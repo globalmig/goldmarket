@@ -1,0 +1,316 @@
+main {
+    position: relative;
+}
+
+main>:last-child {
+    position: absolute;
+    bottom: -70px;
+    left: 50%;
+    transform: translate(-50%, 10%);
+}
+
+main>:last-child h1 {
+    margin-bottom: 40px;
+    color: #F4E220;
+    text-align: center;
+}
+
+main>:last-child table {
+    width: 1440px;
+    border-radius: 20px;
+}
+
+main>:last-child table thead {
+    background-color: #1D1D1A;
+    border-bottom: 1px solid #414141;
+    color: #ccc;
+    font-size: 1.7rem;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+main>:last-child table thead th {
+    font-weight: 300;
+}
+
+main>:last-child table thead span {
+    font-size: 1.2rem;
+}
+
+main>:last-child table thead th,
+main>:last-child table tbody td {
+    padding: 20px 70px;
+}
+
+main>:last-child table tbody {
+    background-color: #252524;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+main>:last-child table tbody p {
+    color: #aaa;
+}
+
+main>:last-child table tbody td {
+    width: 30%;
+    text-align: center;
+}
+
+main>:last-child table tbody td:first-of-type {
+    text-align: left;
+}
+
+main>:last-child table tbody td:first-of-type>:first-child {
+    color: #aaa;
+}
+
+main>:last-child table tbody td:nth-of-type(2) {
+    border-left: 1px solid #504217;
+    border-right: 1px solid #504217;
+}
+
+main>:last-child table tbody td:last-child {
+    margin-top: 10px;
+}
+
+main>:last-child table tbody td>p {
+    margin-bottom: 2px;
+}
+
+main>:last-child table tbody td>p:first-of-type {
+    color: white;
+    font-size: 2rem;
+}
+
+main>:last-child table tbody td div {
+    justify-content: center;
+}
+
+main>:last-child table tbody td div img {
+    margin: auto 10px auto 0;
+}
+
+main>:last-child table tr td:first-of-type>:first-child {
+    font-size: 0.9rem;
+}
+
+main>:last-child table tbody span {
+    font-size: 1.5rem;
+    color: #F4E220;
+}
+
+.main-slider {
+    position: relative;
+    width: 100%;
+    height: 870px;
+    overflow: hidden;
+}
+
+.main-slider img {
+    object-fit: cover;
+}
+
+.main-slide-wrapper button {
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.main-slide-wrapper .main-arrow-prev {
+    z-index: 3;
+    position: absolute;
+    left: 100px;
+}
+
+.main-slide-wrapper .main-arrow-next {
+    z-index: 3;
+    position: absolute;
+    right: 100px;
+}
+
+.recommend {
+    background: url("/images/recommend_background.jpg") no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.recommend>div {
+    width: 1460px;
+    margin: 0 auto;
+    padding: 220px 0 200px;
+    z-index: 2;
+}
+
+.recommend>div>:first-child {
+    text-align: center;
+    color: #252423;
+    margin-bottom: 50px;
+}
+
+.recommend>div>:first-child p {
+    margin-top: 10px;
+}
+
+.recommend>div>:last-child {
+    width: 1805px;
+    box-sizing: border-box;
+}
+
+.recommend>div>:last-child>div {
+    margin-right: -20px
+}
+
+.recommend-slide-wrapper .slick-arrow {
+    display: none;
+    opacity: 0;
+}
+
+.product>div {
+    width: 1460px;
+    margin: 0 auto;
+    padding: 100px 0 150px;
+}
+
+.product>div>:first-child {
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ddd;
+}
+
+.product>div>:first-child>h2 {
+    text-align: center;
+}
+
+.product-list {
+    display: flex;
+    gap: 20;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.unList {
+    height: 300px;
+}
+
+.unList>p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #555;
+}
+
+.product-list .product-item {
+    text-align: center;
+    width: 23.97%;
+    padding: 30px;
+}
+
+.item-wrapper {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.product-list .product-item>:first-child img {
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+}
+
+.product-list .product-item>:last-child p:first-of-type{
+    font-weight: bold;
+}
+
+.product-list .product-item>:last-child p:nth-of-type(2) {
+    color: #aaa;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+.product-list .product-item>:last-child p span {
+    font-weight: bold;
+}
+
+.admin>div {
+    width: 1460px;
+    margin: 0 auto;
+    padding: 100px 0 150px;
+}
+
+.admin>div>:first-child {
+    margin-bottom: 50px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+.admin>div>form, .admin>div>:last-child {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.admin>div>form h3{
+    margin-bottom: 30px;
+}
+
+.admin>div>form >div{
+    margin-bottom: 50px;
+}
+
+.admin>div>form >div>div{
+    width: 48%;
+}
+
+.admin>div>form input {
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #aaa;
+    margin-top: 10px;
+}
+
+.admin>div>form button {
+    cursor: pointer;
+    width: 100%;
+    background: #000;
+    color: white;
+    padding: 10px;
+}
+
+.admin>div>form button:hover{
+    background-color: #252524;
+}
+
+.admin>div>:last-child {
+    margin-top: 80px;
+}
+
+.admin>div:last-child table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.admin>div>:last-child table thead tr th {
+    padding: 10px;
+    background-color: #1D1D1A;
+    border-bottom: 1px solid #414141;
+    color: #ccc;
+    font-weight: 300;
+    width: 50%;
+}
+
+.admin>div>:last-child table thead tr th:first-of-type{
+    border-right: 1px solid #555;
+}
+
+.admin>div>:last-child table thead tr th span {
+    font-size: 0.9rem;
+}
+
+.admin>div>:last-child table tbody tr td {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #aaa
+}
