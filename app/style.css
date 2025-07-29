@@ -23,7 +23,7 @@ main>:last-child table {
 main>:last-child table thead {
     background-color: #1D1D1A;
     border-bottom: 1px solid #414141;
-    color: #ccc;
+    color: #aaa;
     font-size: 1.7rem;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -31,6 +31,11 @@ main>:last-child table thead {
 
 main>:last-child table thead th {
     font-weight: 300;
+}
+
+main>:last-child table thead th:last-of-type{
+    font-weight: bold;
+    color: #ccc;
 }
 
 main>:last-child table thead span {
@@ -68,6 +73,10 @@ main>:last-child table tbody td:first-of-type>:first-child {
 main>:last-child table tbody td:nth-of-type(2) {
     border-left: 1px solid #504217;
     border-right: 1px solid #504217;
+}
+
+main>:last-child table tbody td:last-of-type p:first-of-type{
+    font-weight: bold;
 }
 
 main>:last-child table tbody td:last-child {

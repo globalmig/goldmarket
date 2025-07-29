@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./style.css";
-import Header from "@/compoennts/Header";
-import Footer from "@/compoennts/Footer";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "한국금시장거래소 압구정점",

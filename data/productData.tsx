@@ -58,7 +58,7 @@ export const ProductData = [
         category: '골드바',
         name: '사자 골드바',
         subname: '순도 999.9% FINE GOLD',
-        price: 1200000,
+        price: 2033000,
         img: '/images/goldbar/사자골드바_11.25g.jpg',
         weight: 11.25,
     },
@@ -67,7 +67,7 @@ export const ProductData = [
         category: '골드바',
         name: '사자 골드바',
         subname: '순도 999.9% FINE GOLD',
-        price: 1200000,
+        price: 3288000,
         img: '/images/goldbar/사자골드바_18.75g.jpg',
         weight: 18.75,
     }, {
@@ -75,7 +75,7 @@ export const ProductData = [
         category: '골드바',
         name: '사자 골드바',
         subname: '순도 999.9% FINE GOLD',
-        price: 1200000,
+        price: 6536000,
         img: '/images/goldbar/사자골드바_37.5g.jpg',
         weight: 37.5,
     }, {
@@ -83,7 +83,7 @@ export const ProductData = [
         category: '골드바',
         name: '사자 골드바',
         subname: '순도 999.9% FINE GOLD',
-        price: 1200000,
+        price: 8715000,
         img: '/images/goldbar/사자골드바_50g.jpg',
         weight: 50,
     }, {
@@ -91,7 +91,7 @@ export const ProductData = [
         category: '골드바',
         name: '사자 골드바',
         subname: '순도 999.9% FINE GOLD',
-        price: 1200000,
+        price: 13017000,
         img: '/images/goldbar/사자골드바_75g.jpg',
         weight: 75,
     }, {
@@ -99,7 +99,7 @@ export const ProductData = [
         category: '골드바',
         name: '사자 골드바',
         subname: '순도 999.9% FINE GOLD',
-        price: 1200000,
+        price: 17263000,
         img: '/images/goldbar/사자골드바_100g.jpg',
         weight: 100,
     }, {
@@ -107,7 +107,7 @@ export const ProductData = [
         category: '골드바',
         name: '사자 골드바',
         subname: '순도 999.9% FINE GOLD',
-        price: 1200000,
+        price: 64736000,
         img: '/images/goldbar/사자골드바_375g.jpg',
         weight: 375,
     }, {
@@ -115,7 +115,7 @@ export const ProductData = [
         category: '골드바',
         name: '사자 골드바',
         subname: '순도 999.9% FINE GOLD',
-        price: 1200000,
+        price: 86268000,
         img: '/images/goldbar/사자골드바_500g.jpg',
         weight: 500,
     }, {
@@ -123,7 +123,7 @@ export const ProductData = [
         category: '골드바',
         name: '사자 골드바',
         subname: '순도 999.9% FINE GOLD',
-        price: 1200000,
+        price: 172308000,
         img: '/images/goldbar/사자골드바_1000g.jpg',
         weight: 1000,
     }, {
@@ -211,22 +211,6 @@ export const ProductData = [
         price: 691000,
         img: '/images/goldbar/해피벌스데이골드바_3.75g.jpg',
         weight: 3.75,
-    }, {
-        id: 26,
-        category: '골드바',
-        name: '타이포 모던 골드바',
-        subname: '순도 999.9% FINE GOLD',
-        price: 21029000,
-        img: '/images/goldbar/타이포모던골드바_112.5g.jpg',
-        weight: 112.5,
-    }, {
-        id: 27,
-        category: '골드바',
-        name: '타이포 모던 골드바',
-        subname: '순도 999.9% FINE GOLD',
-        price: 35048000,
-        img: '/images/goldbar/타이포모던골드바_187.5g.jpg',
-        weight: 187.5,
     }, {
         id: 28,
         category: '골드바',
@@ -382,14 +366,15 @@ export const ProductData = [
     }, {
         id: 47,
         category: '실버바',
+        name: '호랑이 실버바',
         subname: 'AG999.9%',
-        price: 2168000,
+        price: undefined,
         img: '/images/silverbar/호랑이실버바_1000g.jpg',
         weight: 1000,
     }, {
         id: 48,
         category: '골드바',
-        name: '카네이션 골드바 3.75g',
+        name: '카네이션 골드바',
         subname: '순도 999.9% FINE GOLD',
         price: 694000,
         img: '/images/goldbar/카네이션골드바_3.75g.jpg',
@@ -397,7 +382,7 @@ export const ProductData = [
     }, {
         id: 49,
         category: '골드바',
-        name: '카네이션 골드바 7.5g',
+        name: '카네이션 골드바',
         subname: '순도 999.9% FINE GOLD',
         price: 1389000,
         img: '/images/goldbar/카네이션골드바_7.5g.jpg',
@@ -405,8 +390,9 @@ export const ProductData = [
     }, {
         id: 50,
         category: '골드바',
-        name: 'LS MnM 골드바 1000g',
+        name: 'LS MnM 골드바',
         subname: '순도 999.9% FINE GOLD',
+        price: undefined,
         img: '/images/goldbar/LS_MnM골드바_1000g.png',
         weight: 1000,
     }, {
@@ -699,6 +685,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 87,
+        category: '순금기념품',
         name: '순금 수저 카드 상패',
         subname: '선물추천! 기본 우드케이스 포함',
         price: 2095000,
@@ -853,6 +840,7 @@ export const ProductData = [
         category: '순금주얼리',
         name: '순금 더블볼 체인 목걸이',
         subname: 'FINE GOLD 26.25g',
+        price: undefined,
         img: '/images/goldjewelry/순금_더블볼_체인목걸이_26.25g.jpg',
         weight: 26.25,
     }, {
@@ -860,6 +848,7 @@ export const ProductData = [
         category: '순금주얼리',
         name: '순금 럭키 클로버 목걸이',
         subname: 'FINE GOLD 3.75g',
+        price: undefined,
         img: '/images/goldjewelry/순금_럭키클로버_목걸이_3.75g.jpg',
         weight: 3.75,
     }, {
@@ -867,6 +856,7 @@ export const ProductData = [
         category: '순금주얼리',
         name: '순금 루프볼 체인 목걸이',
         subname: 'FINE GOLD 11.25g',
+        price: undefined,
         img: '/images/goldjewelry/순금_루프볼_체인목걸이_11.25g.jpg',
         weight: 11.25,
     }, {
@@ -874,6 +864,7 @@ export const ProductData = [
         category: '순금주얼리',
         name: '순금 볼도넛 목걸이',
         subname: 'FINE GOLD 7.5g',
+        price: undefined,
         img: '/images/goldjewelry/순금_볼도넛_목걸이_7.5g.jpg',
         weight: 7.5,
     }, {
@@ -881,6 +872,7 @@ export const ProductData = [
         category: '순금주얼리',
         name: '순금 선샤인 체인 목걸이',
         subname: 'FINE GOLD 11.25g',
+        price: undefined,
         img: '/images/goldjewelry/순금_선샤인_체인목걸이_11.25g.jpg',
         weight: 11.25,
     }, {
@@ -888,6 +880,7 @@ export const ProductData = [
         category: '순금주얼리',
         name: '순금 스프링 목걸이',
         subname: 'FINE GOLD 7.5g',
+        price: undefined,
         img: '/images/goldjewelry/순금_스프링_목걸이_7.5g.jpg',
         weight: 7.5,
     }, {
@@ -895,6 +888,7 @@ export const ProductData = [
         category: '순금주얼리',
         name: '순금 인피니티 클래식 목걸이',
         subname: 'FINE GOLD 37.5g',
+        price: undefined,
         img: '/images/goldjewelry/순금_인피니티_클래식_목걸이_37.5g.jpg',
         weight: 37.5,
     }, {
@@ -902,6 +896,7 @@ export const ProductData = [
         category: '순금주얼리',
         name: '순금 커팅 네잎클로버 목걸이',
         subname: 'FINE GOLD 7.5g',
+        price: undefined,
         img: '/images/goldjewelry/순금_커팅_네잎클로버_목걸이_7.5g.jpg',
         weight: 7.5,
     }, {
@@ -909,6 +904,7 @@ export const ProductData = [
         category: '순금주얼리',
         name: '순금 하트 앤 하트 목걸이',
         subname: 'FINE GOLD 5.625g',
+        price: undefined,
         img: '/images/goldjewelry/순금_하트앤하트_목걸이_5.625g.jpg',
         weight: 5.625,
     }, {
@@ -916,6 +912,7 @@ export const ProductData = [
         category: '순금주얼리',
         name: '순금 행운 열쇠 목걸이',
         subname: 'FINE GOLD 7.5g',
+        price: undefined,
         img: '/images/goldjewelry/순금_행운열쇠_목걸이_7.5g.jpg',
         weight: 7.5,
     }, {
@@ -923,6 +920,7 @@ export const ProductData = [
         category: '순금주얼리',
         name: '순금 메이플 씰 펜던트',
         subname: 'FINE GOLD 3.75g',
+        price: undefined,
         img: '/images/goldjewelry/순금_메이플씰_펜던트_3.75g.jpg',
         weight: 3.75,
     }, {
@@ -930,6 +928,7 @@ export const ProductData = [
         category: '순금주얼리',
         name: '순금 벨트 샤인 클로버 펜던트',
         subname: 'FINE GOLD 3.75g',
+        price: undefined,
         img: '/images/goldjewelry/순금_벨트_샤인_클로버_펜던트_3.75g.jpg',
         weight: 3.75,
     }, {
@@ -937,6 +936,7 @@ export const ProductData = [
         category: '순금주얼리',
         name: '순금 쁘띠 거북이 펜던트',
         subname: 'FINE GOLD 1.875g',
+        price: undefined,
         img: '/images/goldjewelry/순금_쁘띠거북이_펜던트_1.875g.jpg',
         weight: 1.875,
     }, {
@@ -944,6 +944,7 @@ export const ProductData = [
         category: '순금주얼리',
         name: '순금 세잎클로버 컬러 펜던트',
         subname: 'FINE GOLD 3.75g',
+        price: undefined,
         img: '/images/goldjewelry/순금_세잎클로버_컬러_펜던트_3.75g.jpg',
         weight: 3.75,
     }, {
@@ -951,6 +952,7 @@ export const ProductData = [
         category: '순금주얼리',
         name: '순금 썬 플라워 펜던트',
         subname: 'FINE GOLD 7.5g',
+        price: undefined,
         img: '/images/goldjewelry/순금_썬플라워_펜던트_7.5g.jpg',
         weight: 7.5,
     }, {
@@ -958,6 +960,7 @@ export const ProductData = [
         category: '순금주얼리',
         name: '순금 옥타곤 드래곤 펜던트',
         subname: 'FINE GOLD 18.75g',
+        price: undefined,
         img: '/images/goldjewelry/순금_옥타곤_드래곤_펜던트_18.75g.jpg',
         weight: 18.75,
     }, {
@@ -965,6 +968,7 @@ export const ProductData = [
         category: '순금주얼리',
         name: '순금 와이어 브이라인 펜던트',
         subname: 'FINE GOLD 3.75g',
+        price: undefined,
         img: '/images/goldjewelry/순금_와이어_브이라인_펜던트_3.75g.jpg',
         weight: 3.75,
     }, {
@@ -972,6 +976,7 @@ export const ProductData = [
         category: '순금주얼리',
         name: '순금 글리터 나비 반지',
         subname: 'FINE GOLD 3.75g',
+        price: undefined,
         img: '/images/goldjewelry/순금_글리터나비_반지_3.75g.jpg',
         weight: 3.75,
     }, {
@@ -979,6 +984,7 @@ export const ProductData = [
         category: '순금주얼리',
         name: '순금 더블디 반지',
         subname: 'FINE GOLD 3.75g',
+        price: undefined,
         img: '/images/goldjewelry/순금_더블디_반지_3.75g.jpg',
         weight: 3.75,
     }, {
@@ -986,6 +992,7 @@ export const ProductData = [
         category: '순금주얼리',
         name: '순금 롬버스 커팅 반지',
         subname: 'FINE GOLD 3.75g',
+        price: undefined,
         img: '/images/goldjewelry/순금_롬버스커팅_반지_3.75g.jpg',
         weight: 3.75,
     }, {
@@ -993,6 +1000,7 @@ export const ProductData = [
         category: '순금주얼리',
         name: '순금 모던샌드 반지',
         subname: 'FINE GOLD 7.5g',
+        price: undefined,
         img: '/images/goldjewelry/순금_모던샌드_반지_7.5g.jpg',
         weight: 7.5,
     }, {
@@ -1000,6 +1008,7 @@ export const ProductData = [
         category: '순금주얼리',
         name: '순금 모던샌드 반지',
         subname: 'FINE GOLD 11.25g',
+        price: undefined,
         img: '/images/goldjewelry/순금_모던샌드_반지_11.25g.jpg',
         weight: 11.25,
     }, {
@@ -1007,6 +1016,7 @@ export const ProductData = [
         category: '순금주얼리',
         name: '순금 스퀘어 워치 반지',
         subname: 'FINE GOLD 3.75g',
+        price: undefined,
         img: '/images/goldjewelry/순금_스퀘어워치_반지_3.75g.jpg',
         weight: 3.75,
     }, {
@@ -1014,6 +1024,7 @@ export const ProductData = [
         category: '순금주얼리',
         name: '순금 와이어 코일 반지',
         subname: 'FINE GOLD 11.25g',
+        price: undefined,
         img: '/images/goldjewelry/순금_와이어코일_반지_11.25g.jpg',
         weight: 11.25,
     }, {
@@ -1021,6 +1032,7 @@ export const ProductData = [
         category: '순금주얼리',
         name: '순금 이터니티 반지',
         subname: 'FINE GOLD 3.75g',
+        price: undefined,
         img: '/images/goldjewelry/순금_이터니티_반지_3.75g.jpg',
         weight: 3.75,
     }, {
@@ -1028,6 +1040,7 @@ export const ProductData = [
         category: '순금주얼리',
         name: '순금 골든볼 팔찌',
         subname: 'FINE GOLD 3.75g',
+        price: undefined,
         img: '/images/goldjewelry/순금_골든볼_팔찌_3.75g.jpg',
         weight: 3.75,
     }, {
@@ -1035,6 +1048,7 @@ export const ProductData = [
         category: '순금주얼리',
         name: '순금 럭키유 팔찌',
         subname: 'FINE GOLD 18.75g',
+        price: undefined,
         img: '/images/goldjewelry/순금_럭키유_팔찌_18.75g.jpg',
         weight: 18.75,
     }, {
@@ -1042,6 +1056,7 @@ export const ProductData = [
         category: '순금주얼리',
         name: '순금 로프 트위스트 뱅글 팔찌',
         subname: 'FINE GOLD 18.75g',
+        price: undefined,
         img: '/images/goldjewelry/순금_로프_트위스트_뱅글팔찌_18.75g.jpg',
         weight: 18.75,
     }, {
@@ -1049,6 +1064,7 @@ export const ProductData = [
         category: '순금주얼리',
         name: '순금 루프볼 체인 팔찌',
         subname: 'FINE GOLD 11.25g',
+        price: undefined,
         img: '/images/goldjewelry/순금_루프볼_체인팔찌_11.25g.jpg',
         weight: 11.25,
     }, {
@@ -1056,6 +1072,7 @@ export const ProductData = [
         category: '순금주얼리',
         name: '순금 믹스 체인 팔찌',
         subname: 'FINE GOLD 11.25g',
+        price: undefined,
         img: '/images/goldjewelry/순금_믹스_체인팔찌_11.25g.jpg',
         weight: 11.25,
     }, {
@@ -1063,6 +1080,7 @@ export const ProductData = [
         category: '순금주얼리',
         name: '순금 샤인 로프 체인 팔찌',
         subname: 'FINE GOLD 11.25g',
+        price: undefined,
         img: '/images/goldjewelry/순금_샤인로프_체인팔찌_11.25g.jpg',
         weight: 11.25,
     }, {
@@ -1070,6 +1088,7 @@ export const ProductData = [
         category: '순금주얼리',
         name: '순금 선샤인 체인 팔찌',
         subname: 'FINE GOLD 11.25g',
+        price: undefined,
         img: '/images/goldjewelry/순금_선샤인_체인팔찌_11.25g.jpg',
         weight: 11.25,
     }, {
@@ -1077,6 +1096,7 @@ export const ProductData = [
         category: '순금주얼리',
         name: '순금 인피니티 클래식 팔찌',
         subname: 'FINE GOLD 18.75g',
+        price: undefined,
         img: '/images/goldjewelry/순금_인피니티_클래식_팔찌_18.75g.jpg',
         weight: 18.75,
     }, {
@@ -1084,146 +1104,167 @@ export const ProductData = [
         category: '순금베이비',
         name: '순금 왕관용 돌반지',
         subname: 'FINE GOLD 3.75g',
+        price: undefined,
         img: '/images/goldbaby/순금_왕관용_돌반지_3.75g.jpg',
         weight: 3.75,
-    },{
+    }, {
         id: 140,
         category: '순금베이비',
         name: '순금 첫돌 까꿍용 돌반지',
         subname: 'FINE GOLD 3.75g',
+        price: undefined,
         img: '/images/goldbaby/순금_첫돌_까꿍용_돌반지_3.75g.jpg',
         weight: 3.75,
-    },{
+    }, {
         id: 141,
         category: '순금베이비',
         name: '순금 2024 용 돌반지',
         subname: 'FINE GOLD 3.75g',
+        price: undefined,
         img: '/images/goldbaby/순금_2024_용_돌반지_3.75g.jpg',
         weight: 3.75,
-    },{
+    }, {
         id: 142,
         category: '순금베이비',
         name: '순금 왕관용 꼬까신 돌반지',
         subname: 'FINE GOLD 3.75g',
+        price: undefined,
         img: '/images/goldbaby/순금_왕관용_꼬까신_돌반지_3.75g.jpg',
         weight: 3.75,
-    },{
+    }, {
         id: 143,
         category: '순금베이비',
         name: '순금 용건물주_금수저 돌반지',
         subname: 'FINE GOLD 1.875g',
+        price: undefined,
         img: '/images/goldbaby/순금_용건물주_금수저_돌반지_1.875g.jpg',
         weight: 1.875,
-    },{
+    }, {
         id: 144,
         category: '순금베이비',
         name: '순금 용건물주_금수저 돌반지',
         subname: 'FINE GOLD 3.75g',
+        price: undefined,
         img: '/images/goldbaby/순금_용건물주_금수저_돌반지_3.75g.jpg',
         weight: 3.75,
-    },{
+    }, {
         id: 145,
         category: '순금베이비',
         name: '순금 왕관용 금수저 돌반지',
         subname: 'FINE GOLD 3.75g',
+        price: undefined,
         img: '/images/goldbaby/순금_왕관용_금수저_돌반지_3.75g.jpg',
         weight: 3.75,
-    },{
+    }, {
         id: 146,
         category: '순금베이비',
         name: '순금 힘찬용 돌반지',
         subname: 'FINE GOLD 3.75g',
+        price: undefined,
         img: '/images/goldbaby/순금_힘찬용_돌반지_3.75g.jpg',
         weight: 3.75,
-    },{
+    }, {
         id: 147,
         category: '순금베이비',
         name: '순금 왕관용 돌팔찌',
         subname: 'FINE GOLD 7.5g',
+        price: undefined,
         img: '/images/goldbaby/순금_왕관용_돌팔찌_7.5g.jpg',
         weight: 7.5,
-    },{
+    }, {
         id: 148,
         category: '순금베이비',
         name: '순금 하트용 돌팔찌',
         subname: 'FINE GOLD 3.75g',
+        price: undefined,
         img: '/images/goldbaby/순금_하트용_돌팔찌_7.5g.jpg',
         weight: 7.5,
-    },{
+    }, {
         id: 149,
         category: '순금베이비',
         name: '순금 첫돌용 돌팔찌',
         subname: 'FINE GOLD 7.5g',
+        price: undefined,
         img: '/images/goldbaby/순금_첫돌용_돌팔찌_7.5g.jpg',
         weight: 7.5,
-    },{
+    }, {
         id: 150,
         category: '순금베이비',
         name: '순금 까꿍용 돌팔찌',
         subname: 'FINE GOLD 11.25g',
+        price: undefined,
         img: '/images/goldbaby/순금_까꿍용_돌팔찌_11.25g.jpg',
         weight: 11.25,
-    },{
+    }, {
         id: 151,
         category: '순금베이비',
         name: '순금 마이엔젤 돌팔찌',
         subname: 'FINE GOLD 3.75g',
+        price: undefined,
         img: '/images/goldbaby/순금_마이엔젤_돌팔찌_3.75g.jpg',
         weight: 3.75,
-    },{
+    }, {
         id: 152,
         category: '순금베이비',
         name: '순금 마이프린세스 돌팔찌',
         subname: 'FINE GOLD 3.75g',
+        price: undefined,
         img: '/images/goldbaby/순금_마이프린세스_돌팔찌_3.75g.jpg',
         weight: 3.75,
-    },{
+    }, {
         id: 153,
         category: '순금베이비',
         name: '순금 하트 토끼 돌팔찌',
         subname: 'FINE GOLD 18.75g',
+        price: undefined,
         img: '/images/goldbaby/순금_하트토끼_돌팔찌_18.75g.jpg',
         weight: 18.75,
-    },{
+    }, {
         id: 154,
         category: '순금베이비',
         name: '순금 하트 호랑이 돌팔찌',
         subname: 'FINE GOLD 3.75g',
+        price: undefined,
         img: '/images/goldbaby/순금_하트호랑이_돌팔찌_18.75g.jpg',
         weight: 18.75,
-    },{
+    }, {
         id: 155,
         category: '순금베이비',
         name: '순금 왕관용 돌목걸이',
         subname: 'FINE GOLD 3.75g',
+        price: undefined,
         img: '/images/goldbaby/순금_왕관용_돌목걸이_3.75g.jpg',
         weight: 3.75,
-    },{
+    }, {
         id: 156,
         category: '순금베이비',
         name: '순금 왕관용 돌목걸이',
         subname: 'FINE GOLD 1.875g',
+        price: undefined,
         img: '/images/goldbaby/순금_왕관용_돌목걸이_1.875g.jpg',
         weight: 1.875,
-    },{
+    }, {
         id: 157,
         category: '순금베이비',
         name: '첫 생일 순금 카드',
         subname: 'FINE GOLD 3.75g',
+        price: undefined,
         img: '/images/goldbaby/첫생일_순금카드_3.75g.jpg',
         weight: 3.75,
-    },{
+    }, {
         id: 158,
-       category: '순금베이비',
+        category: '순금베이비',
         name: '백일 순금 카드',
         subname: 'FINE GOLD 3.75g',
+        price: undefined,
         img: '/images/goldbaby/백일_순금카드_3.75g.jpg',
         weight: 3.75,
-    },{
+    }, {
         id: 159,
         category: '순금베이비',
         name: '첫돌 순금 카드',
         subname: 'FINE GOLD 3.75g',
+        price: undefined,
         img: '/images/goldbaby/첫돌_순금카드_3.75g.jpg',
         weight: 3.75,
     },

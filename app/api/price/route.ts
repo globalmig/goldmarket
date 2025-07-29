@@ -1,33 +1,45 @@
+import connectDB from "@/lib/mongodb";
+import Price from "@/models/GoldPrice";
+import { NextResponse } from "next/server";
+
 // api/price
-function getTodayDate() {
-  const today = new Date();
-  return `${today.getFullYear().toString().slice(2)}/${(today.getMonth() + 1)
-    .toString()
-    .padStart(2, "0")}/${today.getDate().toString().padStart(2, "0")}`;
+export interface GoldPrice {
+  _id: string,
+  buy: number,
+  sell: number,
+  rate: number,
+  createAt: Date,
+  updateAt: Date
 }
 
-const latestPriceData = { // 메인페이지의 시세 초기값
-  date: getTodayDate(),
-  price: 0,
-  sell: 0,
-  prevPrice: 0,
-  prevSellPrice: 0,
+export async function GET () {
+    try {
+    await connectDB();
+    console.log("MongoDB connected successfully");
+    const goldPrices = await Price.find().sort({ createdAt: -1 }).limit(2);
+      console.log("prices fetched:", goldPrices.length);
+    return NextResponse.json({ data: goldPrices });
+  } catch (error) {
+    console.error('GET /api/price error:', error);
+    return NextResponse.json({ error: 'Server error' }, { status: 500 });
+  }
 };
 
-export async function GET() {
- return Response.json(latestPriceData);
-}
+export async function POST(req: Request) {
+  try {
+    await connectDB();
 
-export async function POST(req : Request) {
-    const body = await req.json();
-    const {buy, sell, date} = body
+    const formData = await req.formData();
+    const buy = formData.get('buy') as string;
+    const sell = formData.get('sell') as string;
+    const rate = formData.get('rate') as string;
 
-   // 이전 가격을 저장하고 업데이트
-  latestPriceData.prevPrice = latestPriceData.price;
-  latestPriceData.price = buy;
-  latestPriceData.prevSellPrice = latestPriceData.sell;
-  latestPriceData.sell = sell;
-  latestPriceData.date = date;
+    const price = new Price({ buy, sell, rate });
+    await price.save();
 
-    return Response.json({success: true, data: latestPriceData})
+    return NextResponse.json({ data: price });
+  } catch (error) {
+    console.error("API Error: ", error);
+    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+  }
 }

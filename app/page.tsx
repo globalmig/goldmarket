@@ -1,11 +1,10 @@
 'use client'
-import MainSlide from "@/compoennts/MainSlide";
+import MainSlide from "@/components/MainSlide";
 import Image from "next/image";
 import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import usePrice from "@/hook/usePrice";
-
 
 export default function Home() {
 
@@ -13,12 +12,12 @@ export default function Home() {
 
   if (!priceData) return null;
 
-  const updatePrice = priceData.price - priceData.prevPrice; // 시세 변동 차액 구하기
-  const updateSell = priceData.sell - priceData.prevSellPrice;
-  const todayPrice = Number(priceData.price).toLocaleString(); // 살때 시세
+  const updatePrice = Number(priceData.buy ?? 0) - Number(priceData.prevBuyPrice ?? 0);
+  const updateSell = Number(priceData.sell ?? 0) - Number(priceData.prevSellPrice ?? 0);
+  const todayPrice = Number(priceData.buy).toLocaleString(); // 살때 시세
   const todaySell = Number(priceData.sell).toLocaleString(); // 팔때 시세
-  const todayDiff = Math.abs(updatePrice).toLocaleString();
-  const todaySellDiff = Math.abs(updateSell).toLocaleString();
+  const todayDiff = Math.abs(updatePrice);
+  const todaySellDiff = Math.abs(updateSell);
 
   const formatDate = (today: string): string => {
     const date = new Date(today);
@@ -62,9 +61,9 @@ export default function Home() {
                 <td>
                   <p>{todayPrice}원</p>
                   <div className="display-flex">
-                    {priceData.price > priceData.prevPrice ? <Image src="/icons/quote_up.png" alt="시세변동 아이콘" width={15} height={10} /> : <Image src="/icons/quote_down.png" alt="시세변동 아이콘" width={15} height={10} />
+                    {priceData.buy > priceData.prevBuyPrice ? <Image src="/icons/quote_up.png" alt="시세변동 아이콘" width={15} height={10} /> : <Image src="/icons/quote_down.png" alt="시세변동 아이콘" width={15} height={10} />
                     }
-                    <p>{todayDiff}</p>
+                    <p>{todayDiff.toLocaleString()}</p>
                   </div>
                 </td>
                 <td>
@@ -72,7 +71,7 @@ export default function Home() {
                   <div className="display-flex">
                     {priceData.sell > priceData.prevSellPrice ? <Image src="/icons/quote_up.png" alt="시세변동 아이콘" width={15} height={10} /> : <Image src="/icons/quote_down.png" alt="시세변동 아이콘" width={15} height={10} />
                     }
-                    <p>{todaySellDiff}</p>
+                    <p>{todaySellDiff.toLocaleString()}</p>
                   </div>
                 </td>
               </tr>

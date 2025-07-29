@@ -13,9 +13,10 @@ export default function Footer() {
                 <div>
                     <ul className="display-flex">
                         <li>브랜드소개</li>
-                        <li>이용약관</li>
-                        <li>개인정보처리방침</li>
-                        <li>이용안내</li>
+                        <li><Link href="/member/agreement">이용약관</Link></li>
+                        <li><Link href="/member/privacy">개인정보처리방침</Link></li>
+                        <li><Link href="/member/term">이용안내</Link></li>
+                        <li><Link href="/admin">관리자페이지</Link></li>
                     </ul>
                     <div>
                         <p>쇼핑몰 기본정보</p>

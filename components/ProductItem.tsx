@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 interface ProductItemProps {
     name: string,
     subname: string,
-    price?: number,
+    price: number | undefined,
     img: string,
     weight: number,
     priority?: boolean;
@@ -14,7 +14,8 @@ interface ProductItemProps {
 export default function ProductItem({ name, subname, price, img, weight, priority = false }: ProductItemProps) {
 
     const pathname = usePathname();
-    const isPriceHidden = pathname.startsWith('/jewelry') || pathname.startsWith('/goldbaby');
+    const isPriceHidden = pathname.startsWith('/jewelry') || pathname.startsWith('/goldbaby') || pathname.startsWith('/silverbar');
+    const isWeight = weight < 3.75 ; // 무게가 3.75g미만 부터 가격 표시X
 
     return (
         <section className="product-item">
@@ -27,7 +28,8 @@ export default function ProductItem({ name, subname, price, img, weight, priorit
                 <p>{subname}</p>
                 <p>
                     {isPriceHidden ?
-                        <span>가격 변동</span>
+                        <span>시세 변동</span>
+                        : isWeight ? null
                         : <span>{price?.toLocaleString()}원</span>
                     }
                 </p>

@@ -1,4 +1,4 @@
-import ProductLayout from "@/compoennts/ProductLayout";
+import ProductLayout from "@/components/ProductLayout";
 
 export default function ProductPage() {
 
