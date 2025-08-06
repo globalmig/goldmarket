@@ -61,16 +61,26 @@ export default function Home() {
                 <td>
                   <p>{todayPrice}원</p>
                   <div className="display-flex">
-                    {priceData.buy > priceData.prevBuyPrice ? <Image src="/icons/quote_up.png" alt="시세변동 아이콘" width={15} height={10} /> : <Image src="/icons/quote_down.png" alt="시세변동 아이콘" width={15} height={10} />
-                    }
+                    {priceData.buy > priceData.prevBuyPrice ? (
+                      <Image src="/icons/quote_up.png" alt="시세상승 아이콘" width={15} height={10} />
+                    ) : priceData.buy === priceData.prevBuyPrice ? (
+                      <Image src="/icons/quote_same.png" alt="시세변동 없음 아이콘" width={20} height={4} />
+                    ) : (
+                      <Image src="/icons/quote_down.png" alt="시세하락 아이콘" width={15} height={10} />
+                    )}
                     <p>{todayDiff.toLocaleString()}</p>
                   </div>
                 </td>
                 <td>
                   <p>{todaySell}원</p>
                   <div className="display-flex">
-                    {priceData.sell > priceData.prevSellPrice ? <Image src="/icons/quote_up.png" alt="시세변동 아이콘" width={15} height={10} /> : <Image src="/icons/quote_down.png" alt="시세변동 아이콘" width={15} height={10} />
-                    }
+                    {priceData.sell > priceData.prevSellPrice ? (
+                      <Image src="/icons/quote_up.png" alt="시세상승 아이콘" width={15} height={10} />
+                    ) : priceData.sell === priceData.prevSellPrice ? (
+                      <Image src="/icons/quote_same.png" alt="시세변동 없음 아이콘" width={20} height={4} />
+                    ) : (
+                      <Image src="/icons/quote_down.png" alt="시세하락 아이콘" width={15} height={10} />
+                    )}
                     <p>{todaySellDiff.toLocaleString()}</p>
                   </div>
                 </td>

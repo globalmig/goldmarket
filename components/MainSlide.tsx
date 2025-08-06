@@ -3,7 +3,11 @@ import Slider from 'react-slick';
 import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 
-function PrevArrow(props: any) {
+interface ArrowProps {
+  onClick?: () => void;
+}
+
+function PrevArrow(props: ArrowProps) {
   const { onClick } = props;
   return (
     <button onClick={onClick} className='main-arrow-prev'>
@@ -12,7 +16,7 @@ function PrevArrow(props: any) {
   );
 }
 
-function NextArrow(props: any) {
+function NextArrow(props: ArrowProps) {
   const { onClick } = props;
   return (
     <button onClick={onClick} className='main-arrow-next'>

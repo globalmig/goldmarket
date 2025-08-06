@@ -5,9 +5,6 @@ export async function POST(req: Request) {
 
   const masterPassword = process.env.MASTER_PASSWORD || "1234";
 
-  console.log("입력된 비번:", password);
-  console.log("마스터 비번:", masterPassword);
-
   if (password === masterPassword) {
     return NextResponse.json({ success: true });
   } else {
