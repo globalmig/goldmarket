@@ -5,6 +5,7 @@ import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import usePrice from "@/hook/usePrice";
+import Link from "next/link";
 
 export default function Home() {
 
@@ -98,22 +99,34 @@ export default function Home() {
           </div>
           <Slider {...settings} className="recommend-slide-wrapper">
             <div>
-              <Image src="/images/recommend_item_1.png" alt='호랑이 골드바 100g' width={345} height={500} />
+              <Link href="/goldbar">
+                <Image src="/images/recommend_item_1.png" alt='호랑이 골드바 100g' width={345} height={500} />
+              </Link>
             </div>
             <div>
-              <Image src="/images/recommend_item_2.png" alt='골드바 수납함' width={345} height={500} />
+              <Link href="/goldbar">
+                <Image src="/images/recommend_item_2.png" alt='골드바 수납함' width={345} height={500} />
+              </Link>
             </div>
             <div>
-              <Image src="/images/recommend_item_3.png" alt='사자 골드바 100g' width={345} height={500} />
+              <Link href="/goldbar">
+                <Image src="/images/recommend_item_3.png" alt='사자 골드바 100g' width={345} height={500} />
+              </Link>
             </div>
             <div>
-              <Image src="/images/recommend_item_4.png" alt='순금 뱀상패' width={345} height={500} />
+              <Link href="/goldbar">
+                <Image src="/images/recommend_item_4.png" alt='순금 뱀상패' width={345} height={500} />
+              </Link>
             </div>
             <div>
-              <Image src="/images/recommend_item_5.png" alt='호랑이 골드바 50g' width={345} height={500} />
+              <Link href="/goldbar">
+                <Image src="/images/recommend_item_5.png" alt='호랑이 골드바 50g' width={345} height={500} />
+              </Link>
             </div>
             <div>
-              <Image src="/images/recommend_item_6.png" alt='사자 골드바 50g' width={345} height={500} />
+              <Link href="/goldbar">
+                <Image src="/images/recommend_item_6.png" alt='사자 골드바 50g' width={345} height={500} />
+              </Link>
             </div>
           </Slider>
         </div>

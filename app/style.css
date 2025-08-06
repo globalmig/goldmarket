@@ -4,7 +4,7 @@ main {
 
 main>:last-child {
     position: absolute;
-    bottom: -70px;
+    bottom: -30px;
     left: 50%;
     transform: translate(-50%, 10%);
 }
@@ -44,7 +44,7 @@ main>:last-child table thead span {
 
 main>:last-child table thead th,
 main>:last-child table tbody td {
-    padding: 20px 70px;
+    padding: 20px 55px;
 }
 
 main>:last-child table tbody {
@@ -109,10 +109,14 @@ main>:last-child table tbody span {
     color: #F4E220;
 }
 
+.main-slide-wrapper {
+    height: 620px;
+}
+
 .main-slider {
     position: relative;
     width: 100%;
-    height: 870px;
+    height: 620px;
     overflow: hidden;
 }
 
@@ -147,7 +151,7 @@ main>:last-child table tbody span {
 .recommend>div {
     width: 1460px;
     margin: 0 auto;
-    padding: 220px 0 200px;
+    padding: 130px 0 200px;
     z-index: 2;
 }
 

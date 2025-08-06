@@ -27,9 +27,8 @@ export default function ProductItem({ name, subname, price, img, weight, priorit
                 <p>{name} <span>{weight.toLocaleString()}g</span></p>
                 <p>{subname}</p>
                 <p>
-                    {isPriceHidden ?
+                    {isPriceHidden || isWeight ?
                         <span>시세 변동</span>
-                        : isWeight ? null
                         : <span>{price?.toLocaleString()}원</span>
                     }
                 </p>
