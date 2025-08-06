@@ -193,7 +193,7 @@ main>:last-child table tbody span {
 
 .product-list {
     display: flex;
-    gap: 20;
+    gap: 20px;
     flex-wrap: wrap;
     position: relative;
 }

@@ -140,7 +140,7 @@ footer>div>:first-child {
 
 footer>div>:first-child>ul {
   justify-content: left;
-  gap: 50;
+  gap: 50px;
 }
 
 footer>div>:first-child>div>p {
@@ -151,7 +151,7 @@ footer>div>:first-child>div>p {
 
 footer>div>:first-child>div ul {
   justify-content: left;
-  gap: 20;
+  gap: 20px;
 }
 
 footer>div>:first-child>div ul span {
