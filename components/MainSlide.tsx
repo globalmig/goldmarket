@@ -45,25 +45,20 @@ export default function MainSlide () {
     nextArrow: <NextArrow/>
   };
 
-   // 슬라이드 엘리먼트에 tabindex 제어하는 함수
   const handleFocusOnSlide = (currentIndex: number) => {
     if (!sliderRef.current) return;
 
-    // slick-slide 클래스가 붙은 div들을 모두 찾기
     const slides = document.querySelectorAll('.slick-slide');
 
     slides.forEach((slide, index) => {
       if (index === currentIndex) {
-        // 활성 슬라이드는 tabindex 제거(포커스 가능)
         (slide as HTMLElement).removeAttribute('tabindex');
       } else {
-        // 비활성 슬라이드는 tabindex -1 (포커스 불가)
         (slide as HTMLElement).setAttribute('tabindex', '-1');
       }
     });
   };
 
-  // 컴포넌트 최초 렌더링 후 첫 슬라이드 포커스 상태 세팅
   useEffect(() => {
     handleFocusOnSlide(0);
   }, []);
