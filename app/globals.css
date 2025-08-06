@@ -91,6 +91,7 @@ header {
 
 .inner-header nav ul li a {
   color: #000;
+   text-shadow: 0px 0px 0px  rgba(0, 0, 0, 0);
 }
 
 header>nav ul {
