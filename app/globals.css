@@ -108,6 +108,7 @@ header>nav ul li a:hover,
 header>nav ul li a:focus {
   color: #EACC1E;
   border-bottom: 1px solid #EACC1E;
+  text-shadow: 0px 0px 0px  rgba(0, 0, 0, 0);
 }
 
 footer {
