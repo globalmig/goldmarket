@@ -66,10 +66,10 @@ export default function MainSlide () {
   return (
     <Slider {...settings} ref={sliderRef} className='main-slide-wrapper'>
       <div className='main-slider'>
-        <Image src="/images/main_banner_1.png" alt='메인배너1' fill/>
+        <Image src="/images/main_banner1.png" alt='메인배너1' fill/>
       </div>
       <div className='main-slider'>
-        <Image src="/images/main_banner_2.jpg" alt='메인배너2' fill/>
+        <Image src="/images/main_banner2.jpg" alt='메인배너2' fill/>
       </div>
       <div className='main-slider'>
         <Image src="/images/main_banner_3.jpg" alt='메인배너3' fill/>

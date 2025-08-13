@@ -1,15 +1,7 @@
-'use client'
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
-import { useEffect } from "react";
-
 export default function Footer() {
-    useEffect(() => {
-    if (window.wsa) {
-      console.log("wsa", window.wsa);
-    }
-  }, []);
 
     return (
         <>
@@ -44,15 +36,13 @@ export default function Footer() {
                 strategy="beforeInteractive"
             />
             <Script
-                    id="wsa-init"
-                    strategy="afterInteractive"
-                    dangerouslySetInnerHTML={{
-                        __html: `
-            wsa.inflow("goldmarket.co.kr");
-            wsa_do(wsa);
-          `
-                    }}
-                />
+        src="//wsa.mig-log.com/wsalog.js"
+        strategy="afterInteractive"
+        onLoad={() => {
+          window.wsa?.inflow(".goldmarket.co.kr");
+          window.wsa_do?.(window.wsa);
+        }}
+      />
         </>
     )
 }
