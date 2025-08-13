@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
@@ -39,7 +40,7 @@ export default function Footer() {
         src="//wsa.mig-log.com/wsalog.js"
         strategy="afterInteractive"
         onLoad={() => {
-          window.wsa?.inflow(".goldmarket.co.kr");
+          window.wsa?.inflow("goldmarket.co.kr");
           window.wsa_do?.(window.wsa);
         }}
       />
