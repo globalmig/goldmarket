@@ -17,6 +17,10 @@ export default function ProductItem({ name, subname, price, img, weight, priorit
     const isPriceHidden = pathname.startsWith('/jewelry') || pathname.startsWith('/goldbaby') || pathname.startsWith('/silverbar');
     const isWeight = weight < 3.75 ; // 무게가 3.75g미만 부터 가격 표시X
 
+    const roundedPrice = price !== undefined
+        ? Math.ceil(price / 1000) * 1000
+        : undefined;
+
     return (
         <section className="product-item">
             <div className="item-wrapper">
@@ -29,7 +33,7 @@ export default function ProductItem({ name, subname, price, img, weight, priorit
                 <p>
                     {isPriceHidden || isWeight ?
                         <span>시세 변동</span>
-                        : <span>{price?.toLocaleString()}원</span>
+                        : <span>{roundedPrice?.toLocaleString()}원</span>
                     }
                 </p>
             </div>

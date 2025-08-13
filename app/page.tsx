@@ -43,7 +43,9 @@ export default function Home() {
 
       <main>
         <MainSlide />
+        <div></div>
         <div>
+          <h2>실시간 상담 02-543-5551</h2>
           <h1>정확한 기준가를 적용하여 매입은 높게, 판매는 낮은 금액으로 시세 적용합니다</h1>
           <table>
             <thead>

@@ -2,7 +2,6 @@ import connectDB from "@/lib/mongodb";
 import Price from "@/models/GoldPrice";
 import { NextResponse } from "next/server";
 
-// api/price
 export interface GoldPrice {
   _id: string,
   buy: number,

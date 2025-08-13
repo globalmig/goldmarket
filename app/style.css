@@ -9,10 +9,26 @@ main>:last-child {
     transform: translate(-50%, 10%);
 }
 
+main>:nth-child(2) {
+    width: 100%;
+    height: 630px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    background: linear-gradient(180deg, rgb(0, 0, 0,0) 15%, rgb(0, 0, 0,0.8) 85%);
+}
+
 main>:last-child h1 {
     margin-bottom: 40px;
     color: #F4E220;
     text-align: center;
+}
+
+main>:last-child h2 {
+    text-align: center;
+    margin-bottom: 90px;
+    color: #F4E220;
+    font-size: 2.5rem;
 }
 
 main>:last-child table {
@@ -29,13 +45,12 @@ main>:last-child table thead {
     border-top-right-radius: 20px;
 }
 
-main>:last-child table thead th {
-    font-weight: 300;
+main>:last-child table thead th:last-of-type{
+    color: #ccc;
 }
 
-main>:last-child table thead th:last-of-type{
-    font-weight: bold;
-    color: #ccc;
+main>:last-child table thead th {
+font-weight: 300;
 }
 
 main>:last-child table thead span {
@@ -72,15 +87,13 @@ main>:last-child table tbody td:first-of-type>:first-child {
 
 main>:last-child table tbody td:nth-of-type(2) {
     border-left: 1px solid #504217;
-    border-right: 1px solid #504217;
-}
-
-main>:last-child table tbody td:last-of-type p:first-of-type{
-    font-weight: bold;
+    border-right: 1px solid #a8a7a2;
+    background-color: white;
 }
 
 main>:last-child table tbody td:last-child {
     margin-top: 10px;
+    background-color: white;
 }
 
 main>:last-child table tbody td>p {
@@ -88,8 +101,8 @@ main>:last-child table tbody td>p {
 }
 
 main>:last-child table tbody td>p:first-of-type {
-    color: white;
     font-size: 2rem;
+    color: #000;
 }
 
 main>:last-child table tbody td div {
