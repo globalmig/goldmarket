@@ -25,7 +25,7 @@ export default function ProductItem({ name, subname, price, img, weight, priorit
         <section className="product-item">
             <div className="item-wrapper">
                 <Image src={img} alt={name} fill
-                    sizes="(max-width: 768px) 100vw, 24vw" priority={priority} />
+                    sizes="(max-width: 768px) 100vw, 24vw" priority={priority} unoptimized/>
             </div>
             <div>
                 <p>{name} <span>{weight.toLocaleString()}g</span></p>
