@@ -5,11 +5,13 @@ import usePrice from "@/hook/usePrice";
 
 interface ProductListProps {
     category: string,
+    subCategory?: string[],
 }
 
 interface ProductType {
     id: number;
     category: string;
+    subCategory?: string;
     name: string;
     subname: string;
     price: number | undefined;
@@ -18,7 +20,7 @@ interface ProductType {
 }
 
 
-export default function ProductList({ category }: ProductListProps) {
+export default function ProductList({ category, subCategory}: ProductListProps) {
 
     const updatePrice = usePrice();
     if (!updatePrice) return null;
@@ -26,8 +28,11 @@ export default function ProductList({ category }: ProductListProps) {
     const goldPrice = updatePrice?.buy ?? 0;
     const rate = updatePrice?.rate ?? 0;
 
-    const filterList = ProductData.filter(product => {
-        return product?.category === category
+     const filterList: ProductType[] = ProductData.filter(
+        (product): product is ProductType => !!product && product.category === category
+    ).filter(product => {
+        if (!subCategory || subCategory.length === 0) return true;
+        return product.subCategory && subCategory.includes(product.subCategory);
     });
 
     const getCalculatedPrice = (product: ProductType) => {

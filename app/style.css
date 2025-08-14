@@ -208,6 +208,24 @@ main>:last-child table tbody span {
     text-align: center;
 }
 
+.product>div>:first-child ul {
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.product>div>:first-child ul li a{
+    color: #000;
+     background: #f3f3f3;
+    border-radius: 7px;
+    padding: 8px 45px;
+}
+
+.product>div>:first-child ul li a:focus {
+   background-color: #000;
+    color: white; 
+}
+
 .product-list {
     display: flex;
     gap: 20px;

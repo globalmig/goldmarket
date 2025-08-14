@@ -12,7 +12,7 @@ export default function Header() {
         <header className={`display-flex ${isHome ? "home-header" : "inner-header"}`}>
             <div>
                 <Link href="/">
-                <Image src="/images/logo.png" alt="메인페이지 이동" width={250} height={50}/>
+                <Image src="/images/logo.png" alt="메인페이지 이동" width={300} height={60}/>
                 </Link>
             </div>
             <nav>

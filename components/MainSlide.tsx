@@ -25,7 +25,7 @@ function NextArrow(props: ArrowProps) {
   );
 }
 
-export default function MainSlide () {
+export default function MainSlide ({priority = true}) {
 
  const sliderRef = useRef<Slider>(null);
 
@@ -66,13 +66,13 @@ export default function MainSlide () {
   return (
     <Slider {...settings} ref={sliderRef} className='main-slide-wrapper'>
       <div className='main-slider'>
-        <Image src="/images/main_banner1.png" alt='메인배너1' fill/>
+        <Image src="/images/main_banner1.png" alt='메인배너1' fill priority={priority} unoptimized/>
       </div>
       <div className='main-slider'>
-        <Image src="/images/main_banner2.jpg" alt='메인배너2' fill/>
+        <Image src="/images/main_banner2.jpg" alt='메인배너2' fill priority={priority} unoptimized/>
       </div>
       <div className='main-slider'>
-        <Image src="/images/main_banner_3.jpg" alt='메인배너3' fill/>
+        <Image src="/images/main_banner_3.jpg" alt='메인배너3' fill priority={priority} unoptimized/>
       </div>
     </Slider>
   );

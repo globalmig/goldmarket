@@ -1,8 +1,14 @@
 import ProductLayout from "@/components/ProductLayout";
 
-export default function ProductPage() {
+interface categoryPageProps {
+  params: Promise<{category: string;}>;
+}
+
+export default async function ProductPage({ params }: categoryPageProps) {
+
+  const {category} = await params;
 
     return (
-        <ProductLayout/>
+       <ProductLayout categoryKey={category} />
     )
 }
