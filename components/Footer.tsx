@@ -5,15 +5,15 @@ import Script from "next/script";
 export default function Footer() {
 
     const initWSA = () => {
-    if (typeof window.wsa !== 'undefined' && typeof window.wsa.inflow === 'function') {
-      window.wsa.inflow('goldmarket.co.kr');
-      if (typeof window.wsa_do === 'function') {
-        window.wsa_do(window.wsa);
-      }
-    } else {
-      console.error('WSA object still not ready');
-    }
-  };
+        if (typeof window.wsa !== 'undefined' && typeof window.wsa.inflow === 'function') {
+            window.wsa.inflow('goldmarket.co.kr');
+            if (typeof window.wsa_do === 'function') {
+                window.wsa_do(window.wsa);
+            }
+        } else {
+            console.error('WSA object still not ready');
+        }
+    };
 
     return (
         <>
@@ -41,13 +41,14 @@ export default function Footer() {
                         <Image src="/images/business_card.png" alt="대표님 명함" width={557} height={346} />
                     </div>
                 </div>
-                 <Script
-                src="//wsa.mig-log.com/wsalog.js"
-                type="text/javascript"
-                strategy="afterInteractive"
-                onLoad={initWSA}
-            />
+                <Script
+                    src="//wsa.mig-log.com/wsalog.js"
+                    strategy="afterInteractive"
+                    onLoad={() => {
+                        setTimeout(initWSA, 100);
+                    }}
+                />
             </footer>
-            </>
+        </>
     )
 }
