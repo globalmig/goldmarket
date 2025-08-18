@@ -42,12 +42,16 @@ export default function Footer() {
                     </div>
                 </div>
                 <Script
-                    src="//wsa.mig-log.com/wsalog.js"
-                    strategy="afterInteractive"
-                    onLoad={() => {
-                        setTimeout(initWSA, 100);
-                    }}
-                />
+    src="//wsa.mig-log.com/wsalog.js"
+    strategy="afterInteractive"
+    onLoad={() => {
+        if (typeof window.wsa !== 'undefined') {
+            setTimeout(initWSA, 100);
+        } else {
+            console.error('WSA script loaded but window.wsa not defined yet');
+        }
+    }}
+/>
             </footer>
         </>
     )
