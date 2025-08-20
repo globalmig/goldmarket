@@ -15,7 +15,7 @@ main>:nth-child(2) {
     position: absolute;
     bottom: 0px;
     left: 0px;
-    background: linear-gradient(180deg, rgb(0, 0, 0,0) 15%, rgb(0, 0, 0,0.8) 85%);
+    background: linear-gradient(180deg, rgb(0, 0, 0, 0) 15%, rgb(0, 0, 0, 0.8) 85%);
 }
 
 main>:last-child h1 {
@@ -45,12 +45,12 @@ main>:last-child table thead {
     border-top-right-radius: 20px;
 }
 
-main>:last-child table thead th:last-of-type{
+main>:last-child table thead th:last-of-type {
     color: #ccc;
 }
 
 main>:last-child table thead th {
-font-weight: 300;
+    font-weight: 300;
 }
 
 main>:last-child table thead span {
@@ -195,12 +195,12 @@ main>:last-child table tbody span {
 .product>div {
     width: 1460px;
     margin: 0 auto;
-    padding: 100px 0 150px;
+    padding: 180px 0 150px;
 }
 
 .product>div>:first-child {
     margin-bottom: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 80px;
     border-bottom: 1px solid #ddd;
 }
 
@@ -211,19 +211,19 @@ main>:last-child table tbody span {
 .product>div>:first-child ul {
     justify-content: center;
     gap: 20px;
-    margin-top: 30px;
+    margin-top: 40px;
 }
 
-.product>div>:first-child ul li a{
+.product>div>:first-child ul li a {
     color: #000;
-     background: #f3f3f3;
+    background: #f3f3f3;
     border-radius: 7px;
     padding: 8px 45px;
 }
 
 .product>div>:first-child ul li a:focus {
-   background-color: #000;
-    color: white; 
+    background-color: #000;
+    color: white;
 }
 
 .product-list {
@@ -252,9 +252,15 @@ main>:last-child table tbody span {
 }
 
 .item-wrapper {
-    position: relative;
     width: 100%;
     height: 300px;
+}
+
+.item-wrapper>a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
 .product-list .product-item>:first-child img {
@@ -263,7 +269,7 @@ main>:last-child table tbody span {
     object-fit: contain;
 }
 
-.product-list .product-item>:last-child p:first-of-type{
+.product-list .product-item>:last-child p:first-of-type {
     font-weight: bold;
 }
 
@@ -275,6 +281,91 @@ main>:last-child table tbody span {
 
 .product-list .product-item>:last-child p span {
     font-weight: bold;
+}
+
+.detail>div {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 180px 0 150px;
+}
+
+.detail>div>:first-child {
+    margin-bottom: 75px;
+}
+
+.detail>div>:first-child>:first-child {
+    margin: auto 0;
+}
+
+.detail>div>:first-child>:last-child {
+    margin: auto 0;
+    width: 45%;
+}
+
+.detail>div>:first-child>:last-child>p {
+    color: #555;
+    margin: 20px 0 40px;
+}
+
+.detail>div>:first-child>:last-child>div>p {
+    font-size: 0.7rem;
+    color: #555;
+}
+
+.detail>div>:first-child>:last-child>div>p:last-of-type {
+    margin-top: 30px;
+}
+
+.detail>div>:first-child>:last-child>div h3 {
+    margin: 5px 0 25px;
+}
+
+.detail>div>:first-child>:last-child>div ul {
+    border-top: 1px solid #ddd;
+    padding: 15px 0 0;
+}
+
+.detail>div>:first-child>:last-child>div ul li {
+    color: #333;
+    padding: 8px 0;
+}
+
+.detail>div>:first-child>:last-child>div ul li p:last-of-type {
+    width: 60%;
+}
+
+.detail>div>:first-child>:last-child>div>p:last-of-type {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+}
+
+.detail>div>:first-child>:last-child>button {
+    margin-top: 70px;
+    background: #E3C565;
+    color: white;
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+}
+
+.detail>div>:last-child>h2 {
+    border-bottom: 1px solid black;
+    padding: 20px 0;
+    margin-bottom: 70px;
+}
+
+.detail>div>:last-child>div {
+    position: relative;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.detail>div>:last-child>div>img {
+    height: auto;
+}
+
+.detail>div>:last-child>div>img:first-of-type {
+    margin-bottom: 80px;
 }
 
 .admin>div {
@@ -290,20 +381,21 @@ main>:last-child table tbody span {
     text-align: center;
 }
 
-.admin>div>form, .admin>div>:last-child {
+.admin>div>form,
+.admin>div>:last-child {
     width: 500px;
     margin: 0 auto;
 }
 
-.admin>div>form h3{
+.admin>div>form h3 {
     margin-bottom: 30px;
 }
 
-.admin>div>form >div{
+.admin>div>form>div {
     margin-bottom: 50px;
 }
 
-.admin>div>form >div>div{
+.admin>div>form>div>div {
     width: 30%;
 }
 
@@ -323,7 +415,7 @@ main>:last-child table tbody span {
     padding: 10px;
 }
 
-.admin>div>form button:hover{
+.admin>div>form button:hover {
     background-color: #252524;
 }
 
@@ -345,7 +437,7 @@ main>:last-child table tbody span {
     width: 50%;
 }
 
-.admin>div>:last-child table thead tr th:first-of-type{
+.admin>div>:last-child table thead tr th:first-of-type {
     border-right: 1px solid #555;
 }
 

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: '한국금시장거래소 압구정점',
     description: '한국금시장거래소 압구정점 홈페이지입니다.',
-    // url: 'https://www.campingmaker.co.kr/', 도메인 주소 확인 필요
+    url: 'https://www.goldmarket.co.kr/',
     siteName: '한국금시장거래소 압구정점',
     images: [
       {

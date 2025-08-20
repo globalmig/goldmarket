@@ -41,22 +41,31 @@ export default function ProductLayout({ categoryKey, selectedSubCategory }: Prod
                     <h2>{data.title}</h2>
                     {data.subcategories &&
                         <ul className="display-flex subcategory">
-                            {data.subcategories.map((sub, index) => (
-                                <li key={index}>
-                                    <Link href={`/${categoryKey}/${sub}`}
-                                    style={decodeURIComponent(pathname) === `/${categoryKey}/${sub}` ? {background: "black", color: "white"} : {background: "#f3f3f3", color: "black"}}>
-                                        {sub}
-                                    </Link>
-                                </li>
-                            ))}
+                            {data.subcategories.map((sub, index) => {
+                                const encodedSub = encodeURIComponent(sub); // 인코딩된 값
+                                const decodedPath = decodeURIComponent(pathname); // 현재 경로 디코딩
+                                return (
+                                    <li key={index}>
+                                        <Link href={`/${categoryKey}/${encodedSub}`}
+                                            style={
+                                                decodedPath === `/${categoryKey}/${sub}`
+                                                    ? { background: "black", color: "white" }
+                                                    : { background: "#f3f3f3", color: "black" }
+                                            }>
+                                            {sub}
+                                        </Link>
+                                    </li>
+                                )
+                            }
+                            )}
                         </ul>
                     }
                 </div>
                 <ProductList category={data.title}
                     subCategory={selectedSubCategory
-            ? [decodeURIComponent(selectedSubCategory)]
-            : undefined
-    } />
+                        ? [decodeURIComponent(selectedSubCategory)]
+                        : undefined
+                    } />
             </div>
         </article>
     )

@@ -14,11 +14,12 @@ interface ProductType {
     subCategory?: string;
     name: string;
     subname: string;
-    price: number | undefined;
+    model?: string;
+    price?: number;
     img: string;
+    detailImag?: string;
     weight: number;
 }
-
 
 export default function ProductList({ category, subCategory}: ProductListProps) {
 
@@ -28,12 +29,13 @@ export default function ProductList({ category, subCategory}: ProductListProps) 
     const goldPrice = updatePrice?.buy ?? 0;
     const rate = updatePrice?.rate ?? 0;
 
-     const filterList: ProductType[] = ProductData.filter(
-        (product): product is ProductType => !!product && product.category === category
-    ).filter(product => {
-        if (!subCategory || subCategory.length === 0) return true;
-        return product.subCategory && subCategory.includes(product.subCategory);
-    });
+    const filterList = ProductData
+  .filter(product => product.category === category)
+  .filter(product => {
+    if (!subCategory || subCategory.length === 0) return true;
+    return product.subCategory && subCategory.includes(product.subCategory);
+  });
+
 
     const getCalculatedPrice = (product: ProductType) => {
         const { weight } = product;
@@ -80,6 +82,8 @@ export default function ProductList({ category, subCategory}: ProductListProps) 
                     return (
                         <ProductItem
                             key={product.id}
+                            id={product.id}
+                            category={product.category}
                             name={product.name ?? ""}
                             subname={product.subname}
                             price={price}

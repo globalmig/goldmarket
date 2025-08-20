@@ -1,8 +1,11 @@
 'use client'
 import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 interface ProductItemProps {
+    id: number,
+    category: string,
     name: string,
     subname: string,
     price: number | undefined,
@@ -11,11 +14,11 @@ interface ProductItemProps {
     priority?: boolean;
 }
 
-export default function ProductItem({ name, subname, price, img, weight, priority = false }: ProductItemProps) {
+export default function ProductItem({ id, category, name, subname, price, img, weight, priority = false }: ProductItemProps) {
 
     const pathname = usePathname();
-    const isPriceHidden = pathname.startsWith('/jewelry') || pathname.startsWith('/goldbaby') || pathname.startsWith('/silverbar');
-    const isWeight = weight < 3.75 ; // 무게가 3.75g미만 부터 가격 표시X
+    const isPriceHidden = pathname.startsWith('/goldbaby') || pathname.startsWith('/silverbar');
+    const isWeight = weight < 3.75; // 무게가 3.75g미만 부터 가격 표시X
 
     const roundedPrice = price !== undefined
         ? Math.ceil(price / 1000) * 1000
@@ -24,8 +27,10 @@ export default function ProductItem({ name, subname, price, img, weight, priorit
     return (
         <section className="product-item">
             <div className="item-wrapper">
-                <Image src={img} alt={name} fill
-                    sizes="(max-width: 768px) 100vw, 24vw" priority={priority} unoptimized/>
+                <Link href={`/${category}/detail/${id}`}>
+                    <Image src={img} alt={name} fill
+                        sizes="(max-width: 768px) 100vw, 24vw" priority={priority} unoptimized />
+                </Link>
             </div>
             <div>
                 <p>{name} <span>{weight.toLocaleString()}g</span></p>

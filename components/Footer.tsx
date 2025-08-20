@@ -4,17 +4,6 @@ import Link from "next/link";
 import Script from "next/script";
 export default function Footer() {
 
-    const initWSA = () => {
-        if (typeof window.wsa !== 'undefined' && typeof window.wsa.inflow === 'function') {
-            window.wsa.inflow('goldmarket.co.kr');
-            if (typeof window.wsa_do === 'function') {
-                window.wsa_do(window.wsa);
-            }
-        } else {
-            console.error('WSA object still not ready');
-        }
-    };
-
     return (
         <>
             <footer>
@@ -42,16 +31,20 @@ export default function Footer() {
                     </div>
                 </div>
                 <Script
-    src="//wsa.mig-log.com/wsalog.js"
-    strategy="afterInteractive"
-    onLoad={() => {
-        if (typeof window.wsa !== 'undefined') {
-            setTimeout(initWSA, 100);
-        } else {
-            console.error('WSA script loaded but window.wsa not defined yet');
-        }
-    }}
-/>
+                    src="//wsa.mig-log.com/wsalog.js"
+                    type="text/javascript"
+                    strategy="beforeInteractive"
+                />
+                <Script
+                    id="wsa-init"
+                    strategy="afterInteractive"
+                    dangerouslySetInnerHTML={{
+                        __html: `
+            wsa.inflow("www.goldmarket.co.kr");
+            wsa_do(wsa);
+          `
+                    }}
+                />
             </footer>
         </>
     )
