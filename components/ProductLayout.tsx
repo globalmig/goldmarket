@@ -42,8 +42,8 @@ export default function ProductLayout({ categoryKey, selectedSubCategory }: Prod
                     {data.subcategories &&
                         <ul className="display-flex subcategory">
                             {data.subcategories.map((sub, index) => {
-                                const encodedSub = encodeURIComponent(sub); // 인코딩된 값
-                                const decodedPath = decodeURIComponent(pathname); // 현재 경로 디코딩
+                                const encodedSub = encodeURIComponent(sub);
+                                const decodedPath = decodeURIComponent(pathname);
                                 return (
                                     <li key={index}>
                                         <Link href={`/${categoryKey}/${encodedSub}`}

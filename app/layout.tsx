@@ -23,9 +23,6 @@ export const metadata: Metadata = {
     locale: 'ko_KR',
     type: 'website',
   },
-  // other: { 웹마스터 도구 설정 시, 키 입력
-  //   'naver-site-verification': '632bbdbe748e6125f42049c66acc306736a8ad8e',
-  // }
 };
 
 export default function RootLayout({

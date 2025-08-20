@@ -30,7 +30,8 @@ export default function Footer() {
                         <Image src="/images/business_card.png" alt="대표님 명함" width={557} height={346} />
                     </div>
                 </div>
-                <Script
+            </footer>
+            <Script
                     src="//wsa.mig-log.com/wsalog.js"
                     type="text/javascript"
                     strategy="beforeInteractive"
@@ -45,7 +46,6 @@ export default function Footer() {
           `
                     }}
                 />
-            </footer>
         </>
     )
 }
