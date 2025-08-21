@@ -9,7 +9,7 @@ export const ProductData = [
         model: "수납함",
         price: 30000,
         img: "/images/goldbar/골드수납함.jpg",
-        detailImag: "/images/detail/goldbar/골드수납함_detail.jpeg",
+        detailImag: "/images/detail/goldbar/골드수납함_detail.jpg",
         weight: 3.75,
     },
     {
