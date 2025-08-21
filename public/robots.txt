@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /admin
+
+User-agent: Yeti
+Disallow: /admin
+
+Sitemap: https://www.goldmarket.co.kr/sitemap.xml

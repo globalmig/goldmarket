@@ -11,7 +11,7 @@ interface ProductLayoutProps {
 const CATEGORY_MAP: { [key: string]: { title: string; subcategories?: string[] } } = {
     goldbar: {
         title: '골드바',
-        subcategories: ['사자 골드바', '호랑이 골드바', '기타 골드바', 'LS MnM 골드바'],
+        subcategories: ['사자 골드바', '호랑이 골드바', '기타 골드바', 'LS MnM 골드바','기타'],
     },
     silverbar: {
         title: '실버바',

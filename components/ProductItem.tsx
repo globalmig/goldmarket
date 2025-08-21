@@ -33,13 +33,10 @@ export default function ProductItem({ id, category, name, subname, price, img, w
                 </Link>
             </div>
             <div>
-                <p>{name} <span>{weight.toLocaleString()}g</span></p>
+                <p>{name} <span>{name !== "골드 수납함" && `${weight.toLocaleString()}g`}</span></p>
                 <p>{subname}</p>
                 <p>
-                    {isPriceHidden || isWeight ?
-                        <span>시세 변동</span>
-                        : <span>{roundedPrice?.toLocaleString()}원</span>
-                    }
+                    {name === "골드 수납함" ? <span>30,000원</span>: isPriceHidden || isWeight ? <span>시세 변동</span>: <span>{roundedPrice?.toLocaleString()}원</span>}
                 </p>
             </div>
         </section>

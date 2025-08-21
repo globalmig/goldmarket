@@ -74,12 +74,12 @@ export default function DetailLayout() {
 
     const isPriceHidden = pathname.startsWith('/goldbaby') || pathname.startsWith('/silverbar') || product.weight < 3.75;
     const detailImage = pathname.startsWith('/%EC%88%9C%EA%B8%88%EB%B2%A0%EC%9D%B4%EB%B9%84') ||
-                        pathname.startsWith('/%EC%88%9C%EA%B8%88%EC%BD%94%EC%9D%B8') ||
-                        pathname.startsWith('/%EC%88%9C%EA%B8%88%EA%B8%B0%EB%85%90%ED%92%88') 
-                        ? "/images/detail/detail_02_2.png"
-                        : pathname.startsWith('/%EC%8B%A4%EB%B2%84%EB%B0%94')
-                        ? null
-                        : "/images/detail/detail_02.jpg";
+        pathname.startsWith('/%EC%88%9C%EA%B8%88%EC%BD%94%EC%9D%B8') ||
+        pathname.startsWith('/%EC%88%9C%EA%B8%88%EA%B8%B0%EB%85%90%ED%92%88')
+        ? "/images/detail/detail_02_2.png"
+        : pathname.startsWith('/%EC%8B%A4%EB%B2%84%EB%B0%94')
+            ? null
+            : "/images/detail/detail_02.jpg";
 
     return (
         <article className="detail">
@@ -89,11 +89,17 @@ export default function DetailLayout() {
                         <Image src={product.img} alt="상품이미지" width={550} height={550} />
                     </div>
                     <div>
-                        <h2>{product.name} {product.weight}g</h2>
+                        <h2>{product.name} {product.name === "골드 수납함" ? "" : `${product.weight}g`}</h2>
                         {product.detailContent ? <p>{product.detailContent}</p> : <p> </p>}
                         <div>
                             <p>판매가</p>
-                            {isPriceHidden ? <h3>시세 변동</h3> : <h3>{roundedPrice?.toLocaleString()}원</h3>}
+                            <h3>
+                                {product.name === "골드 수납함"
+                                ? <span>30,000원</span>
+                                : isPriceHidden ?
+                                <span>시세 변동</span>
+                                : <span>{roundedPrice?.toLocaleString()}원</span>}
+                            </h3>
                             <ul>
                                 <li className="display-flex">
                                     <p>상품요약정보</p>
