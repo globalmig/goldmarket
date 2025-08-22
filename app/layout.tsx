@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     siteName: '한국금시장거래소 압구정점',
     images: [
       {
-        url: 'https://images/og_image.png',
+        url: 'https://www.goldmarket.co.kr/images/og_image.png',
         width: 1200,
         height: 630,
         alt: '한국금시장거래소 미리보기 이미지',
@@ -23,6 +23,9 @@ export const metadata: Metadata = {
     locale: 'ko_KR',
     type: 'website',
   },
+  other: {
+    'naver-site-verification': '71ef59ad4d2fdb36af7b582dc091585e5626d4c5',
+  }
 };
 
 export default function RootLayout({

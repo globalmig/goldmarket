@@ -74,28 +74,37 @@ export default function ProductList({ category, subCategory}: ProductListProps) 
 
     return (
         <div className={`product-list ${filterList.length > 0 ? "isList" : "unList"}`}>
-            {filterList.length > 0 ? (
-                filterList.map(product => {
-                    if (!product) return null;
-                    const price = getCalculatedPrice(product);
-                   
-                    return (
-                        <ProductItem
-                            key={product.id}
-                            id={product.id}
-                            category={product.category}
-                            name={product.name ?? ""}
-                            subname={product.subname}
-                            price={price}
-                            img={product.img}
-                            weight={product.weight}
-                        />
-                    );
+  {filterList.length > 0 ? (
+    [...filterList]
+      .sort((a, b) => {
+        // 1. 카테고리 오름차순 정렬
+        if (a.category < b.category) return -1;
+        if (a.category > b.category) return 1;
 
-                })
-            ) : (
-                <p>해당 카테고리에 상품이 없습니다.</p>
-            )}
-        </div>
+        // 2. 같은 카테고리 내에서는 무게 내림차순
+        return (b.weight ?? 0) - (a.weight ?? 0);
+      })
+      .map(product => {
+        if (!product) return null;
+        const price = getCalculatedPrice(product);
+
+        return (
+          <ProductItem
+            key={product.id}
+            id={product.id}
+            category={product.category}
+            name={product.name ?? ""}
+            subname={product.subname}
+            price={price}
+            img={product.img}
+            weight={product.weight}
+          />
+        );
+      })
+  ) : (
+    <p>해당 카테고리에 상품이 없습니다.</p>
+  )}
+</div>
+
     )
 }

@@ -22,10 +22,10 @@ export default function Home() {
 
   const formatDate = (today: string): string => {
     const date = new Date(today);
-    const year = String(date.getFullYear()).slice(2);
+    const year = String(date.getFullYear()).slice(0);
     const month = String(date.getMonth() + 1).padStart(2, '0');
     const day = String(date.getDate()).padStart(2, '0');
-    return `${year}/${month}/${day}`;
+    return `${year}년 ${month}월 ${day}일`;
   }
 
   const settings = {
@@ -42,24 +42,30 @@ export default function Home() {
     <>
 
       <main>
-        <MainSlide />
+        <MainSlide/>
+        {/* <div className='main-banner'>
+                <Image src="/images/main_banner.jpg" alt='캐나다 코스트코 계약 체결' fill/>
+        </div> */}
         <div></div>
         <div>
           <h2>실시간 상담 02-543-5551</h2>
           <h1>정확한 기준가를 적용하여 매입은 높게, 판매는 낮은 금액으로 시세 적용합니다</h1>
+          {/* 네이버 플레이스 추가 : https://naver.me/GV2dKf99 */}
+          {/* 주소 :  압구정역 4번 출구 근처 */}
+          {/* 주차는 매장 입구에 하시면 됩니다.*/}
           <table>
             <thead>
               <tr>
                 <th> </th>
-                <th><p>살때 <span>(VAT포함)</span></p></th>
-                <th><p>팔때</p></th>
+                <th><p>내가 살 때 <span>(VAT포함)</span></p></th>
+                <th><p>내가 팔 때</p></th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>
                   <p><span>순금 시세 </span>자사골드바기준</p>
-                  {priceData.date ? <p>{formatDate(priceData.date)}기준</p> : <p>오늘 기준</p>}
+                  {priceData.date ? <p>{formatDate(priceData.date)}</p> : <p>오늘 기준</p>}
                 </td>
                 <td>
                   <p>{todayPrice}원</p>

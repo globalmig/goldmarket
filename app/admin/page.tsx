@@ -105,15 +105,15 @@ export default function AdminPage() {
                             <div className="display-flex">
                                 <div>
                                     <div>
-                                        <label htmlFor="buy">팔때</label>
+                                        <label htmlFor="sell">살 때</label>
                                     </div>
-                                    <input type="number" id="buy" name="buy" placeholder="변동된 시세를 입력하세요." onChange={onChange} value={form.buy} />
+                                    <input type="number" id="sell" name="sell" placeholder="변동된 시세를 입력하세요." onChange={onChange} value={form.sell} />
                                 </div>
                                 <div>
                                     <div>
-                                        <label htmlFor="sell">살때</label>
+                                        <label htmlFor="buy">팔 때</label>
                                     </div>
-                                    <input type="number" id="sell" name="sell" placeholder="변동된 시세를 입력하세요." onChange={onChange} value={form.sell} />
+                                    <input type="number" id="buy" name="buy" placeholder="변동된 시세를 입력하세요." onChange={onChange} value={form.buy} />
                                 </div>
                                 <div>
                                     <div>
@@ -129,8 +129,8 @@ export default function AdminPage() {
                             <table>
                                 <thead>
                                     <tr>
-                                        <th><p>살때 <span>(VAT포함)</span></p></th>
-                                        <th><p>팔때</p></th>
+                                        <th><p>살 때 <span>(VAT포함)</span></p></th>
+                                        <th><p>팔 때</p></th>
                                     </tr>
                                 </thead>
                                 <tbody>

@@ -72,7 +72,7 @@ export default function DetailLayout() {
         ? Math.ceil(price / 1000) * 1000
         : undefined;
 
-    const isPriceHidden = pathname.startsWith('/goldbaby') || pathname.startsWith('/silverbar') || product.weight < 3.75;
+    const isPriceHidden = pathname.startsWith('/silverbar');
     const detailImage = pathname.startsWith('/%EC%88%9C%EA%B8%88%EB%B2%A0%EC%9D%B4%EB%B9%84') ||
         pathname.startsWith('/%EC%88%9C%EA%B8%88%EC%BD%94%EC%9D%B8') ||
         pathname.startsWith('/%EC%88%9C%EA%B8%88%EA%B8%B0%EB%85%90%ED%92%88')
@@ -89,14 +89,14 @@ export default function DetailLayout() {
                         <Image src={product.img} alt="상품이미지" width={550} height={550} />
                     </div>
                     <div>
-                        <h2>{product.name} {product.name === "골드 수납함" ? "" : `${product.weight}g`}</h2>
+                        <h2>{product.name} {product.name === "골드바 수납함" ? "" : `${product.weight}g`}</h2>
                         {product.detailContent ? <p>{product.detailContent}</p> : <p> </p>}
                         <div>
                             <p>판매가</p>
                             <h3>
-                                {product.name === "골드 수납함"
+                                {product.name === "골드바 수납함"
                                 ? <span>30,000원</span>
-                                : isPriceHidden ?
+                                : isPriceHidden || product.category === "실버바" ?
                                 <span>시세 변동</span>
                                 : <span>{roundedPrice?.toLocaleString()}원</span>}
                             </h3>
@@ -129,14 +129,14 @@ export default function DetailLayout() {
                 <div>
                     <h2>상세정보</h2>
                     <div>
-                        <Image src="/images/detail/detail_01.jpg" alt="상세정보" width={1000} height={460} />
-                        {product.detailImag && <Image src={product.detailImag} alt="상세정보" width={1000} height={10000} />}
+                        <Image src="/images/detail/detail_01.jpg" alt="주의사항" width={1000} height={460} />
+                        {product.detailImag && <Image src={product.detailImag} alt="상세정보" width={1000} height={5000} />}
                         {detailImage && <Image src={detailImage} alt="상세정보" width={1000} height={2700} />}
                         <Image src="/images/detail/detail_03.jpeg" alt="상세정보" width={1000} height={1800} />
                         <Image src="/images/detail/detail_04.png" alt="상세정보" width={1000} height={800} />
                         <Image src="/images/detail/detail_05.jpg" alt="상세정보" width={1000} height={2000} />
                         <Image src="/images/detail/detail_06.jpg" alt="상세정보" width={1000} height={3000} />
-                        <Image src="/images/detail/detail_07.jpg" alt="상세정보" width={1000} height={1700} />
+                        <Image src="/images/detail/detail_07.jpg" alt="구매 전 유의사항" width={1000} height={1700} />
                     </div>
                 </div>
             </div>

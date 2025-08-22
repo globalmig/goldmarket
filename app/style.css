@@ -122,6 +122,12 @@ main>:last-child table tbody span {
     color: #F4E220;
 }
 
+.main-banner {
+    position: relative;
+    width: 100%;
+    height: 630px;
+}
+
 .main-slide-wrapper {
     height: 620px;
 }
@@ -206,6 +212,7 @@ main>:last-child table tbody span {
 
 .product>div>:first-child>h2 {
     text-align: center;
+    font-size: 1.8rem;
 }
 
 .product>div>:first-child ul {
@@ -219,6 +226,7 @@ main>:last-child table tbody span {
     background: #f3f3f3;
     border-radius: 7px;
     padding: 8px 45px;
+    font-size: 1.2rem;
 }
 
 .product>div>:first-child ul li a:focus {
@@ -247,8 +255,9 @@ main>:last-child table tbody span {
 
 .product-list .product-item {
     text-align: center;
-    width: 23.97%;
-    padding: 30px;
+    width: 23.2%;
+    margin: 5px;
+    margin-bottom: 30px;
 }
 
 .item-wrapper {
@@ -266,17 +275,19 @@ main>:last-child table tbody span {
 .product-list .product-item>:first-child img {
     width: 100%;
     height: 300px;
-    object-fit: contain;
+    object-fit:cover;
 }
 
 .product-list .product-item>:last-child p:first-of-type {
     font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 20px;
 }
 
 .product-list .product-item>:last-child p:nth-of-type(2) {
-    color: #aaa;
-    font-size: 0.9rem;
-    margin-bottom: 10px;
+    color: #919191;
+    font-weight: bold;
+    margin: 10px 0 8px;
 }
 
 .product-list .product-item>:last-child p span {
@@ -308,7 +319,6 @@ main>:last-child table tbody span {
 }
 
 .detail>div>:first-child>:last-child>div>p {
-    font-size: 0.7rem;
     color: #555;
 }
 
@@ -318,6 +328,7 @@ main>:last-child table tbody span {
 
 .detail>div>:first-child>:last-child>div h3 {
     margin: 5px 0 25px;
+    font-size: 1.5rem;
 }
 
 .detail>div>:first-child>:last-child>div ul {
@@ -328,6 +339,10 @@ main>:last-child table tbody span {
 .detail>div>:first-child>:last-child>div ul li {
     color: #333;
     padding: 8px 0;
+}
+
+.detail>div>:first-child>:last-child>div ul li p:first-of-type{
+    font-weight: bold;
 }
 
 .detail>div>:first-child>:last-child>div ul li p:last-of-type {
