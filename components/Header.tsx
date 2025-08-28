@@ -1,6 +1,7 @@
 'use client'
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 import { useState } from "react";
 
 export default function Header() {
@@ -41,6 +42,17 @@ export default function Header() {
                     </button>
                 </div>
             </div>
+            <Script src="//wsa.mig-log.com/wsalog.js" type="text/javascript" strategy="beforeInteractive" />
+            <Script
+                id="wsa-init"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                    __html: `
+             wsa.inflow("goldmarket.co.kr");
+            wsa_do(wsa);
+          `
+                }}
+            />
         </header>
     )
 }

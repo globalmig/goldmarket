@@ -27,15 +27,41 @@ export default function Home() {
     return `${year}년 ${month}월 ${day}일`;
   }
 
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 5,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-  };
+const settings = {
+  dots: false,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  responsive: [
+    {
+      breakpoint: 1200, // 1200px 이하
+      settings: {
+        slidesToShow: 4,
+      }
+    },
+    {
+      breakpoint: 992, // 992px 이하
+      settings: {
+        slidesToShow: 3,
+      }
+    },
+    {
+      breakpoint: 768, // 768px 이하
+      settings: {
+        slidesToShow: 2,
+      }
+    },
+    {
+      breakpoint: 480, // 480px 이하
+      settings: {
+        slidesToShow: 1,
+      }
+    }
+  ]
+};
 
   return (
     <>

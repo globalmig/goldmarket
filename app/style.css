@@ -136,6 +136,7 @@ main>div>:last-child>img {
     margin: 0 auto;
     padding: 100px 0 150px;
     z-index: 2;
+    overflow: hidden;
 }
 
 .recommend>div>:first-child {
@@ -150,7 +151,6 @@ main>div>:last-child>img {
 
 .recommend>div>:last-child {
     width: 1805px;
-    box-sizing: border-box;
 }
 
 .recommend>div>:last-child>div {
@@ -456,7 +456,7 @@ main>div>:last-child>img {
         padding: 10px;
     }
 
-    main>div>:first-child table tbody tr td >p span{
+    main>div>:first-child table tbody tr td>p span {
         font-size: 0.7rem;
     }
 
@@ -508,6 +508,7 @@ main>div>:last-child>img {
         width: 100%;
         margin: 0;
         padding: 80px 5% 100px;
+        overflow: hidden;
     }
 
     .recommend>div>:last-child {
@@ -521,6 +522,10 @@ main>div>:last-child>img {
     .recommend>div>:last-child>div a img {
         width: 200px;
         height: auto;
+    }
+
+    .recommend .slcik-slide {
+        padding: 10px;
     }
 
     .product>div {
@@ -612,7 +617,7 @@ main>div>:last-child>img {
         width: 100%;
     }
 
-    .detail>div>:first-child>:last-child h2{
+    .detail>div>:first-child>:last-child h2 {
         font-size: 1.3rem;
     }
 
@@ -648,7 +653,7 @@ main>div>:last-child>img {
     }
 
     .detail>div>:last-child>h2 {
-       font-size: 1.3rem;
+        font-size: 1.3rem;
     }
 
     .detail>div>:last-child>div {

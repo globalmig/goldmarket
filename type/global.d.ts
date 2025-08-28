@@ -7,6 +7,6 @@ declare global {
     };
     wsa_do?: (wsa: typeof window.wsa) => void;
   }
-}
+  }
 
 export {};
