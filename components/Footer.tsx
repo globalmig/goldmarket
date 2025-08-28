@@ -50,20 +50,6 @@ export default function Footer() {
           `,
         }}
       />
-            {/* <Script
-                id="wsa-init"
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{
-                    __html: `
-      if (window.wsa?.inflow) {
-        window.wsa.inflow("www.goldmarket.co.kr");
-      }
-      if (window.wsa_do) {
-        window.wsa_do(window.wsa);
-      }
-    `,
-                }}
-            /> */}
         </>
     )
 }
