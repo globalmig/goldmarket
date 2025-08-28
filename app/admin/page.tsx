@@ -107,13 +107,13 @@ export default function AdminPage() {
                                     <div>
                                         <label htmlFor="buy">살 때</label>
                                     </div>
-                                    <input type="number" id="buy" name="buy" placeholder="변동된 시세를 입력하세요." onChange={onChange} value={form.sell} />
+                                    <input type="number" id="buy" name="buy" placeholder="변동된 시세를 입력하세요." onChange={onChange} value={form.buy} />
                                 </div>
                                 <div>
                                     <div>
                                         <label htmlFor="sell">팔 때</label>
                                     </div>
-                                    <input type="number" id="sell" name="sell" placeholder="변동된 시세를 입력하세요." onChange={onChange} value={form.buy} />
+                                    <input type="number" id="sell" name="sell" placeholder="변동된 시세를 입력하세요." onChange={onChange} value={form.sell} />
                                 </div>
                                 <div>
                                     <div>
