@@ -68,9 +68,12 @@ export default function DetailLayout() {
     };
 
     const price = getCalculatedPrice(product);
+    const isPlusPrice = pathname.startsWith('/%EC%88%9C%EA%B8%88%EB%B2%A0%EC%9D%B4%EB%B9%84') || pathname.startsWith('/%EC%88%9C%EA%B8%88%EC%BD%94%EC%9D%B8') || pathname.startsWith('/%EC%88%9C%EA%B8%88%EA%B8%B0%EB%85%90%ED%92%88');
     const roundedPrice = price !== undefined
         ? Math.ceil(price / 1000) * 1000
         : undefined;
+    const displayPrice = roundedPrice &&
+        (isPlusPrice ? roundedPrice + 20000 : roundedPrice).toLocaleString();
 
     const isPriceHidden = pathname.startsWith('/silverbar');
     const detailImage = pathname.startsWith('/%EC%88%9C%EA%B8%88%EB%B2%A0%EC%9D%B4%EB%B9%84') ||
@@ -94,11 +97,13 @@ export default function DetailLayout() {
                         <div>
                             <p>판매가</p>
                             <h3>
-                                {product.name === "골드바 수납함"
-                                ? <span>30,000원</span>
-                                : isPriceHidden || product.category === "실버바" ?
-                                <span>시세 변동</span>
-                                : <span>{roundedPrice?.toLocaleString()}원</span>}
+                                {product.name === "골드바 수납함" ? (
+                                    <span>30,000원</span>
+                                ) : isPriceHidden || product.category === "실버바" ? (
+                                    <span>시세 변동</span>
+                                ) : (
+                                    <span>{displayPrice}원</span>
+                                )}
                             </h3>
                             <ul>
                                 <li className="display-flex">

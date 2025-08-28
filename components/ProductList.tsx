@@ -6,6 +6,12 @@ import usePrice from "@/hook/usePrice";
 interface ProductListProps {
     category: string,
     subCategory?: string[],
+    CATEGORY_MAP: {
+        [key: string]: {
+            title: string;
+            subcategories?: string[] | undefined;
+        };
+    }
 }
 
 interface ProductType {
@@ -21,7 +27,7 @@ interface ProductType {
     weight: number;
 }
 
-export default function ProductList({ category, subCategory}: ProductListProps) {
+export default function ProductList({ category, subCategory, CATEGORY_MAP }: ProductListProps) {
 
     const updatePrice = usePrice();
     if (!updatePrice) return null;
@@ -30,12 +36,15 @@ export default function ProductList({ category, subCategory}: ProductListProps) 
     const rate = updatePrice?.rate ?? 0;
 
     const filterList = ProductData
-  .filter(product => product.category === category)
-  .filter(product => {
-    if (!subCategory || subCategory.length === 0) return true;
-    return product.subCategory && subCategory.includes(product.subCategory);
-  });
+        .filter(product => product.category === category)
+        .filter(product => {
+            if (!subCategory || subCategory.length === 0) return true;
+            return product.subCategory && subCategory.includes(product.subCategory);
+        });
 
+    const uniqueList = Array.from(
+        new Map(filterList.map(p => [`${p.name}-${p.weight}`, p])).values()
+    );
 
     const getCalculatedPrice = (product: ProductType) => {
         const { weight } = product;
@@ -73,38 +82,36 @@ export default function ProductList({ category, subCategory}: ProductListProps) 
     };
 
     return (
-        <div className={`product-list ${filterList.length > 0 ? "isList" : "unList"}`}>
-  {filterList.length > 0 ? (
-    [...filterList]
-      .sort((a, b) => {
-        // 1. 카테고리 오름차순 정렬
-        if (a.category < b.category) return -1;
-        if (a.category > b.category) return 1;
+        <div className={`product-list ${uniqueList.length > 0 ? "isList" : "unList"}`}>
+            {uniqueList.length > 0 ? (
+                [...uniqueList]
+                    .sort((a, b) => {
+                        if (a.name === b.name) {
+                            return (b.weight ?? 0) - (a.weight ?? 0);
+                        }
+                        return a.id - b.id;
+                    })
+                    .map(product => {
+                        if (!product) return null;
+                        const price = getCalculatedPrice(product);
 
-        // 2. 같은 카테고리 내에서는 무게 내림차순
-        return (b.weight ?? 0) - (a.weight ?? 0);
-      })
-      .map(product => {
-        if (!product) return null;
-        const price = getCalculatedPrice(product);
-
-        return (
-          <ProductItem
-            key={product.id}
-            id={product.id}
-            category={product.category}
-            name={product.name ?? ""}
-            subname={product.subname}
-            price={price}
-            img={product.img}
-            weight={product.weight}
-          />
-        );
-      })
-  ) : (
-    <p>해당 카테고리에 상품이 없습니다.</p>
-  )}
-</div>
+                        return (
+                            <ProductItem
+                                key={product.id}
+                                id={product.id}
+                                category={product.category}
+                                name={product.name ?? ""}
+                                subname={product.subname}
+                                price={price}
+                                img={product.img}
+                                weight={product.weight}
+                            />
+                        );
+                    })
+            ) : (
+                <p>해당 카테고리에 상품이 없습니다.</p>
+            )}
+        </div>
 
     )
 }

@@ -40,6 +40,7 @@ export default function ProductLayout({ categoryKey, selectedSubCategory }: Prod
                 <div>
                     <h2>{data.title}</h2>
                     {data.subcategories &&
+                     (!pathname.startsWith('/goldcoin') || !pathname.startsWith("/silverbar") ?
                         <ul className="display-flex subcategory">
                             {data.subcategories.map((sub, index) => {
                                 const encodedSub = encodeURIComponent(sub);
@@ -58,10 +59,10 @@ export default function ProductLayout({ categoryKey, selectedSubCategory }: Prod
                                 )
                             }
                             )}
-                        </ul>
+                        </ul> : <></>)
                     }
                 </div>
-                <ProductList category={data.title}
+                <ProductList category={data.title} CATEGORY_MAP={CATEGORY_MAP}
                     subCategory={selectedSubCategory
                         ? [decodeURIComponent(selectedSubCategory)]
                         : undefined
