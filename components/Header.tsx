@@ -1,13 +1,10 @@
 'use client'
 import Image from "next/image";
 import Link from "next/link";
-import Script from "next/script";
 import { useState } from "react";
 
 export default function Header() {
 
-    // const pathname = usePathname();
-    // const isHome = pathname === '/'
     const [navOpen, setNavOpen] = useState(false);
 
     return (
@@ -25,7 +22,7 @@ export default function Header() {
                         </button>
                     </div>
                     <ul className="display-flex">
-                        <li><Link href="/">메인 화면</Link></li>
+                        <li><Link href="/" onClick={() => setNavOpen(false)}>메인 화면</Link></li>
                         <li><Link href="/goldbar" onClick={() => setNavOpen(false)}>골드바</Link></li>
                         <li><Link href="/silverbar" onClick={() => setNavOpen(false)}>실버바</Link></li>
                         <li><Link href="/goldbaby" onClick={() => setNavOpen(false)}>순금베이비</Link></li>
@@ -42,17 +39,6 @@ export default function Header() {
                     </button>
                 </div>
             </div>
-            <Script src="//wsa.mig-log.com/wsalog.js" type="text/javascript" strategy="beforeInteractive" />
-            <Script
-                id="wsa-init"
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{
-                    __html: `
-             wsa.inflow("goldmarket.co.kr");
-            wsa_do(wsa);
-          `
-                }}
-            />
         </header>
     )
 }

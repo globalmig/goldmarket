@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 export default function Footer() {
 
     return (
@@ -27,6 +28,25 @@ export default function Footer() {
                     <Image src="/images/business_card.png" alt="대표님 명함" width={557} height={346} />
                 </div>
             </div>
+            <Script src="//wsa.mig-log.com/wsalog.js" type="text/javascript" strategy="beforeInteractive" />
+            <Script
+                id="wsa-init"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                    __html: `
+            //  wsa.inflow("www.goldmarket.co.kr");
+            // wsa_do(wsa);
+            (function checkWSA() {
+        if (typeof window.wsa !== "undefined" && typeof window.wsa_do !== "undefined") {
+          window.wsa.inflow("www.goldmarket.co.kr");
+          window.wsa_do(window.wsa);
+        } else {
+          setTimeout(checkWSA, 50);
+        }
+      })();
+          `
+                }}
+            />
         </footer>
     )
 }

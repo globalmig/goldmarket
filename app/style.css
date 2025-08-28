@@ -438,7 +438,7 @@ main>div>:last-child>img {
     }
 
     main>div>:first-child {
-        padding: 20px 15px;
+        padding: 50px 15px 35px;
         width: 100%;
         font-size: 0.9rem;
         order: 2;
@@ -512,7 +512,7 @@ main>div>:last-child>img {
     }
 
     .recommend>div>:last-child {
-        width: 1050px;
+        width: 500px;
     }
 
     .recommend>div>:last-child>div {
@@ -520,12 +520,13 @@ main>div>:last-child>img {
     }
 
     .recommend>div>:last-child>div a img {
-        width: 200px;
+        width: 230px;
         height: auto;
     }
 
     .recommend .slcik-slide {
         padding: 10px;
+        margin: 0;
     }
 
     .product>div {

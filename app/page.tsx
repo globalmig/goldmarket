@@ -45,19 +45,13 @@ const settings = {
     {
       breakpoint: 992, // 992px 이하
       settings: {
-        slidesToShow: 3,
-      }
-    },
-    {
-      breakpoint: 768, // 768px 이하
-      settings: {
         slidesToShow: 2,
       }
     },
     {
-      breakpoint: 480, // 480px 이하
+      breakpoint: 400, // 480px 이하
       settings: {
-        slidesToShow: 1,
+        slidesToShow: 2,
       }
     }
   ]
