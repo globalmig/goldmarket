@@ -1,3 +1,7 @@
+main {
+    margin-top: 100px;
+}
+
 main>div {
     position: relative;
     width: 100%;
@@ -196,6 +200,21 @@ main>div>:last-child>img {
 .product>div>:first-child ul li a:focus {
     background-color: #000;
     color: white;
+}
+
+.loading {
+    width: 100%;
+    height: 500px;
+    position: relative;
+}
+
+.loading p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    width: 100%;
 }
 
 .product-list {
@@ -432,6 +451,10 @@ main>div>:last-child>img {
 
 @media screen and (max-width: 768px) {
 
+    main {
+    margin-top: 80px;
+}
+
     main>div {
         height: auto;
         flex-wrap: wrap;
@@ -595,7 +618,7 @@ main>div>:last-child>img {
     .detail>div {
         width: 100%;
         margin: 0;
-        padding: 40px 5% 100px;
+        padding: 100px 5%;
     }
 
     .detail>div>:first-child {

@@ -1,10 +1,10 @@
+'use client'
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
 export default function Footer() {
 
     return (
-        <>
         <footer>
             <Link href="tel:010-5482-4215" className="display-flex" style={{ width: '40px', maxWidth: '70px' }}>
                 <Image src="/icons/tel.png" alt="전화문의" width={100} height={100} />
@@ -35,18 +35,19 @@ export default function Footer() {
                 strategy="afterInteractive"
                 dangerouslySetInnerHTML={{
                     __html: `
-            (function checkWSA() {
-        if (typeof window.wsa !== "undefined" && typeof window.wsa_do !== "undefined") {
+      (function initWsa() {
+        if (window.wsa && typeof window.wsa.inflow === "function") {
           window.wsa.inflow("www.goldmarket.co.kr");
-          window.wsa_do(window.wsa);
+          if (typeof window.wsa_do === "function") {
+            window.wsa_do(window.wsa);
+          }
         } else {
-          setTimeout(checkWSA, 50);
+          setTimeout(initWsa, 300);
         }
       })();
-          `
+    `,
                 }}
             />
         </footer>
-        </>
     )
 }

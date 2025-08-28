@@ -4,6 +4,7 @@ import usePrice from "@/hook/usePrice";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 interface DetailProductType {
     id: number;
@@ -27,15 +28,32 @@ export default function DetailLayout() {
     const product = ProductData.find(p => p.id === productId);
     const productPrice = usePrice();
 
-    if (!product || !productPrice) return <p>상품을 찾을 수 없습니다.</p>
+    const [priceData, setPriceData] = useState<{ buy: number; rate: number } | null>(null);
 
-    const goldPrice = productPrice?.buy ?? 0;
-    const rate = productPrice?.rate ?? 0;
+     useEffect(() => {
+    async function fetchPrice() {
+      try {
+        const res = await fetch("/api/price");
+        const result = await res.json();
+        const [latestPrice] = result.data;
+        setPriceData({ buy: latestPrice.buy, rate: latestPrice.rate });
+      } catch (err) {
+        console.error(err);
+      }
+    }
+    fetchPrice();
+  }, []);
+
+    if (!product || !priceData) return <p>상품을 찾을 수 없습니다.</p>
+
+    const goldPrice = priceData.buy;
+    const rate = priceData.rate;
 
     const getCalculatedPrice = (product: DetailProductType) => {
-        const { weight } = product;
+        const { weight, price } = product;
 
         switch (weight) {
+            case 1 : return price;
             case 3.75:
                 return Math.round(goldPrice * 1 + (rate * goldPrice));
             case 5:
@@ -63,7 +81,7 @@ export default function DetailLayout() {
             case 1000:
                 return Math.round(goldPrice * 266.6666666666667 + (rate * goldPrice));
             default:
-                return typeof goldPrice === "number" ? goldPrice : undefined;
+                return typeof goldPrice === "number" ? price : undefined;
         }
     };
 

@@ -11,12 +11,17 @@ export interface GoldPrice {
   updateAt: Date
 }
 
+async function deleteOldPrices() {
+  const threeMonthsPrice = new Date(Date.now() - 1000*60*60*24*90 );
+  const result = await Price.deleteMany({createAt: {$lt: threeMonthsPrice}});
+  console.log(result);
+}
+
 export async function GET () {
     try {
     await connectDB();
-    console.log("MongoDB connected successfully");
+    await deleteOldPrices();
     const goldPrices = await Price.find().sort({ createdAt: -1 }).limit(2);
-      console.log("prices fetched:", goldPrices.length);
     return NextResponse.json({ data: goldPrices });
   } catch (error) {
     console.error('GET /api/price error:', error);

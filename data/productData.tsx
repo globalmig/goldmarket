@@ -645,7 +645,7 @@ export const ProductData = [
         subname: "FINE GOLD 0.5G",
         detailContent: "순금코인",
         model: "MONEYTREECOIN-0.5G",
-        price: 62000,
+        price: 115000,
         img: "/images/goldcoin/금나무코인_0.5g.jpg",
         detailImag: "/images/detail/goldcoin/금나무코인_0.5g_detail.jpg",
         weight: 0.5,

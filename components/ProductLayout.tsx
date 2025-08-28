@@ -2,6 +2,7 @@
 import { usePathname } from "next/navigation";
 import ProductList from "./ProductList";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 interface ProductLayoutProps {
     categoryKey: string;
@@ -33,6 +34,21 @@ export default function ProductLayout({ categoryKey, selectedSubCategory }: Prod
 
     const data = CATEGORY_MAP[categoryKey];
     const pathname = usePathname();
+    const [priceData, setPriceData] = useState(null);
+
+    useEffect(()=> {
+        const fetchPrice = async () => {
+      try {
+        const res = await fetch("/api/price");
+        const result = await res.json();
+        const [latestPrice] = result.data;
+        setPriceData(latestPrice);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+    fetchPrice();
+    },[]);
 
     return (
         <article className="product">
@@ -62,11 +78,18 @@ export default function ProductLayout({ categoryKey, selectedSubCategory }: Prod
                         </ul> : <></>)
                     }
                 </div>
+                {(!priceData)
+                ?
+                <div className="loading">
+                    <p>상품을 불러오는 중입니다.</p>
+                </div>
+                :
                 <ProductList category={data.title} CATEGORY_MAP={CATEGORY_MAP}
                     subCategory={selectedSubCategory
                         ? [decodeURIComponent(selectedSubCategory)]
                         : undefined
-                    } />
+                    } priceData={priceData}/>
+                }
             </div>
         </article>
     )

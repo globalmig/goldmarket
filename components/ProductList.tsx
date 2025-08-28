@@ -11,7 +11,8 @@ interface ProductListProps {
             title: string;
             subcategories?: string[] | undefined;
         };
-    }
+    },
+    priceData: {buy: number, rate: number}
 }
 
 interface ProductType {
@@ -27,13 +28,9 @@ interface ProductType {
     weight: number;
 }
 
-export default function ProductList({ category, subCategory, CATEGORY_MAP }: ProductListProps) {
+export default function ProductList({ category, subCategory, priceData }: ProductListProps) {
 
-    const updatePrice = usePrice();
-    if (!updatePrice) return null;
-
-    const goldPrice = updatePrice?.buy ?? 0;
-    const rate = updatePrice?.rate ?? 0;
+    const {buy: goldPrice, rate} = priceData;
 
     const filterList = ProductData
         .filter(product => product.category === category)
@@ -47,9 +44,10 @@ export default function ProductList({ category, subCategory, CATEGORY_MAP }: Pro
     );
 
     const getCalculatedPrice = (product: ProductType) => {
-        const { weight } = product;
+        const {weight, price} = product;
 
         switch (weight) {
+            case 1 : return price;
             case 3.75:
                 return Math.round(goldPrice * 1 + (rate * goldPrice));
             case 5:
@@ -77,7 +75,7 @@ export default function ProductList({ category, subCategory, CATEGORY_MAP }: Pro
             case 1000:
                 return Math.round(goldPrice * 266.6666666666667 + (rate * goldPrice));
             default:
-                return typeof goldPrice === "number" ? goldPrice : undefined;
+                return typeof goldPrice === "number" ? price : undefined;
         }
     };
 
