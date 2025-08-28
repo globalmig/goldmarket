@@ -28,22 +28,14 @@ export default function Footer() {
                     <Image src="/images/business_card.png" alt="대표님 명함" width={557} height={346} />
                 </div>
             </div>
-            <Script src="https://wsa.mig-log.com/wsalog.js" type="text/javascript" strategy="afterInteractive" />
+            <Script src="//wsa.mig-log.com/wsalog.js" type="text/javascript" strategy="afterInteractive" />
             <Script
                 id="wsa-init"
                 strategy="afterInteractive"
                 dangerouslySetInnerHTML={{
                     __html: `
-            //  wsa.inflow("www.goldmarket.co.kr");
-            // wsa_do(wsa);
-            (function checkWSA() {
-        if (typeof window.wsa !== "undefined" && typeof window.wsa_do !== "undefined") {
-          window.wsa.inflow("www.goldmarket.co.kr");
-          window.wsa_do(window.wsa);
-        } else {
-          setTimeout(checkWSA, 50);
-        }
-      })();
+            wsa.inflow("www.goldmarket.co.kr");
+            wsa_do(wsa);
           `
                 }}
             />
