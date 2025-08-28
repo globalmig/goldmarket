@@ -31,20 +31,39 @@ export default function Footer() {
                 </div>
             </footer>
             <Script
-                src="//wsa.mig-log.com/wsalog.js"
-                type="text/javascript"
+                src="https://wsa.mig-log.com/wsalog.js"
                 strategy="beforeInteractive"
             />
             <Script
+        id="wsa-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.addEventListener('load', function() {
+              if (window.wsa?.inflow) {
+                window.wsa.inflow("www.goldmarket.co.kr");
+              }
+              if (window.wsa_do) {
+                window.wsa_do(window.wsa);
+              }
+            });
+          `,
+        }}
+      />
+            {/* <Script
                 id="wsa-init"
                 strategy="afterInteractive"
                 dangerouslySetInnerHTML={{
                     __html: `
-            wsa.inflow("www.goldmarket.co.kr");
-            wsa_do(wsa);
-          `
+      if (window.wsa?.inflow) {
+        window.wsa.inflow("www.goldmarket.co.kr");
+      }
+      if (window.wsa_do) {
+        window.wsa_do(window.wsa);
+      }
+    `,
                 }}
-            />
+            /> */}
         </>
     )
 }

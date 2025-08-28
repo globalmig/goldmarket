@@ -9,6 +9,7 @@ main>div>:first-child {
     color: white;
     width: 30%;
     font-size: 0.95rem;
+    padding: 30px;
 }
 
 main>div>:first-child>div>span {
