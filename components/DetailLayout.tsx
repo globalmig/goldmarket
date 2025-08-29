@@ -52,45 +52,47 @@ export default function DetailLayout() {
 
         switch (weight) {
             case 0.2:
-                return Math.round(goldPrice * 0.0533333333333333 + (rate * goldPrice));
+                return Math.round(goldPrice * 0.054 * rate);
             case 0.3:
-                return Math.round(goldPrice * 0.08 + (rate * goldPrice));
+                return Math.round(goldPrice * 0.08 * rate);
             case 0.5:
-                return Math.round(goldPrice * 0.1333333333333333 + (rate * goldPrice));
+                return Math.round(goldPrice * 0.134 * rate);
             case 1:
-                return Math.round(goldPrice * 0.2666666666666667 + (rate * goldPrice));
+                return Math.round(goldPrice * 0.27 * rate);
             case 1.875:
-                return Math.round(goldPrice * 0.5 + (rate * goldPrice));
+                return Math.round(goldPrice * 0.5 * rate);
             case 3.75:
-                return Math.round(goldPrice * 1 + (rate * goldPrice));
+                return Math.round(goldPrice * 1 * rate);
             case 5:
-                return Math.round(goldPrice * 1.3 + (rate * goldPrice));
+                return Math.round(goldPrice * 1.3 * rate);
             case 7.5:
-                return Math.round(goldPrice * 2 + (rate * goldPrice));
+                return Math.round(goldPrice * 2 * rate);
             case 10:
-                return Math.round(goldPrice * 2.666666666666667 + (rate * goldPrice));
+                return Math.round(goldPrice * 2.67 * rate);
             case 11.25:
-                return Math.round(goldPrice * 3 + (rate * goldPrice));
+                return Math.round(goldPrice * 3 * rate);
             case 18.75:
-                return Math.round(goldPrice * 5 + (rate * goldPrice));
+                return Math.round(goldPrice * 5 * rate);
             case 37.5:
-                return Math.round(goldPrice * 10 + (rate * goldPrice));
+                return Math.round(goldPrice * 10 * rate);
+            case 45:
+                return Math.round(goldPrice * 12 * rate);
             case 50:
-                return Math.round(goldPrice * 13.33 + (rate * goldPrice));
+                return Math.round(goldPrice * 13.33 * rate);
             case 75:
-                return Math.round(goldPrice * 20 + (rate * goldPrice));
+                return Math.round(goldPrice * 20 * rate);
             case 100:
-                return Math.round(goldPrice * 26.66666666666667 + (rate * goldPrice));
+                return Math.round(goldPrice * 26.67 * rate);
             case 112.5:
-                return Math.round(goldPrice * 30 + (rate * goldPrice));
+                return Math.round(goldPrice * 30 * rate);
             case 187.5:
-                return Math.round(goldPrice * 50 + (rate * goldPrice));
+                return Math.round(goldPrice * 50 * rate);
             case 375:
-                return Math.round(goldPrice * 100 + (rate * goldPrice));
+                return Math.round(goldPrice * 100 * rate);
             case 500:
-                return Math.round(goldPrice * 133.333 + (rate * goldPrice));
+                return Math.round(goldPrice * 133.33 * rate);
             case 1000:
-                return Math.round(goldPrice * 266.6666666666667 + (rate * goldPrice));
+                return Math.round(goldPrice * 266.67 * rate);
             default:
                 return typeof goldPrice === "number" ? goldPrice : undefined;
         }
@@ -106,7 +108,7 @@ export default function DetailLayout() {
     const isWeight = product.weight < 3.75;
 
     const displayPrice = roundedPrice &&
-        (isPlusPrice || isWeight ? roundedPrice + 20000 : roundedPrice).toLocaleString();
+        (isPlusPrice || isWeight ? roundedPrice + 30000 : roundedPrice).toLocaleString();
 
     const isPriceHidden = pathname.startsWith('/silverbar');
 

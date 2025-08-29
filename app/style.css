@@ -5,20 +5,20 @@ main {
 main>div {
     position: relative;
     width: 100%;
-    height: 600px;
+    height: 620px;
 }
 
 main>div>:first-child {
     background-color: #1D1E28;
     color: white;
-    width: 30%;
-    font-size: 0.95rem;
+    width: 37%;
+    font-size: 1.2rem;
     padding: 30px;
 }
 
 main>div>:first-child>div>span {
-    font-size: 0.8rem;
-    color: #aaa;
+    font-size: 1.2rem;
+    color: #eee;
 }
 
 main>div>:first-child table {
@@ -27,18 +27,18 @@ main>div>:first-child table {
 }
 
 main>div>:first-child table thead {
-    border-bottom: 1px solid #aaa;
+    border-bottom: 1px solid #eee;
 }
 
 main>div>:first-child table thead th {
     font-weight: 300;
-    width: 25%;
+    width: 24%;
     padding: 15px 0;
 }
 
 main>div>:first-child table thead th span {
-    font-size: 0.7rem;
-    color: #aaa;
+    font-size: 0.8rem;
+    color: #eee;
 }
 
 main>div>:first-child table thead th:nth-of-type(2) {
@@ -56,13 +56,14 @@ main>div>:first-child table tbody tr td {
 
 main>div>:first-child table tbody tr td span {
     font-size: 0.8rem;
-    color: #aaa;
+    color: #eee;
     word-break: break-all;
 }
 
 main>div>:first-child table tbody tr td h3 {
     text-align: center;
     margin-bottom: 5px;
+    font-size: 1.5rem;
 }
 
 main>div>:first-child table tbody tr td div {
@@ -71,7 +72,7 @@ main>div>:first-child table tbody tr td div {
 }
 
 main>div>:first-child>div:last-of-type>p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
     margin-bottom: 50px;
@@ -90,7 +91,7 @@ main>div>:first-child>div:last-of-type ul li div {
 main>div>:last-child {
     position: relative;
     width: 70%;
-    height: 600px;
+    height: 620px;
 }
 
 main>div>:last-child>img {
@@ -162,12 +163,37 @@ main>div>:last-child>img {
 }
 
 .recommend>div>:last-child>div {
-    margin-right: -20px
+    margin-right: -20px;
+}
+
+.recommend>div>:last-child div a img{
+    border-radius: 30px;
+    box-shadow: 3px 3px 3px rgba(105, 105, 105, 0.4);
 }
 
 .recommend-slide-wrapper .slick-arrow {
     display: none;
     opacity: 0;
+}
+
+.recommend-slide-wrapper>div>:last-child {
+    text-align: center;
+    font-weight: bold;
+}
+
+.recommend-slide-wrapper>div>:last-child p:first-of-type{
+    margin: 30px 0 10px;
+    font-size: 1.3rem;
+}
+
+.recommend-slide-wrapper>div>:last-child p:nth-of-type(2){
+    font-size: 1rem;
+    color: #555;
+}
+
+.recommend-slide-wrapper>div>:last-child p:last-of-type {
+    font-size: 1.3rem;
+    margin-top: 15px;
 }
 
 .product>div {
@@ -267,7 +293,7 @@ main>div>:last-child>img {
 
 .product-list .product-item>:last-child p:first-of-type {
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     margin-top: 20px;
 }
 
@@ -275,6 +301,10 @@ main>div>:last-child>img {
     color: #919191;
     font-weight: bold;
     margin: 10px 0 8px;
+}
+
+.product-list .product-item>:last-child p:last-of-type{
+    font-size: 1.2rem;
 }
 
 .product-list .product-item>:last-child p span {
@@ -467,16 +497,16 @@ main>div>:last-child>img {
     main>div>:first-child {
         padding: 50px 15px 35px;
         width: 100%;
-        font-size: 0.9rem;
         order: 2;
     }
 
     main>div>:first-child>div>span {
         font-size: 0.9rem;
+        margin: auto 0;
     }
 
     main>div>:first-child table {
-        margin: 20px 0 50px;
+        margin: 40px 0 50px;
     }
 
     main>div>:first-child table tbody tr td {
@@ -490,7 +520,7 @@ main>div>:last-child>img {
     main>div>:first-child table tbody tr td h3 {
         text-align: center;
         margin-bottom: 5px;
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
 
     main>div>:first-child table tbody tr td>div img {
@@ -499,7 +529,7 @@ main>div>:last-child>img {
     }
 
     main>div>:first-child table tbody tr td>div p {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 
     main>div>:first-child>div:last-of-type>p {
@@ -523,7 +553,7 @@ main>div>:last-child>img {
     main>div>:last-child {
         position: relative;
         width: 100%;
-        height: 180px;
+        height: 250px;
     }
 
     main>div>:last-child img {
@@ -612,11 +642,16 @@ main>div>:last-child>img {
     }
 
     .product-list .product-item>:last-child p:first-of-type {
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
 
     .product-list .product-item>:last-child p:nth-of-type(2) {
         font-size: 0.8rem;
+        margin: 5px 0 10px;
+    }
+
+    .product-list .product-item>:last-child p:last-of-type{
+        font-size: 1rem;
     }
 
     .detail>div {

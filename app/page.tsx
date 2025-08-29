@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { ProductData } from "@/data/productData";
 
 interface PriceDataProps {
   buy: number,
@@ -12,7 +13,7 @@ interface PriceDataProps {
   rate: number,
   prevBuyPrice: number,
   prevSellPrice: number,
-  date: Date
+  date: string
 }
 
 export default function Home() {
@@ -42,8 +43,33 @@ export default function Home() {
     fetchPrice();
   }, []);
 
-
   if (!priceData) return null;
+
+  const getCalculatedPrice = (weight: number) => {
+
+    switch (weight) {
+      case 37.5:
+        return Math.round(priceData.buy * 10 * priceData.rate);
+      case 50:
+        return Math.round(priceData.buy * 13.33 * priceData.rate);
+      case 75:
+        return Math.round(priceData.buy * 20 * priceData.rate);
+      case 100:
+        return Math.round(priceData.buy * 26.66666666666667 * priceData.rate);
+      case 112.5:
+        return Math.round(priceData.buy * 30 * priceData.rate);
+      case 187.5:
+        return Math.round(priceData.buy * 50 * priceData.rate);
+      case 375:
+        return Math.round(priceData.buy * 100 * priceData.rate);
+      case 500:
+        return Math.round(priceData.buy * 133.333 * priceData.rate);
+      case 1000:
+        return Math.round(priceData.buy * 266.6666666666667 * priceData.rate);
+      default:
+        return typeof priceData.buy === "number" ? priceData.buy : undefined;
+    }
+  }
 
   const updatePrice = Number(priceData.buy ?? 0) - Number(priceData.prevBuyPrice ?? 0);
   const updateSell = Number(priceData.sell ?? 0) - Number(priceData.prevSellPrice ?? 0);
@@ -52,13 +78,23 @@ export default function Home() {
   const todayDiff = Math.abs(updatePrice);
   const todaySellDiff = Math.abs(updateSell);
 
-  const formatDate = (today: string): string => {
-    const date = new Date(today);
+  const formatDate = (today: string | Date): string => {
+    const date = today instanceof Date ? today : new Date(today);
+
+    if (isNaN(date.getTime())) {
+      const now = new Date();
+      return `${now.getFullYear()}년 ${String(now.getMonth() + 1).padStart(2, '0')}월 ${String(now.getDate()).padStart(2, '0')}일`;
+    }
+
     const year = String(date.getFullYear()).slice(0);
     const month = String(date.getMonth() + 1).padStart(2, '0');
     const day = String(date.getDate()).padStart(2, '0');
     return `${year}년 ${month}월 ${day}일`;
   }
+
+  const recommendProduct = ProductData
+    .filter(product => product.subCategory === "사자 골드바")
+    .filter(product => product.weight >= 37.5)
 
   const settings = {
     dots: false,
@@ -100,7 +136,7 @@ export default function Home() {
             <p>한국금시장거래소</p>
             <div className="display-flex">
               <h3>오늘의 시세</h3>
-              {priceData.date ? <span>{formatDate(priceData.date.toDateString())}</span> : <span>오늘 기준</span>}
+              <span>{formatDate(priceData.date)}</span>
             </div>
             <table>
               <thead>
@@ -180,7 +216,7 @@ export default function Home() {
           </div>
 
           <div>
-            <Image src="/images/main_banner.jpg" alt='캐나다 코스트코 계약 체결' fill />
+            <Image src="/images/main_banner2.jpg" alt='캐나다 코스트코 계약 체결' fill />
           </div>
 
         </div>
@@ -193,36 +229,26 @@ export default function Home() {
             <p>RECOMMEND ITEM</p>
           </div>
           <Slider {...settings} className="recommend-slide-wrapper">
-            <div>
-              <Link href="/goldbar">
-                <Image src="/images/recommend_item_1.png" alt='호랑이 골드바 100g' width={345} height={500} />
-              </Link>
-            </div>
-            <div>
-              <Link href="/goldbar">
-                <Image src="/images/recommend_item_2.png" alt='골드바 수납함' width={345} height={500} />
-              </Link>
-            </div>
-            <div>
-              <Link href="/goldbar">
-                <Image src="/images/recommend_item_3.png" alt='사자 골드바 100g' width={345} height={500} />
-              </Link>
-            </div>
-            <div>
-              <Link href="/goldbar">
-                <Image src="/images/recommend_item_4.png" alt='순금 뱀상패' width={345} height={500} />
-              </Link>
-            </div>
-            <div>
-              <Link href="/goldbar">
-                <Image src="/images/recommend_item_5.png" alt='호랑이 골드바 50g' width={345} height={500} />
-              </Link>
-            </div>
-            <div>
-              <Link href="/goldbar">
-                <Image src="/images/recommend_item_6.png" alt='사자 골드바 50g' width={345} height={500} />
-              </Link>
-            </div>
+            {recommendProduct.map(product => {
+
+              const price = getCalculatedPrice(product.weight);
+              const roundedPrice = price !== undefined
+              ? Math.ceil(price/1000) * 1000
+              : undefined
+
+              return <div key={product.id}>
+                <Link href={`/골드바/detail/${product.id}`}>
+                  <div>
+                    <Image src={`/images/goldbar/사자골드바_${product.weight.toString()}g.jpg`} alt={`사자 골드바 ${product.weight.toLocaleString()}g`} width={345} height={345} />
+                  </div>
+                </Link>
+                <div>
+                  <p>{product.name} {product.weight.toLocaleString()}g</p>
+                  <p>{product.subname}</p>
+                  <p>{roundedPrice?.toLocaleString()}원</p>
+                </div>
+              </div>
+            })}
           </Slider>
         </div>
       </article>

@@ -26,7 +26,7 @@ export default function ProductItem({ id, category, name, subname, price, img, w
         : undefined;
 
     const displayPrice = roundedPrice !== undefined
-        ? (isPlusPrice || isWeight ? roundedPrice + 20000 : roundedPrice).toLocaleString()
+        ? (isPlusPrice || isWeight ? roundedPrice + 30000 : roundedPrice).toLocaleString()
         : null;
 
     return (
