@@ -35,8 +35,8 @@ export default function Footer() {
                 strategy="afterInteractive"
                 dangerouslySetInnerHTML={{
                     __html: `
-            wsa.inflow("www.goldmarket.co.kr");
-          wsa_do(window.wsa);
+        wsa.inflow("www.goldmarket.co.kr");
+        wsa_do(window.wsa);
     `,
                 }}
             />
