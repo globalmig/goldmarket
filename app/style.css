@@ -23,6 +23,7 @@ main>div>:first-child>div>span {
 
 main>div>:first-child table {
     margin: 20px 0 40px;
+    width: 100%;
 }
 
 main>div>:first-child table thead {
@@ -50,11 +51,13 @@ main>div>:first-child table tbody tr {
 
 main>div>:first-child table tbody tr td {
     padding: 25px 15px;
+    word-break: break-all;
 }
 
 main>div>:first-child table tbody tr td span {
     font-size: 0.8rem;
     color: #aaa;
+    word-break: break-all;
 }
 
 main>div>:first-child table tbody tr td h3 {
@@ -91,9 +94,10 @@ main>div>:last-child {
 }
 
 main>div>:last-child>img {
-    position: absolute;
-    bottom: 0;
     width: 100%;
+    max-width: 3000px;
+    height: auto;
+    object-fit: cover;
 }
 
 .main-slide-wrapper {

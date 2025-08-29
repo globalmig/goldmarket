@@ -26,23 +26,22 @@ export default function DetailLayout() {
     const { id } = params;
     const productId = Number(id);
     const product = ProductData.find(p => p.id === productId);
-    const productPrice = usePrice();
 
     const [priceData, setPriceData] = useState<{ buy: number; rate: number } | null>(null);
 
-     useEffect(() => {
-    async function fetchPrice() {
-      try {
-        const res = await fetch("/api/price");
-        const result = await res.json();
-        const [latestPrice] = result.data;
-        setPriceData({ buy: latestPrice.buy, rate: latestPrice.rate });
-      } catch (err) {
-        console.error(err);
-      }
-    }
-    fetchPrice();
-  }, []);
+    useEffect(() => {
+        async function fetchPrice() {
+            try {
+                const res = await fetch("/api/price");
+                const result = await res.json();
+                const [latestPrice] = result.data;
+                setPriceData({ buy: latestPrice.buy, rate: latestPrice.rate });
+            } catch (err) {
+                console.error(err);
+            }
+        }
+        fetchPrice();
+    }, []);
 
     if (!product || !priceData) return <p>상품을 찾을 수 없습니다.</p>
 
@@ -50,10 +49,19 @@ export default function DetailLayout() {
     const rate = priceData.rate;
 
     const getCalculatedPrice = (product: DetailProductType) => {
-        const { weight, price } = product;
+        const { weight } = product;
 
         switch (weight) {
-            case 1 : return price;
+            case 0.2:
+                return Math.round(goldPrice * 0.0533333333333333 + (rate * goldPrice));
+            case 0.3:
+                return Math.round(goldPrice * 0.08 + (rate * goldPrice));
+            case 0.5:
+                return Math.round(goldPrice * 0.1333333333333333 + (rate * goldPrice));
+            case 1:
+                return Math.round(goldPrice * 0.2666666666666667 + (rate * goldPrice));
+            case 1.875:
+                return Math.round(goldPrice * 0.5 + (rate * goldPrice));
             case 3.75:
                 return Math.round(goldPrice * 1 + (rate * goldPrice));
             case 5:
@@ -81,19 +89,24 @@ export default function DetailLayout() {
             case 1000:
                 return Math.round(goldPrice * 266.6666666666667 + (rate * goldPrice));
             default:
-                return typeof goldPrice === "number" ? price : undefined;
+                return typeof goldPrice === "number" ? goldPrice : undefined;
         }
     };
 
     const price = getCalculatedPrice(product);
     const isPlusPrice = pathname.startsWith('/%EC%88%9C%EA%B8%88%EB%B2%A0%EC%9D%B4%EB%B9%84') || pathname.startsWith('/%EC%88%9C%EA%B8%88%EC%BD%94%EC%9D%B8') || pathname.startsWith('/%EC%88%9C%EA%B8%88%EA%B8%B0%EB%85%90%ED%92%88');
+
     const roundedPrice = price !== undefined
         ? Math.ceil(price / 1000) * 1000
         : undefined;
+
+    const isWeight = product.weight < 3.75;
+
     const displayPrice = roundedPrice &&
-        (isPlusPrice ? roundedPrice + 20000 : roundedPrice).toLocaleString();
+        (isPlusPrice || isWeight ? roundedPrice + 20000 : roundedPrice).toLocaleString();
 
     const isPriceHidden = pathname.startsWith('/silverbar');
+
     const detailImage = pathname.startsWith('/%EC%88%9C%EA%B8%88%EB%B2%A0%EC%9D%B4%EB%B9%84') ||
         pathname.startsWith('/%EC%88%9C%EA%B8%88%EC%BD%94%EC%9D%B8') ||
         pathname.startsWith('/%EC%88%9C%EA%B8%88%EA%B8%B0%EB%85%90%ED%92%88')
@@ -124,10 +137,12 @@ export default function DetailLayout() {
                                 )}
                             </h3>
                             <ul>
-                                <li className="display-flex">
-                                    <p>상품요약정보</p>
-                                    <p>{product.subname}</p>
-                                </li>
+                                {product.subname === "" &&
+                                    <li className="display-flex">
+                                        <p>상품요약정보</p>
+                                        <p>{product.subname}</p>
+                                    </li>
+                                }
                                 {product.model &&
                                     <li className="display-flex">
                                         <p>모델</p>

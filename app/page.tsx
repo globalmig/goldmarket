@@ -3,12 +3,45 @@ import Image from "next/image";
 import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import usePrice from "@/hook/usePrice";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+
+interface PriceDataProps {
+  buy: number,
+  sell: number,
+  rate: number,
+  prevBuyPrice: number,
+  prevSellPrice: number,
+  date: string
+}
 
 export default function Home() {
 
-  const priceData = usePrice();
+  const [priceData, setPriceData] = useState<PriceDataProps | null>(null);
+
+  useEffect(() => {
+    async function fetchPrice() {
+      try {
+        const res = await fetch("/api/price");
+        const result = await res.json();
+
+        const [latestPrice, prevPrice] = result.data;
+
+        setPriceData({
+          buy: latestPrice.buy,
+          sell: latestPrice.sell,
+          rate: latestPrice.rate,
+          prevBuyPrice: prevPrice?.buy ?? latestPrice.buy,
+          prevSellPrice: prevPrice?.sell ?? latestPrice.sell,
+          date: latestPrice.date
+        });
+      } catch (err) {
+        console.error(err);
+      }
+    }
+    fetchPrice();
+  }, []);
+
 
   if (!priceData) return null;
 
@@ -27,41 +60,40 @@ export default function Home() {
     return `${year}년 ${month}월 ${day}일`;
   }
 
-const settings = {
-  dots: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 5,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 3000,
-  responsive: [
-    {
-      breakpoint: 1200, // 1200px 이하
-      settings: {
-        slidesToShow: 4,
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 2,
+        }
+      },
+      {
+        breakpoint: 400,
+        settings: {
+          slidesToShow: 2,
+        }
       }
-    },
-    {
-      breakpoint: 992, // 992px 이하
-      settings: {
-        slidesToShow: 2,
-      }
-    },
-    {
-      breakpoint: 400, // 480px 이하
-      settings: {
-        slidesToShow: 2,
-      }
-    }
-  ]
-};
+    ]
+  };
 
   return (
     <>
 
       <main>
-        {/* <MainSlide/> */}
         <div className='main-banner display-flex'>
 
           <div>
@@ -81,7 +113,7 @@ const settings = {
               <tbody>
                 <tr>
                   <td>
-                    <p>순금 시세<span>(자사골드바기준)</span></p>
+                    <p>순금 시세<br /><span>(자사골드바기준)</span></p>
                   </td>
                   <td>
                     <h3>{todayPrice}원</h3>

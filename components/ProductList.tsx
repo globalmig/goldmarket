@@ -44,10 +44,19 @@ export default function ProductList({ category, subCategory, priceData }: Produc
     );
 
     const getCalculatedPrice = (product: ProductType) => {
-        const {weight, price} = product;
+        const {weight} = product;
 
         switch (weight) {
-            case 1 : return price;
+            case 0.2 : 
+                return Math.round(goldPrice * 0.0533333333333333 + (rate * goldPrice));
+            case 0.3 : 
+                return Math.round(goldPrice * 0.08 + (rate * goldPrice));
+            case 0.5 : 
+                return Math.round(goldPrice * 0.1333333333333333 + (rate * goldPrice));
+            case 1 : 
+                return Math.round(goldPrice * 0.2666666666666667 + (rate * goldPrice));
+            case 1.875 :
+                return Math.round(goldPrice * 0.5 + (rate * goldPrice));
             case 3.75:
                 return Math.round(goldPrice * 1 + (rate * goldPrice));
             case 5:
@@ -75,7 +84,7 @@ export default function ProductList({ category, subCategory, priceData }: Produc
             case 1000:
                 return Math.round(goldPrice * 266.6666666666667 + (rate * goldPrice));
             default:
-                return typeof goldPrice === "number" ? price : undefined;
+                return typeof goldPrice === "number" ? goldPrice : undefined;
         }
     };
 

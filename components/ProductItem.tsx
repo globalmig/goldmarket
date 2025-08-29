@@ -17,12 +17,17 @@ interface ProductItemProps {
 export default function ProductItem({ id, category, name, subname, price, img, weight, priority = false }: ProductItemProps) {
 
     const pathname = usePathname();
-    const isPriceHidden =  pathname.startsWith('/silverbar');
-    const isPlusPrice = pathname.startsWith('/goldbaby') || pathname.startsWith('/goldcoin') || pathname.startsWith('/goldgift')
+    const isPriceHidden = pathname.startsWith('/silverbar');
+    const isPlusPrice = ['/goldbaby', '/goldcoin', '/goldgift'].some(p => pathname.includes(p));
+    const isWeight = weight < 3.75;
 
     const roundedPrice = price !== undefined
         ? Math.ceil(price / 1000) * 1000
         : undefined;
+
+    const displayPrice = roundedPrice !== undefined
+        ? (isPlusPrice || isWeight ? roundedPrice + 20000 : roundedPrice).toLocaleString()
+        : null;
 
     return (
         <section className="product-item">
@@ -36,7 +41,13 @@ export default function ProductItem({ id, category, name, subname, price, img, w
                 <p>{name} <span>{name !== "골드바 수납함" && `${weight.toLocaleString()}g`}</span></p>
                 <p>{subname}</p>
                 <p>
-                    {name === "골드바 수납함" ? <span>30,000원</span>: isPriceHidden ? <span>시세 변동</span>: <span>{ roundedPrice && (isPlusPrice ? roundedPrice +20000 : roundedPrice).toLocaleString()}원</span>}
+                    {name === "골드바 수납함" ? (
+                        <span>30,000원</span>
+                    ) : isPriceHidden ? (
+                        <span>시세 변동</span>
+                    ) : (
+                        <span>{displayPrice}원</span>
+                    )}
                 </p>
             </div>
         </section>
