@@ -29,9 +29,10 @@ export default function Footer() {
                     <Image src="/images/business_card.png" alt="대표님 명함" width={557} height={346} />
                 </div>
             </div>
-            <Script src="//wsa.mig-log.com/wsalog.js" type="text/javascript"/>
+            <Script src="//wsa.mig-log.com/wsalog.js" type="text/javascript" strategy="beforeInteractive" />
             <Script
                 id="wsa-init"
+                strategy="afterInteractive"
                 dangerouslySetInnerHTML={{
                     __html: `
             wsa.inflow("www.goldmarket.co.kr");
@@ -39,13 +40,6 @@ export default function Footer() {
     `,
                 }}
             />
-            <Script id="wsa-cnv" type="text/javascript"
-            dangerouslySetInnerHTML={{
-                __html: `
-            wsa.cnv('5',1000,'UwWHsFC');
-    `,
-            }}>
-            </Script>
         </footer>
     )
 }
