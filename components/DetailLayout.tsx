@@ -1,6 +1,5 @@
 'use client'
 import { ProductData } from "@/data/productData";
-import usePrice from "@/hook/usePrice";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";

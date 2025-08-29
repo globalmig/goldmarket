@@ -1,7 +1,6 @@
 "use client"
 import { ProductData } from "@/data/productData";
 import ProductItem from "./ProductItem";
-import usePrice from "@/hook/usePrice";
 
 interface ProductListProps {
     category: string,

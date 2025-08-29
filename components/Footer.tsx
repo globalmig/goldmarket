@@ -39,7 +39,7 @@ export default function Footer() {
     `,
                 }}
             />
-            <Script type="text/javascript"
+            <Script id="wsa-cnv" type="text/javascript"
             dangerouslySetInnerHTML={{
                 __html: `
             wsa.cnv('5',1000,'UwWHsFC');
