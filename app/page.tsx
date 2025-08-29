@@ -225,8 +225,8 @@ export default function Home() {
       <article className="recommend">
         <div>
           <div>
-            <h2>상품 추천</h2>
-            <p>RECOMMEND ITEM</p>
+            <h1>상품 추천</h1>
+            <h3>RECOMMEND ITEM</h3>
           </div>
           <Slider {...settings} className="recommend-slide-wrapper">
             {recommendProduct.map(product => {

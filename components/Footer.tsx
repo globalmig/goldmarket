@@ -37,7 +37,7 @@ export default function Footer() {
             __html: `
             wsa.inflow("www.goldmarket.co.kr");
           wsa_do(window.wsa);
-          console.log('wsa:', window.wsa); `
+           `
           }}
         />
         </footer>

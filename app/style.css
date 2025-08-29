@@ -13,7 +13,7 @@ main>div>:first-child {
     color: white;
     width: 37%;
     font-size: 1.2rem;
-    padding: 30px;
+    padding: 30px 20px ;
 }
 
 main>div>:first-child>div>span {
@@ -50,7 +50,7 @@ main>div>:first-child table tbody tr {
 }
 
 main>div>:first-child table tbody tr td {
-    padding: 25px 15px;
+    padding: 22px 15px;
     word-break: break-all;
 }
 
@@ -75,12 +75,12 @@ main>div>:first-child>div:last-of-type>p {
     font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 45px;
 }
 
 main>div>:first-child>div:last-of-type ul li {
     justify-content: left;
-    margin: 20px 0;
+    margin: 10px 0;
     gap: 20px
 }
 
@@ -154,8 +154,12 @@ main>div>:last-child>img {
     margin-bottom: 50px;
 }
 
-.recommend>div>:first-child p {
-    margin-top: 10px;
+.recommend>div>:first-child h1{
+    font-size: 2.3rem;
+}
+
+.recommend>div>:first-child h3 {
+    margin: 8px 0 80px
 }
 
 .recommend>div>:last-child {
@@ -294,7 +298,7 @@ main>div>:last-child>img {
 .product-list .product-item>:last-child p:first-of-type {
     font-weight: bold;
     font-size: 1.3rem;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .product-list .product-item>:last-child p:nth-of-type(2) {
@@ -501,7 +505,7 @@ main>div>:last-child>img {
     }
 
     main>div>:first-child>div>span {
-        font-size: 0.9rem;
+        font-size: 1rem;
         margin: auto 0;
     }
 
@@ -514,7 +518,7 @@ main>div>:last-child>img {
     }
 
     main>div>:first-child table tbody tr td>p span {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
     }
 
     main>div>:first-child table tbody tr td h3 {
@@ -554,6 +558,7 @@ main>div>:last-child>img {
         position: relative;
         width: 100%;
         height: 250px;
+        object-fit: contain;
     }
 
     main>div>:last-child img {
