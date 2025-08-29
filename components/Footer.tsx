@@ -30,16 +30,15 @@ export default function Footer() {
                 </div>
             </div>
             <Script src="//wsa.mig-log.com/wsalog.js" type="text/javascript" strategy="beforeInteractive" />
-            <Script
-                id="wsa-init"
-                strategy="afterInteractive"
-                dangerouslySetInnerHTML={{
-                    __html: `
-        wsa.inflow("www.goldmarket.co.kr");
-        wsa_do(window.wsa);
-    `,
-                }}
-            />
+        <Script
+          id="wsa-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+            wsa.inflow("www.goldmarket.co.kr");
+          wsa_do(window.wsa);`,
+          }}
+        />
         </footer>
     )
 }

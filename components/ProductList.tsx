@@ -11,7 +11,7 @@ interface ProductListProps {
             subcategories?: string[] | undefined;
         };
     },
-    priceData: {buy: number, rate: number}
+    priceData: { buy: number, rate: number }
 }
 
 interface ProductType {
@@ -29,7 +29,7 @@ interface ProductType {
 
 export default function ProductList({ category, subCategory, priceData }: ProductListProps) {
 
-    const {buy: goldPrice, rate} = priceData;
+    const { buy: goldPrice, rate } = priceData;
 
     const filterList = ProductData
         .filter(product => product.category === category)
@@ -43,18 +43,18 @@ export default function ProductList({ category, subCategory, priceData }: Produc
     );
 
     const getCalculatedPrice = (product: ProductType) => {
-        const {weight} = product;
+        const { weight } = product;
 
         switch (weight) {
-            case 0.2 : 
+            case 0.2:
                 return Math.round(goldPrice * 0.0533333333333333 + (rate * goldPrice));
-            case 0.3 : 
+            case 0.3:
                 return Math.round(goldPrice * 0.08 + (rate * goldPrice));
-            case 0.5 : 
+            case 0.5:
                 return Math.round(goldPrice * 0.1333333333333333 + (rate * goldPrice));
-            case 1 : 
+            case 1:
                 return Math.round(goldPrice * 0.2666666666666667 + (rate * goldPrice));
-            case 1.875 :
+            case 1.875:
                 return Math.round(goldPrice * 0.5 + (rate * goldPrice));
             case 3.75:
                 return Math.round(goldPrice * 1 + (rate * goldPrice));
@@ -76,6 +76,10 @@ export default function ProductList({ category, subCategory, priceData }: Produc
                 return Math.round(goldPrice * 20 + (rate * goldPrice));
             case 100:
                 return Math.round(goldPrice * 26.66666666666667 + (rate * goldPrice));
+            case 112.5:
+                return Math.round(goldPrice * 30 + (rate * goldPrice));
+            case 187.5:
+                return Math.round(goldPrice * 50 + (rate * goldPrice));
             case 375:
                 return Math.round(goldPrice * 100 + (rate * goldPrice));
             case 500:

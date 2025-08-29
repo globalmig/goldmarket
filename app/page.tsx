@@ -12,7 +12,7 @@ interface PriceDataProps {
   rate: number,
   prevBuyPrice: number,
   prevSellPrice: number,
-  date: string
+  date: Date
 }
 
 export default function Home() {
@@ -100,7 +100,7 @@ export default function Home() {
             <p>한국금시장거래소</p>
             <div className="display-flex">
               <h3>오늘의 시세</h3>
-              {priceData.date ? <span>{formatDate(priceData.date)}</span> : <span>오늘 기준</span>}
+              {priceData.date ? <span>{formatDate(priceData.date.toDateString())}</span> : <span>오늘 기준</span>}
             </div>
             <table>
               <thead>
