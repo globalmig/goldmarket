@@ -31,15 +31,24 @@ export default function Footer() {
             </div>
             <Script src="//wsa.mig-log.com/wsalog.js" type="text/javascript" strategy="beforeInteractive" />
             <Script
-          id="wsa-init"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-            wsa.inflow("www.goldmarket.co.kr");
-          wsa_do(window.wsa);
-           `
-          }}
-        />
+  id="wsa-init"
+  strategy="afterInteractive"
+  dangerouslySetInnerHTML={{
+    __html: `
+      window.addEventListener("load", function() {
+        if (window.wsa && typeof window.wsa.inflow === "function") {
+          window.wsa.inflow("www.goldmarket.co.kr");
+          if (typeof window.wsa_do === "function") {
+            window.wsa_do(window.wsa);
+          }
+          console.log("wsa 초기화 완료:", window.wsa);
+        } else {
+          console.error("wsa 객체가 로드되지 않았습니다.");
+        }
+      });
+    `,
+  }}
+/>
         </footer>
     )
 }

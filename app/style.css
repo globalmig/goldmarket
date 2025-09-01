@@ -84,6 +84,10 @@ main>div>:first-child>div:last-of-type ul li {
     gap: 20px
 }
 
+main>div>:first-child>div:last-of-type ul li:last-of-type a:hover{
+    text-decoration:underline;
+}
+
 main>div>:first-child>div:last-of-type ul li div {
     margin: auto 0;
 }
