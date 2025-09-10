@@ -641,6 +641,7 @@ main>div>:last-child>img {
         display: block;
         height: auto;
         margin-top: 80px;
+        position: relative;
     }
 
     .loading >div{
@@ -652,12 +653,18 @@ main>div>:last-child>img {
         height: auto;
     }
 
-    .loading p{
+    .loading .main-load-text{
         width: 100%;
         text-align: center;
-        background-color: #252423;
-        color: white;
         padding: 60px 0;
+        margin-top: 0;
+        color: white;
+        background-color: #252423;
+    }
+
+    .loading > p{
+        padding: 60px 0;
+        margin-top: 100px;
     }
 
     .product-list .product-item>:first-child img {

@@ -48,7 +48,7 @@ export default function Home() {
         <div className="mo">
             <Image src="/images/main_banner2.jpg" alt='캐나다 코스트코 계약 체결' width={1000} height={500} />
           </div>
-        <p>환영합니다.<br />홈페이지를 불러오는 중입니다.</p>
+        <p className="main-load-text">환영합니다.<br />홈페이지를 불러오는 중입니다.</p>
       </div>
   );
 
