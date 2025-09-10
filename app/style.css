@@ -1,101 +1,105 @@
 main {
-    margin-top: 100px;
+    margin-top: 120px;
 }
 
 main>div {
     position: relative;
     width: 100%;
-    height: 620px;
 }
 
-main>div>:first-child {
+main>div>:nth-child(2) {
     background-color: #1D1E28;
     color: white;
     width: 37%;
     font-size: 1.2rem;
-    padding: 30px 20px ;
+    padding: 30px 20px;
 }
 
-main>div>:first-child>div>span {
+main>div>:nth-child(2)>div>span {
     font-size: 1.2rem;
     color: #eee;
 }
 
-main>div>:first-child table {
+main>div>:nth-child(2) table {
     margin: 20px 0 40px;
     width: 100%;
 }
 
-main>div>:first-child table thead {
+main>div>:nth-child(2) table thead {
     border-bottom: 1px solid #eee;
 }
 
-main>div>:first-child table thead th {
+main>div>:nth-child(2) table thead th {
     font-weight: 300;
     width: 24%;
     padding: 15px 0;
 }
 
-main>div>:first-child table thead th span {
+main>div>:nth-child(2) table thead th span {
     font-size: 0.8rem;
     color: #eee;
 }
 
-main>div>:first-child table thead th:nth-of-type(2) {
+main>div>:nth-child(2) table thead th:nth-of-type(2) {
     width: 50%;
 }
 
-main>div>:first-child table tbody tr {
+main>div>:nth-child(2) table tbody tr {
     background-color: #32333a;
 }
 
-main>div>:first-child table tbody tr td {
+main>div>:nth-child(2) table tbody tr td {
     padding: 22px 15px;
     word-break: break-all;
 }
 
-main>div>:first-child table tbody tr td span {
+main>div>:nth-child(2) table tbody tr:first-of-type>:first-child p {
+    font-weight: bold;
+    font-size: 1.35rem;
+}
+
+main>div>:nth-child(2) table tbody tr td span {
     font-size: 0.8rem;
     color: #eee;
     word-break: break-all;
 }
 
-main>div>:first-child table tbody tr td h3 {
+main>div>:nth-child(2) table tbody tr td h3 {
     text-align: center;
     margin-bottom: 5px;
     font-size: 1.5rem;
 }
 
-main>div>:first-child table tbody tr td div {
+main>div>:nth-child(2) table tbody tr td div {
     justify-content: center;
     gap: 10px
 }
 
-main>div>:first-child>div:last-of-type>p {
+main>div>:nth-child(2)>div:last-of-type>p {
     font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
     margin-bottom: 45px;
 }
 
-main>div>:first-child>div:last-of-type ul li {
+main>div>:nth-child(2)>div:last-of-type ul li {
     justify-content: left;
     margin: 10px 0;
     gap: 20px
 }
 
-main>div>:first-child>div:last-of-type ul li:last-of-type a:hover{
-    text-decoration:underline;
+main>div>:nth-child(2)>div:last-of-type ul li:last-of-type a:hover {
+    text-decoration: underline;
 }
 
-main>div>:first-child>div:last-of-type ul li div {
+main>div>:nth-child(2)>div:last-of-type ul li div {
     margin: auto 0;
 }
 
 main>div>:last-child {
     position: relative;
     width: 70%;
-    height: 620px;
+    /* height: 620px; */
 }
 
 main>div>:last-child>img {
@@ -105,14 +109,9 @@ main>div>:last-child>img {
     object-fit: cover;
 }
 
-.main-slide-wrapper {
-    height: 620px;
-}
-
 .main-slider {
     position: relative;
     width: 100%;
-    height: 620px;
     overflow: hidden;
 }
 
@@ -158,7 +157,7 @@ main>div>:last-child>img {
     margin-bottom: 50px;
 }
 
-.recommend>div>:first-child h1{
+.recommend>div>:first-child h1 {
     font-size: 2.3rem;
 }
 
@@ -174,7 +173,7 @@ main>div>:last-child>img {
     margin-right: -20px;
 }
 
-.recommend>div>:last-child div a img{
+.recommend>div>:last-child div a img {
     border-radius: 30px;
     box-shadow: 3px 3px 3px rgba(105, 105, 105, 0.4);
 }
@@ -189,12 +188,12 @@ main>div>:last-child>img {
     font-weight: bold;
 }
 
-.recommend-slide-wrapper>div>:last-child p:first-of-type{
+.recommend-slide-wrapper>div>:last-child p:first-of-type {
     margin: 30px 0 10px;
     font-size: 1.3rem;
 }
 
-.recommend-slide-wrapper>div>:last-child p:nth-of-type(2){
+.recommend-slide-wrapper>div>:last-child p:nth-of-type(2) {
     font-size: 1rem;
     color: #555;
 }
@@ -242,17 +241,11 @@ main>div>:last-child>img {
 
 .loading {
     width: 100%;
-    height: 500px;
-    position: relative;
-}
-
-.loading p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    width: 100%;
 }
 
 .product-list {
@@ -311,7 +304,7 @@ main>div>:last-child>img {
     margin: 10px 0 8px;
 }
 
-.product-list .product-item>:last-child p:last-of-type{
+.product-list .product-item>:last-child p:last-of-type {
     font-size: 1.2rem;
 }
 
@@ -493,81 +486,82 @@ main>div>:last-child>img {
 
 @media screen and (max-width: 768px) {
 
+    .pc {
+        display: none;
+    }
+
     main {
-    margin-top: 80px;
-}
+        margin-top: 80px;
+    }
 
     main>div {
         height: auto;
         flex-wrap: wrap;
     }
 
-    main>div>:first-child {
+    main>div>:first-child img {
+        width: 100%;
+        height: auto;
+    }
+
+    main>div>:nth-child(2) {
         padding: 50px 15px 35px;
         width: 100%;
         order: 2;
     }
 
-    main>div>:first-child>div>span {
+    main>div>:nth-child(2)>div>span {
         font-size: 1rem;
         margin: auto 0;
     }
 
-    main>div>:first-child table {
+    main>div>:nth-child(2) table {
         margin: 40px 0 50px;
     }
 
-    main>div>:first-child table tbody tr td {
+    main>div>:nth-child(2) table tbody tr td {
         padding: 10px;
     }
 
-    main>div>:first-child table tbody tr td>p span {
+    main>div>:nth-child(2) table tbody tr td>p span {
         font-size: 0.8rem;
     }
 
-    main>div>:first-child table tbody tr td h3 {
+    main>div>:nth-child(2) table tbody tr td h3 {
         text-align: center;
         margin-bottom: 5px;
         font-size: 1.2rem;
     }
 
-    main>div>:first-child table tbody tr td>div img {
+    main>div>:nth-child(2) table tbody tr td>div img {
         width: 8px;
         height: auto;
     }
 
-    main>div>:first-child table tbody tr td>div p {
+    main>div>:nth-child(2) table tbody tr td>div p {
         font-size: 0.9rem;
     }
 
-    main>div>:first-child>div:last-of-type>p {
+    main>div>:nth-child(2)>div:last-of-type>p {
         margin-bottom: 30px;
-        font-size: 1rem;
+        font-size: 1.2rem;
         text-align: left;
     }
 
-    main>div>:first-child>div:last-of-type ul li {
+    main>div>:nth-child(2)>div:last-of-type ul li {
         justify-content: left;
         margin: 15px 0;
         gap: 15px;
         font-size: 0.8rem;
     }
 
-    main>div>:first-child>div:last-of-type ul li img {
+    main>div>:nth-child(2)>div:last-of-type ul li img {
         width: 12px;
         height: auto;
     }
 
     main>div>:last-child {
-        position: relative;
-        width: 100%;
-        height: 250px;
-        object-fit: contain;
-    }
-
-    main>div>:last-child img {
-        object-fit: cover;
-        height: auto;
+        display: none;
     }
 
     .recommend>div {
@@ -642,6 +636,30 @@ main>div>:last-child>img {
         height: 150px;
     }
 
+    .loading {
+        width: 100%;
+        display: block;
+        height: auto;
+        margin-top: 80px;
+    }
+
+    .loading >div{
+        position: relative;
+    }
+
+    .loading>div img{
+        width: 100%;
+        height: auto;
+    }
+
+    .loading p{
+        width: 100%;
+        text-align: center;
+        background-color: #252423;
+        color: white;
+        padding: 60px 0;
+    }
+
     .product-list .product-item>:first-child img {
         object-fit: contain;
     }
@@ -659,7 +677,7 @@ main>div>:last-child>img {
         margin: 5px 0 10px;
     }
 
-    .product-list .product-item>:last-child p:last-of-type{
+    .product-list .product-item>:last-child p:last-of-type {
         font-size: 1rem;
     }
 

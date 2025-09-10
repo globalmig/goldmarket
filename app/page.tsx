@@ -43,7 +43,14 @@ export default function Home() {
     fetchPrice();
   }, []);
 
-  if (!priceData) return null;
+  if (!priceData) return (
+      <div className="loading">
+        <div className="mo">
+            <Image src="/images/main_banner2.jpg" alt='캐나다 코스트코 계약 체결' width={1000} height={500} />
+          </div>
+        <p>환영합니다.<br />홈페이지를 불러오는 중입니다.</p>
+      </div>
+  );
 
   const getCalculatedPrice = (weight: number) => {
 
@@ -132,6 +139,10 @@ export default function Home() {
       <main>
         <div className='main-banner display-flex'>
 
+          <div className="mo">
+            <Image src="/images/main_banner2.jpg" alt='캐나다 코스트코 계약 체결' width={1000} height={500} priority />
+          </div>
+
           <div>
             <p>한국금시장거래소</p>
             <div className="display-flex">
@@ -216,7 +227,7 @@ export default function Home() {
           </div>
 
           <div>
-            <Image src="/images/main_banner2.jpg" alt='캐나다 코스트코 계약 체결' fill priority/>
+            <Image src="/images/main_banner2.jpg" alt='캐나다 코스트코 계약 체결' fill sizes="50vw" priority />
           </div>
 
         </div>
@@ -233,8 +244,8 @@ export default function Home() {
 
               const price = getCalculatedPrice(product.weight);
               const roundedPrice = price !== undefined
-              ? Math.ceil(price/1000) * 1000
-              : undefined
+                ? Math.ceil(price / 1000) * 1000
+                : undefined
 
               return <div key={product.id}>
                 <Link href={`/골드바/detail/${product.id}`}>
