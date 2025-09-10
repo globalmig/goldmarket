@@ -32,27 +32,20 @@ export default function Footer() {
                 </div>
             </footer>
             <Script
-        src="//wsa.mig-log.com/wsalog.js"
-        strategy="afterInteractive"
-      />
-      <Script
-        id="wsa-init"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: `
-            (function checkWSA() {
-              const wsa = window.wsa;
-              if (wsa?.id && wsa?.key && wsa.id.trim() !== '' && wsa.key.trim() !== '') {
-                wsa.inflow("www.goldmarket.co.kr");
-                window.wsa_do?.(wsa);
-                console.log("wsa initialized:", wsa);
-              } else {
-                requestAnimationFrame(checkWSA);
-              }
-            })();
-          `,
-        }}
-      />
+                    src="//wsa.mig-log.com/wsalog.js"
+                    type="text/javascript"
+                    strategy="beforeInteractive"
+                />
+                <Script
+                    id="wsa-init"
+                    strategy="afterInteractive"
+                    dangerouslySetInnerHTML={{
+                        __html: `
+            wsa.inflow("www.goldmarket.co.kr");
+            wsa_do(wsa);
+          `
+                    }}
+                />
         </>
     )
 }
