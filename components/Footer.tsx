@@ -1,4 +1,3 @@
-'use client'
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
@@ -31,14 +30,13 @@ export default function Footer() {
                     </div>
                 </div>
             </footer>
-            <Script type="text/javascript"
-            strategy="beforeInteractive"
-            src="//wsa.mig-log.com/wsalog.js"/> 
             <Script
              id="wsa-init"
             strategy="afterInteractive"
-            dangerouslySetInnerHTML={{ __html: `wsa.inflow("www.goldmarket.co.kr");
-                wsa_do(wsa);`}}/>
+            dangerouslySetInnerHTML={{ __html: `
+                wsa.inflow("www.goldmarket.co.kr");
+                wsa_do(wsa);
+            `}}/>
       </>
       )
 }

@@ -3,6 +3,7 @@ import "./globals.css";
 import "./style.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "한국금시장거래소 압구정점",
@@ -36,6 +37,11 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
+        <Script
+          src="//wsa.mig-log.com/wsalog.js"
+          type="text/javascript"
+          strategy="beforeInteractive"
+        />
         <Header />
         {children}
         <Footer />
