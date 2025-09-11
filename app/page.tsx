@@ -140,7 +140,7 @@ export default function Home() {
         <div className='main-banner display-flex'>
 
           <div className="mo">
-            <Image src="/images/main_banner2.jpg" alt='캐나다 코스트코 계약 체결' width={1000} height={500} priority />
+            <Image src="/images/main_banner2.jpg" alt='캐나다 코스트코 계약 체결' width={1000} height={500}/>
           </div>
 
           <div>
@@ -227,7 +227,7 @@ export default function Home() {
           </div>
 
           <div>
-            <Image src="/images/main_banner2.jpg" alt='캐나다 코스트코 계약 체결' fill sizes="50vw" priority />
+            <Image src="/images/main_banner2.jpg" alt='캐나다 코스트코 계약 체결' fill sizes="50vw"/>
           </div>
 
         </div>

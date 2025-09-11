@@ -32,20 +32,20 @@ export default function Footer() {
                 </div>
             </footer>
             <Script
-                    src="//wsa.mig-log.com/wsalog.js"
-                    type="text/javascript"
-                    strategy="beforeInteractive"
-                />
-                <Script
-                    id="wsa-init"
-                    strategy="afterInteractive"
-                    dangerouslySetInnerHTML={{
-                        __html: `
-            wsa.inflow("www.goldmarket.co.kr");
-            wsa_do(wsa);
-          `
-                    }}
-                />
+  src="//wsa.mig-log.com/wsalog.js"
+  strategy="afterInteractive"
+  onLoad={() => {
+    const wsa = window.wsa;
+    if (wsa?.inflow) {
+      wsa.inflow("www.goldmarket.co.kr");
+      window.wsa_do?.(wsa);
+      console.log("wsa initialized:", wsa);
+    } else {
+      console.log("wsa.inflow를 찾을 수 없음");
+    }
+  }}
+/>
+
         </>
     )
 }
