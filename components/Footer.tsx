@@ -31,23 +31,27 @@ export default function Footer() {
                     </div>
                 </div>
             </footer>
+            {/* <Script type="text/javascript"
+            strategy="beforeInteractive"
+            src="//wsa.mig-log.com/wsalog.js"/> 
+            <Script
+             id="wsa-init"
+            strategy="afterInteractive"
+            dangerouslySetInnerHTML={{ __html: `wsa.inflow("www.goldmarket.co.kr");
+                wsa_do(wsa);`}}/> */}
             <Script
                 src="//wsa.mig-log.com/wsalog.js"
                 strategy="afterInteractive"
                 onLoad={() => {
                     const wsa = window.wsa;
-                    if (wsa?.id && wsa?.key) {
-                        wsa.inflow?.("www.goldmarket.co.kr");
+                    if (wsa && wsa.inflow) {
+                        wsa.inflow("www.goldmarket.co.kr");
                         window.wsa_do?.(wsa);
-                        console.log("wsa initialized with id/key:", wsa);
+                        console.log("wsa initialized:", wsa);
                     } else {
-                        console.log("wsa id/key not available yet");
+                        console.log("wsa 객체 또는 wsa.inflow를 찾을 수 없음");
                     }
-
-                }
-                }
-            />
-
+                }} />
         </>
     )
 }
