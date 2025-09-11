@@ -32,27 +32,21 @@ export default function Footer() {
                 </div>
             </footer>
             <Script
-  src="//wsa.mig-log.com/wsalog.js"
-  strategy="afterInteractive"
-  onLoad={() => {
-    const checkWSA = (startTime = Date.now()) => {
-      const wsa = window.wsa;
-      const now = Date.now();
+                src="//wsa.mig-log.com/wsalog.js"
+                strategy="afterInteractive"
+                onLoad={() => {
+                    const wsa = window.wsa;
+                    if (wsa?.id && wsa?.key) {
+                        wsa.inflow?.("www.goldmarket.co.kr");
+                        window.wsa_do?.(wsa);
+                        console.log("wsa initialized with id/key:", wsa);
+                    } else {
+                        console.log("wsa id/key not available yet");
+                    }
 
-      if (wsa?.id && wsa?.key) {
-        wsa.inflow?.("www.goldmarket.co.kr");
-        (window as any).wsa_do?.(wsa);
-        console.log("wsa initialized with id/key:", wsa);
-      } else if (now - startTime < 5000) {
-        requestAnimationFrame(() => checkWSA(startTime));
-      } else {
-        console.log("wsa id/key not available");
-      }
-    };
-
-    checkWSA();
-  }}
-/>
+                }
+                }
+            />
 
         </>
     )
