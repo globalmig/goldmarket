@@ -35,14 +35,22 @@ export default function Footer() {
   src="//wsa.mig-log.com/wsalog.js"
   strategy="afterInteractive"
   onLoad={() => {
-    const wsa = window.wsa;
-    if (wsa?.inflow) {
-      wsa.inflow("www.goldmarket.co.kr");
-      window.wsa_do?.(wsa);
-      console.log("wsa initialized:", wsa);
-    } else {
-      console.log("wsa.inflow를 찾을 수 없음");
-    }
+    const checkWSA = (startTime = Date.now()) => {
+      const wsa = window.wsa;
+      const now = Date.now();
+
+      if (wsa?.id && wsa?.key) {
+        wsa.inflow?.("www.goldmarket.co.kr");
+        (window as any).wsa_do?.(wsa);
+        console.log("wsa initialized with id/key:", wsa);
+      } else if (now - startTime < 5000) {
+        requestAnimationFrame(() => checkWSA(startTime));
+      } else {
+        console.log("wsa id/key not available");
+      }
+    };
+
+    checkWSA();
   }}
 />
 
