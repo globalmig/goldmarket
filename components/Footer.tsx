@@ -32,11 +32,6 @@ export default function Footer() {
                 </div>
             </footer>
             <Script
-                      src="//wsa.mig-log.com/wsalog.js"
-                      type="text/javascript"
-                      strategy="beforeInteractive"
-                    />
-            <Script
                 id="wsa-init"
                 strategy="afterInteractive"
                 dangerouslySetInnerHTML={{

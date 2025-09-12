@@ -1,12 +1,12 @@
 'use client'
 import { conversion } from "@/util/conversion";
 import Link from "next/link";
-import { ReactNode } from "react";
+import { CSSProperties, ReactNode } from "react";
 
 interface TellButtonProps {
   children: ReactNode;
   className?: string;
-  style?: {}
+  style?: CSSProperties
 }
 
 export default function TellButton({children, className, style} : TellButtonProps) {
