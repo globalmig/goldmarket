@@ -1,15 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
+import TellButton from "./TellButton";
 export default function Footer() {
 
     return (
         <>
             <footer>
-                <Link href="tel:010-5482-4215" className="display-flex" style={{ width: '40px', maxWidth: '70px' }}
-                    >
+                <TellButton className="display-flex" style={{ width: '40px', maxWidth: '70px' }}>
                     <Image src="/icons/tel.png" alt="전화문의" width={100} height={100} />
-                </Link>
+                </TellButton>
                 <div className="display-flex">
                     <div>
                         <ul className="display-flex">
@@ -31,6 +31,11 @@ export default function Footer() {
                     </div>
                 </div>
             </footer>
+            <Script
+                      src="//wsa.mig-log.com/wsalog.js"
+                      type="text/javascript"
+                      strategy="beforeInteractive"
+                    />
             <Script
                 id="wsa-init"
                 strategy="afterInteractive"

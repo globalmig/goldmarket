@@ -37,11 +37,6 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
-        <Script
-          src="//wsa.mig-log.com/wsalog.js"
-          type="text/javascript"
-          strategy="beforeInteractive"
-        />
         <Header />
         {children}
         <Footer />

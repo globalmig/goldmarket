@@ -227,7 +227,7 @@ export default function Home() {
           </div>
 
           <div>
-            <Image src="/images/main_banner2.jpg" alt='캐나다 코스트코 계약 체결' fill sizes="50vw"/>
+            <Image src="/images/main_banner2.jpg" alt='캐나다 코스트코 계약 체결' fill/>
           </div>
 
         </div>

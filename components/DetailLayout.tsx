@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import TellButton from "./TellButton";
 
 interface DetailProductType {
     id: number;
@@ -170,7 +171,7 @@ export default function DetailLayout() {
                         <p>(최소주문수량 1개 이상)</p>
                     </div>
                     <button type="button">
-                        <Link href="tel:010-5482-4215">문의하기</Link>
+                        <TellButton>문의하기</TellButton>
                     </button>
                 </div>
             </div>
