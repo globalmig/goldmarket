@@ -1,3 +1,5 @@
+'use client'
+import { conversion } from "@/util/conversion";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
@@ -6,7 +8,8 @@ export default function Footer() {
     return (
         <>
             <footer>
-                <Link href="tel:010-5482-4215" className="display-flex" style={{ width: '40px', maxWidth: '70px' }}>
+                <Link href="tel:010-5482-4215" className="display-flex" style={{ width: '40px', maxWidth: '70px' }}
+                    onClick={() => conversion('1',1000,'UwWHsFC')}>
                     <Image src="/icons/tel.png" alt="전화문의" width={100} height={100} />
                 </Link>
                 <div className="display-flex">
@@ -31,12 +34,13 @@ export default function Footer() {
                 </div>
             </footer>
             <Script
-             id="wsa-init"
-            strategy="afterInteractive"
-            dangerouslySetInnerHTML={{ __html: `
+                id="wsa-init"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                    __html: `
                 wsa.inflow("www.goldmarket.co.kr");
                 wsa_do(wsa);
-            `}}/>
-      </>
-      )
+            `}} />
+        </>
+    )
 }

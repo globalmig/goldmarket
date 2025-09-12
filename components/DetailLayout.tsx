@@ -1,5 +1,6 @@
 'use client'
 import { ProductData } from "@/data/productData";
+import { conversion } from "@/util/conversion";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams, usePathname } from "next/navigation";
@@ -170,7 +171,7 @@ export default function DetailLayout() {
                         <p>(최소주문수량 1개 이상)</p>
                     </div>
                     <button type="button">
-                        <Link href="tel:010-5482-4215">문의하기</Link>
+                        <Link href="tel:010-5482-4215" onClick={() => conversion('1',1000,'UwWHsFC')}>문의하기</Link>
                     </button>
                 </div>
             </div>
