@@ -53,58 +53,16 @@ export default function DetailLayout() {
     const goldPrice = priceData.buy;
     const rate = priceData.rate;
 
-    const getCalculatedPrice = (product: DetailProductType) => {
-        const { weight } = product;
+    const weightRateMap: Record<number, number> = {
+        0.2: 0.054, 0.3: 0.08, 0.5: 0.134, 1: 0.27, 1.875: 0.5, 3.75: 1,
+        5: 1.3, 7.5: 2, 10: 2.67, 11.25: 3, 18.75: 5, 37.5: 10,
+        45: 12, 50: 13.33, 75: 20, 100: 26.67, 112.5: 30, 187.5: 50, 375: 100, 500: 133.33, 1000: 266.67
+    }
 
-        switch (weight) {
-            case 0.2:
-                return Math.round(goldPrice * 0.054 * rate);
-            case 0.3:
-                return Math.round(goldPrice * 0.08 * rate);
-            case 0.5:
-                return Math.round(goldPrice * 0.134 * rate);
-            case 1:
-                return Math.round(goldPrice * 0.27 * rate);
-            case 1.875:
-                return Math.round(goldPrice * 0.5 * rate);
-            case 3.75:
-                return Math.round(goldPrice * 1 * rate);
-            case 5:
-                return Math.round(goldPrice * 1.3 * rate);
-            case 7.5:
-                return Math.round(goldPrice * 2 * rate);
-            case 10:
-                return Math.round(goldPrice * 2.67 * rate);
-            case 11.25:
-                return Math.round(goldPrice * 3 * rate);
-            case 18.75:
-                return Math.round(goldPrice * 5 * rate);
-            case 37.5:
-                return Math.round(goldPrice * 10 * rate);
-            case 45:
-                return Math.round(goldPrice * 12 * rate);
-            case 50:
-                return Math.round(goldPrice * 13.33 * rate);
-            case 75:
-                return Math.round(goldPrice * 20 * rate);
-            case 100:
-                return Math.round(goldPrice * 26.67 * rate);
-            case 112.5:
-                return Math.round(goldPrice * 30 * rate);
-            case 187.5:
-                return Math.round(goldPrice * 50 * rate);
-            case 375:
-                return Math.round(goldPrice * 100 * rate);
-            case 500:
-                return Math.round(goldPrice * 133.33 * rate);
-            case 1000:
-                return Math.round(goldPrice * 266.67 * rate);
-            default:
-                return typeof goldPrice === "number" ? goldPrice : undefined;
-        }
-    };
+    const getCalculatedPrice = (weight: number)=>
+            Math.round((goldPrice * (weightRateMap[weight] ?? 1) * rate));
 
-    const price = getCalculatedPrice(product);
+    const price = getCalculatedPrice(product.weight);
     const isPlusPrice = pathname.startsWith('/%EC%88%9C%EA%B8%88%EB%B2%A0%EC%9D%B4%EB%B9%84') || pathname.startsWith('/%EC%88%9C%EA%B8%88%EC%BD%94%EC%9D%B8') || pathname.startsWith('/%EC%88%9C%EA%B8%88%EA%B8%B0%EB%85%90%ED%92%88');
 
     const roundedPrice = price !== undefined

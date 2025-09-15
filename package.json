@@ -14,6 +14,7 @@
     "react": "19.1.0",
     "react-dom": "19.1.0",
     "react-slick": "^0.30.3",
+    "react-virtualized": "^9.22.6",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
@@ -23,6 +24,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/react-slick": "^0.23.13",
+    "@types/react-virtualized": "^9.22.2",
     "eslint": "^9",
     "eslint-config-next": "15.4.1",
     "tailwindcss": "^4",
