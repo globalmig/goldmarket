@@ -3,7 +3,7 @@ import { ProductData } from "@/data/productData";
 import { CATEGORY_MAP } from "@/data/categoryMap";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = "http://www.goldmarket.co.kr";
+  const baseUrl = "https://www.goldmarket.co.kr";
   const fixedDate = "2025-09-17";
 
   const urls: MetadataRoute.Sitemap = [
