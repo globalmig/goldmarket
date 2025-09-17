@@ -25,7 +25,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.8,
     })),
     ...subCategories.map((sub) => ({
-      url: `${baseUrl}/${sub}`,
+      url: `${baseUrl}/${encodeURIComponent(sub)}`,
       lastModified: fixedDate,
       priority: 0.7,
     })),
