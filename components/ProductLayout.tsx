@@ -54,11 +54,11 @@ export default function ProductLayout({ categoryKey, selectedSubCategory }: Prod
         <article className="product">
             <div>
                 <div>
-                    <h2>{data.title}</h2>
-                    {data.subcategories &&
+                    <h2>{data?.title ?? " "}</h2>
+                    {data?.subcategories &&
                      (!pathname.startsWith('/goldcoin') || !pathname.startsWith("/silverbar") ?
                         <ul className="display-flex subcategory">
-                            {data.subcategories.map((sub, index) => {
+                            {data?.subcategories?.map((sub, index) => {
                                 const encodedSub = encodeURIComponent(sub);
                                 const decodedPath = decodeURIComponent(pathname);
                                 return (
@@ -78,7 +78,7 @@ export default function ProductLayout({ categoryKey, selectedSubCategory }: Prod
                         </ul> : <></>)
                     }
                 </div>
-                {(!priceData)
+                {(!priceData || !data)
                 ?
                 <div className="loading">
                     <p>상품을 불러오는 중입니다.</p>

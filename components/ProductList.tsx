@@ -1,7 +1,7 @@
 "use client"
 import { ProductData } from "@/data/productData";
 import ProductItem from "./ProductItem";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 interface ProductListProps {
     category: string,
@@ -13,19 +13,6 @@ interface ProductListProps {
         };
     },
     priceData: { buy: number, rate: number }
-}
-
-interface ProductType {
-    id: number;
-    category: string;
-    subCategory?: string;
-    name: string;
-    subname: string;
-    model?: string;
-    price?: number;
-    img: string;
-    detailImag?: string;
-    weight: number;
 }
 
 export default function ProductList({ category, subCategory, priceData }: ProductListProps) {
@@ -45,16 +32,16 @@ export default function ProductList({ category, subCategory, priceData }: Produc
 
     const [visibleCount, setVisibleCount] = useState<number>(12);
 
-    const scrollHandle = () => {
-         if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 300) {
-        setVisibleCount(prev => Math.min(prev + 12, uniqueList.length));
-    }
-    }
+    const scrollHandle = useCallback(() => {
+        if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 300) {
+            setVisibleCount(prev => Math.min(prev + 12, uniqueList.length));
+        }
+    }, [uniqueList.length]);
 
-    useEffect(()=> {
-        window.addEventListener('scroll', scrollHandle);
-        return () => window.removeEventListener('scroll', scrollHandle);
-    },[])
+    useEffect(() => {
+        window.addEventListener("scroll", scrollHandle);
+        return () => window.removeEventListener("scroll", scrollHandle);
+    }, [scrollHandle]);
 
     const weightRateMap: Record<number, number> = {
         0.2: 0.054, 0.3: 0.08, 0.5: 0.134, 1: 0.27, 1.875: 0.5, 3.75: 1,
@@ -62,8 +49,8 @@ export default function ProductList({ category, subCategory, priceData }: Produc
         45: 12, 50: 13.33, 75: 20, 100: 26.67, 112.5: 30, 187.5: 50, 375: 100, 500: 133.33, 1000: 266.67
     }
 
-    const getCalculatedPrice = (weight: number)=>
-            Math.round((goldPrice * (weightRateMap[weight] ?? 1) * rate));
+    const getCalculatedPrice = (weight: number) =>
+        Math.round((goldPrice * (weightRateMap[weight] ?? 1) * rate));
 
     return (
         <div className={`product-list ${uniqueList.length > 0 ? "isList" : "unList"}`}>
@@ -82,7 +69,7 @@ export default function ProductList({ category, subCategory, priceData }: Produc
                             }
                             return a.id - b.id;
                         })
-                        .slice(0, visibleCount) 
+                        .slice(0, visibleCount)
                         .map(product => {
                             if (!product) return null;
                             const price = getCalculatedPrice(product.weight);

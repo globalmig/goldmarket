@@ -52,31 +52,14 @@ export default function Home() {
       </div>
   );
 
-  const getCalculatedPrice = (weight: number) => {
-
-    switch (weight) {
-      case 37.5:
-        return Math.round(priceData.buy * 10 * priceData.rate);
-      case 50:
-        return Math.round(priceData.buy * 13.33 * priceData.rate);
-      case 75:
-        return Math.round(priceData.buy * 20 * priceData.rate);
-      case 100:
-        return Math.round(priceData.buy * 26.66666666666667 * priceData.rate);
-      case 112.5:
-        return Math.round(priceData.buy * 30 * priceData.rate);
-      case 187.5:
-        return Math.round(priceData.buy * 50 * priceData.rate);
-      case 375:
-        return Math.round(priceData.buy * 100 * priceData.rate);
-      case 500:
-        return Math.round(priceData.buy * 133.333 * priceData.rate);
-      case 1000:
-        return Math.round(priceData.buy * 266.6666666666667 * priceData.rate);
-      default:
-        return typeof priceData.buy === "number" ? priceData.buy : undefined;
+  const weightRateMap: Record<number, number> = {
+        0.2: 0.054, 0.3: 0.08, 0.5: 0.134, 1: 0.27, 1.875: 0.5, 3.75: 1,
+        5: 1.3, 7.5: 2, 10: 2.67, 11.25: 3, 18.75: 5, 37.5: 10,
+        45: 12, 50: 13.33, 75: 20, 100: 26.67, 112.5: 30, 187.5: 50, 375: 100, 500: 133.33, 1000: 266.67
     }
-  }
+
+    const getCalculatedPrice = (weight: number)=>
+            Math.round((priceData.buy * (weightRateMap[weight] ?? 1) * priceData.buy));
 
   const updatePrice = Number(priceData.buy ?? 0) - Number(priceData.prevBuyPrice ?? 0);
   const updateSell = Number(priceData.sell ?? 0) - Number(priceData.prevSellPrice ?? 0);

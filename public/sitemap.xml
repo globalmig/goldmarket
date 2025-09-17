@@ -1,11 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset 
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.goldmarket.co.kr</loc>
-    <lastmod>2025-08-22</lastmod>
+    <lastmod>2025-09-17</lastmod>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.goldmarket.co.kr/goldbar</loc>
+    <lastmod>2025-09-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.goldmarket.co.kr/silverbar</loc>
+    <lastmod>2025-09-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.goldmarket.co.kr/goldgift</loc>
+    <lastmod>2025-09-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.goldmarket.co.kr/goldcoin</loc>
+    <lastmod>2025-09-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.goldmarket.co.kr/goldbaby</loc>
+    <lastmod>2025-09-17</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.goldmarket.co.kr/goldbar/%ED%98%B8%EB%9E%91%EC%9D%B4%20%EA%B3%A8%EB%93%9C%EB%B0%94</loc>
+    <lastmod>2025-09-17</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.goldmarket.co.kr/goldbar/detail/1</loc>
+    <lastmod>2025-09-17</lastmod>
+    <priority>0.6</priority>
   </url>
 </urlset>

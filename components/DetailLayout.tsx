@@ -5,19 +5,6 @@ import { useParams, usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import TellButton from "./TellButton";
 
-interface DetailProductType {
-    id: number;
-    category: string;
-    subCategory?: string;
-    name: string;
-    subname: string;
-    model?: string;
-    price?: number;
-    img: string;
-    detailImag?: string;
-    weight: number;
-}
-
 export default function DetailLayout() {
 
     const params = useParams();
