@@ -15,7 +15,7 @@ export default function ProductLayout({ categoryKey, selectedSubCategory }: Prod
     const data = CATEGORY_MAP[categoryKey];
     const pathname = usePathname();
     const [priceData, setPriceData] = useState(null);
-
+    
     useEffect(()=> {
         const fetchPrice = async () => {
       try {
