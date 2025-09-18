@@ -44,22 +44,22 @@ export default function Home() {
   }, []);
 
   if (!priceData) return (
-      <div className="loading">
-        <div className="mo">
-            <Image src="/images/main_banner2.jpg" alt='캐나다 코스트코 계약 체결' width={1000} height={500} />
-          </div>
-        <p className="main-load-text">환영합니다.<br />홈페이지를 불러오는 중입니다.</p>
+    <div className="loading">
+      <div className="mo">
+        <Image src="/images/main_banner2.jpg" alt='캐나다 코스트코 계약 체결' width={1000} height={500} />
       </div>
+      <p className="main-load-text">환영합니다.<br />홈페이지를 불러오는 중입니다.</p>
+    </div>
   );
 
   const weightRateMap: Record<number, number> = {
-        0.2: 0.054, 0.3: 0.08, 0.5: 0.134, 1: 0.27, 1.875: 0.5, 3.75: 1,
-        5: 1.3, 7.5: 2, 10: 2.67, 11.25: 3, 18.75: 5, 37.5: 10,
-        45: 12, 50: 13.33, 75: 20, 100: 26.67, 112.5: 30, 187.5: 50, 375: 100, 500: 133.33, 1000: 266.67
-    }
+    0.2: 0.054, 0.3: 0.08, 0.5: 0.134, 1: 0.27, 1.875: 0.5, 3.75: 1,
+    5: 1.3, 7.5: 2, 10: 2.67, 11.25: 3, 18.75: 5, 37.5: 10,
+    45: 12, 50: 13.33, 75: 20, 100: 26.67, 112.5: 30, 187.5: 50, 375: 100, 500: 133.33, 1000: 266.67
+  }
 
-    const getCalculatedPrice = (weight: number)=>
-            Math.round((priceData.buy * (weightRateMap[weight] ?? 1) * priceData.buy));
+  const getCalculatedPrice = (weight: number) =>
+    Math.round((priceData.buy * (weightRateMap[weight] ?? 1) * priceData.rate));
 
   const updatePrice = Number(priceData.buy ?? 0) - Number(priceData.prevBuyPrice ?? 0);
   const updateSell = Number(priceData.sell ?? 0) - Number(priceData.prevSellPrice ?? 0);
@@ -123,7 +123,7 @@ export default function Home() {
         <div className='main-banner display-flex'>
 
           <div className="mo">
-            <Image src="/images/main_banner2.jpg" alt='캐나다 코스트코 계약 체결' width={1000} height={500}/>
+            <Image src="/images/main_banner2.jpg" alt='캐나다 코스트코 계약 체결' width={1000} height={500} />
           </div>
 
           <div>
@@ -210,7 +210,7 @@ export default function Home() {
           </div>
 
           <div>
-            <Image src="/images/main_banner2.jpg" alt='캐나다 코스트코 계약 체결' fill/>
+            <Image src="/images/main_banner2.jpg" alt='캐나다 코스트코 계약 체결' fill />
           </div>
 
         </div>
@@ -226,9 +226,10 @@ export default function Home() {
             {recommendProduct.map(product => {
 
               const price = getCalculatedPrice(product.weight);
+
               const roundedPrice = price !== undefined
                 ? Math.ceil(price / 1000) * 1000
-                : undefined
+                : undefined;
 
               return <div key={product.id}>
                 <Link href={`/골드바/detail/${product.id}`}>

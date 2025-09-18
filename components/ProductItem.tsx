@@ -18,16 +18,22 @@ export default function ProductItem({ id, category, name, subname, price, img, w
 
     const pathname = usePathname();
     const isPriceHidden = pathname.startsWith('/silverbar');
-    const isPlusPrice = ['/goldbaby', '/goldcoin', '/goldgift'].some(p => pathname.includes(p));
-    const isWeight = weight < 3.75;
 
     const roundedPrice = price !== undefined
         ? Math.ceil(price / 1000) * 1000
         : undefined;
 
-    const displayPrice = roundedPrice !== undefined
-        ? (isPlusPrice || isWeight ? roundedPrice + 30000 : roundedPrice).toLocaleString()
-        : null;
+    const weightPlusMap: Record<number, number> = {
+        0.2: 30000, 0.3: 30000, 0.5: 30000,
+        1: 40000, 1.875: 40000, 3.75: 40000,
+        5: 30000, 7.5: 30000, 10: 20000, 11.25: 10000,
+        18.75: 10000
+    }
+
+    const displayPrice = (weight: number) =>{
+        console.log(weight, roundedPrice, weightPlusMap[weight])
+         return roundedPrice && roundedPrice + (weightPlusMap[weight] ?? 0);
+        }
 
     return (
         <section className="product-item">
@@ -46,7 +52,7 @@ export default function ProductItem({ id, category, name, subname, price, img, w
                     ) : isPriceHidden ? (
                         <span>시세 변동</span>
                     ) : (
-                        <span>{displayPrice}원</span>
+                        <span>{displayPrice(weight)?.toLocaleString()}원</span>
                     )}
                 </p>
             </div>

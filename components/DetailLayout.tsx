@@ -50,21 +50,28 @@ export default function DetailLayout() {
             Math.round((goldPrice * (weightRateMap[weight] ?? 1) * rate));
 
     const price = getCalculatedPrice(product.weight);
-    const isPlusPrice = pathname.startsWith('/%EC%88%9C%EA%B8%88%EB%B2%A0%EC%9D%B4%EB%B9%84') || pathname.startsWith('/%EC%88%9C%EA%B8%88%EC%BD%94%EC%9D%B8') || pathname.startsWith('/%EC%88%9C%EA%B8%88%EA%B8%B0%EB%85%90%ED%92%88');
 
     const roundedPrice = price !== undefined
         ? Math.ceil(price / 1000) * 1000
         : undefined;
 
-    const isWeight = product.weight < 3.75;
+    const weightPlusMap: Record<number, number> = {
+        0.2: 30000, 0.3: 30000, 0.5: 30000,
+        1: 40000, 1.875: 40000, 3.75: 40000,
+        5: 30000, 7.5: 30000, 10: 20000, 11.25: 10000,
+        18.75: 10000
+    }
 
-    const displayPrice = roundedPrice &&
-        (isPlusPrice || isWeight ? roundedPrice + 30000 : roundedPrice).toLocaleString();
+    const displayPrice = (weight: number) =>{
+        console.log(weight, roundedPrice, weightPlusMap[weight])
+         return roundedPrice && roundedPrice + (weightPlusMap[weight] ?? 0);
+        }
 
     const isPriceHidden = pathname.startsWith('/silverbar');
 
+    // 순금베이비, 순금코인, 순금 기념품, 실버바
     const detailImage = pathname.startsWith('/%EC%88%9C%EA%B8%88%EB%B2%A0%EC%9D%B4%EB%B9%84') ||
-        pathname.startsWith('/%EC%88%9C%EA%B8%88%EC%BD%94%EC%9D%B8') ||
+        pathname.startsWith('/%EC%88%9C%EA%B8%88%EC%BD%94%EC%9D%B8/detail/53') ||
         pathname.startsWith('/%EC%88%9C%EA%B8%88%EA%B8%B0%EB%85%90%ED%92%88')
         ? "/images/detail/detail_02_2.png"
         : pathname.startsWith('/%EC%8B%A4%EB%B2%84%EB%B0%94')
@@ -88,7 +95,7 @@ export default function DetailLayout() {
                             ) : isPriceHidden || product.category === "실버바" ? (
                                 <span>시세 변동</span>
                             ) : (
-                                <span>{displayPrice}원</span>
+                                <span>{displayPrice(product.weight)?.toLocaleString()}원</span>
                             )}
                         </h3>
                         <ul>
