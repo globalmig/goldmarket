@@ -58,8 +58,8 @@ export default function DetailLayout() {
     const weightPlusMap: Record<number, number> = {
         0.2: 30000, 0.3: 30000, 0.5: 30000,
         1: 40000, 1.875: 40000, 3.75: 40000,
-        5: 30000, 7.5: 30000, 10: 20000, 11.25: 10000,
-        18.75: 10000
+        5: 60000, 7.5: 60000, 10: 60000, 11.25: 60000,
+        18.75: 50000
     }
 
     const displayPrice = (weight: number) =>{
