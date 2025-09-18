@@ -31,7 +31,6 @@ export default function ProductItem({ id, category, name, subname, price, img, w
     }
 
     const displayPrice = (weight: number) =>{
-        console.log(weight, roundedPrice, weightPlusMap[weight])
          return roundedPrice && roundedPrice + (weightPlusMap[weight] ?? 0);
         }
 

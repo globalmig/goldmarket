@@ -63,7 +63,6 @@ export default function DetailLayout() {
     }
 
     const displayPrice = (weight: number) =>{
-        console.log(weight, roundedPrice, weightPlusMap[weight])
          return roundedPrice && roundedPrice + (weightPlusMap[weight] ?? 0);
         }
 
