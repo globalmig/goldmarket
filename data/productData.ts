@@ -1,7 +1,7 @@
 export const ProductData = [
     {
         id: 1,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "기타",
         name: "골드바 수납함",
         subname: " ",
@@ -14,7 +14,7 @@ export const ProductData = [
     },
     {
         id: 2,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "사자 골드바",
         name: "사자 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -27,7 +27,7 @@ export const ProductData = [
     },
     {
         id: 3,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "사자 골드바",
         name: "사자 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -40,7 +40,7 @@ export const ProductData = [
     },
     {
         id: 4,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "사자 골드바",
         name: "사자 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -53,7 +53,7 @@ export const ProductData = [
     },
     {
         id: 5,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "사자 골드바",
         name: "사자 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -66,7 +66,7 @@ export const ProductData = [
     },
     {
         id: 6,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "사자 골드바",
         name: "사자 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -79,7 +79,7 @@ export const ProductData = [
     },
     {
         id: 7,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "사자 골드바",
         name: "사자 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -92,7 +92,7 @@ export const ProductData = [
     },
     {
         id: 8,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "사자 골드바",
         name: "사자 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -105,7 +105,7 @@ export const ProductData = [
     },
     {
         id: 9,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "사자 골드바",
         name: "사자 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -117,7 +117,7 @@ export const ProductData = [
         weight: 18.75,
     }, {
         id: 10,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "사자 골드바",
         name: "사자 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -129,7 +129,7 @@ export const ProductData = [
         weight: 37.5,
     }, {
         id: 11,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "사자 골드바",
         name: "사자 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -141,7 +141,7 @@ export const ProductData = [
         weight: 50,
     }, {
         id: 12,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "사자 골드바",
         name: "사자 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -153,7 +153,7 @@ export const ProductData = [
         weight: 75,
     }, {
         id: 13,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "사자 골드바",
         name: "사자 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -165,7 +165,7 @@ export const ProductData = [
         weight: 100,
     }, {
         id: 14,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "사자 골드바",
         name: "사자 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -177,7 +177,7 @@ export const ProductData = [
         weight: 375,
     }, {
         id: 15,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "사자 골드바",
         name: "사자 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -189,7 +189,7 @@ export const ProductData = [
         weight: 500,
     }, {
         id: 16,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "사자 골드바",
         name: "사자 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -201,7 +201,7 @@ export const ProductData = [
         weight: 1000,
     }, {
         id: 17,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "호랑이 골드바",
         name: "호랑이 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -214,7 +214,7 @@ export const ProductData = [
     },
     {
         id: 18,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "호랑이 골드바",
         name: "호랑이 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -227,7 +227,7 @@ export const ProductData = [
     },
     {
         id: 19,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "호랑이 골드바",
         name: "호랑이 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -240,7 +240,7 @@ export const ProductData = [
     },
     {
         id: 20,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "호랑이 골드바",
         name: "호랑이 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -253,7 +253,7 @@ export const ProductData = [
     },
     {
         id: 21,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "호랑이 골드바",
         name: "호랑이 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -266,7 +266,7 @@ export const ProductData = [
     },
     {
         id: 22,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "호랑이 골드바",
         name: "호랑이 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -278,7 +278,7 @@ export const ProductData = [
         weight: 18.75,
     }, {
         id: 23,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "호랑이 골드바",
         name: "호랑이 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -290,7 +290,7 @@ export const ProductData = [
         weight: 37.5,
     }, {
         id: 24,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "호랑이 골드바",
         name: "호랑이 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -302,7 +302,7 @@ export const ProductData = [
         weight: 50,
     }, {
         id: 25,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "호랑이 골드바",
         name: "호랑이 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -314,7 +314,7 @@ export const ProductData = [
         weight: 100,
     }, {
         id: 26,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "기타 골드바",
         name: "해피벌스데이 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -326,7 +326,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 27,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "기타 골드바",
         name: "타이포 모던 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -338,7 +338,7 @@ export const ProductData = [
         weight: 187.5,
     }, {
         id: 28,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "기타 골드바",
         name: "타이포 모던 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -351,7 +351,7 @@ export const ProductData = [
     },
     {
         id: 29,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "기타 골드바",
         name: "2024 행운 용 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -363,7 +363,7 @@ export const ProductData = [
         weight: 1,
     }, {
         id: 30,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "기타 골드바",
         name: "2024 행운 용 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -375,7 +375,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 31,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "기타 골드바",
         name: "2024 행운 용 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -387,7 +387,7 @@ export const ProductData = [
         weight: 5,
     }, {
         id: 32,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "기타 골드바",
         name: "2024 행운 용 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -399,7 +399,7 @@ export const ProductData = [
         weight: 10,
     }, {
         id: 33,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "기타 골드바",
         name: "갑진년 청룡 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -411,7 +411,7 @@ export const ProductData = [
         weight: 1,
     }, {
         id: 34,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "기타 골드바",
         name: "갑진년 청룡 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -423,7 +423,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 35,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "기타 골드바",
         name: "갑진년 청룡 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -435,7 +435,7 @@ export const ProductData = [
         weight: 5,
     }, {
         id: 36,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "기타 골드바",
         name: "갑진년 청룡 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -447,7 +447,7 @@ export const ProductData = [
         weight: 10,
     }, {
         id: 37,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "기타 골드바",
         name: "갑진년 청룡 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -459,7 +459,7 @@ export const ProductData = [
         weight: 37.5,
     }, {
         id: 38,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "기타 골드바",
         name: "별토끼 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -471,7 +471,7 @@ export const ProductData = [
         weight: 3.75,
     },{
         id: 40,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "기타 골드바",
         name: "캐릭터 십이지신 골드바 12종",
         subname: "순도 999.9% FINE GOLD",
@@ -483,7 +483,7 @@ export const ProductData = [
         weight: 3.75,
     },{
         id: 41,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "기타 골드바",
         name: "캐릭터 십이지신 골드바 12종",
         subname: "순도 999.9% FINE GOLD",
@@ -495,7 +495,7 @@ export const ProductData = [
         weight: 7.5,
     }, {
         id: 42,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "기타 골드바",
         name: "캐릭터 십이지신 골드바 12종",
         subname: "순도 999.9% FINE GOLD",
@@ -507,7 +507,7 @@ export const ProductData = [
         weight: 11.25,
     },{
         id: 43,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "기타 골드바",
         name: "캐릭터 십이지신 골드바 12종",
         subname: "순도 999.9% FINE GOLD",
@@ -519,7 +519,7 @@ export const ProductData = [
         weight: 37.5,
     },{
         id: 44,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "기타 골드바",
         name: "십장생 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -531,7 +531,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 45,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "기타 골드바",
         name: "십장생 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -543,7 +543,7 @@ export const ProductData = [
         weight: 11.25,
     }, {
         id: 46,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "기타 골드바",
         name: "십장생 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -555,7 +555,7 @@ export const ProductData = [
         weight: 18.75,
     }, {
         id: 47,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "기타 골드바",
         name: "십장생 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -567,7 +567,7 @@ export const ProductData = [
         weight: 37.5,
     }, {
         id: 48,
-        category: "실버바",
+        category: "silverbar",
         subCategory: "실버바",
         name: "호랑이 실버바",
         subname: "AG999.9%",
@@ -579,7 +579,7 @@ export const ProductData = [
         weight: 1000,
     }, {
         id: 49,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "기타 골드바",
         name: "카네이션 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -591,7 +591,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 50,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "기타 골드바",
         name: "카네이션 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -603,7 +603,7 @@ export const ProductData = [
         weight: 7.5,
     }, {
         id: 51,
-        category: "골드바",
+        category: "goldbar",
         subCategory: "LS MnM 골드바",
         name: "LS MnM 골드바",
         subname: "순도 999.9% FINE GOLD",
@@ -615,7 +615,7 @@ export const ProductData = [
         weight: 1000,
     }, {
         id: 52,
-        category: "순금코인",
+        category: "goldcoin",
         subCategory: "순금코인",
         name: "자물쇠 코인",
         subname: "FINE GOLD 0.2G",
@@ -627,7 +627,7 @@ export const ProductData = [
         weight: 0.2,
     }, {
         id: 53,
-        category: "순금코인",
+        category: "goldcoin",
         subCategory: "순금코인",
         name: "불꽃놀이 코인",
         subname: "FINE GOLD 0.3G",
@@ -639,7 +639,7 @@ export const ProductData = [
         weight: 0.3,
     }, {
         id: 54,
-        category: "순금코인",
+        category: "goldcoin",
         subCategory: "순금코인",
         name: "금나무 코인",
         subname: "FINE GOLD 0.5G",
@@ -651,7 +651,7 @@ export const ProductData = [
         weight: 0.5,
     }, {
         id: 55,
-        category: "순금코인",
+        category: "goldcoin",
         subCategory: "순금코인",
         name: "복 코인",
         subname: "순도 999.9% FINE GOLD",
@@ -663,7 +663,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 56,
-        category: "순금코인",
+        category: "goldcoin",
         subCategory: "순금코인",
         name: "클로버 코인",
         subname: "순도 999.9% FINE GOLD",
@@ -675,7 +675,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 57,
-        category: "순금코인",
+        category: "goldcoin",
         subCategory: "순금코인",
         name: "꽃신 코인",
         subname: "순도 999.9% FINE GOLD",
@@ -687,7 +687,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 58,
-        category: "순금코인",
+        category: "goldcoin",
         subCategory: "순금코인",
         name: "행운 코인",
         subname: "순도 999.9% FINE GOLD",
@@ -699,7 +699,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 59,
-        category: "순금코인",
+        category: "goldcoin",
         subCategory: "순금코인",
         name: "십장생 골드",
         subname: "FINE GOLD 3.75g",
@@ -711,7 +711,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 60,
-        category: "순금코인",
+        category: "goldcoin",
         subCategory: "순금코인",
         name: "십장생 골드",
         subname: "FINE GOLD 11.25g",
@@ -723,7 +723,7 @@ export const ProductData = [
         weight: 11.25,
     }, {
         id: 61,
-        category: "순금코인",
+        category: "goldcoin",
         subCategory: "순금코인",
         name: "2024 행운 용 코인",
         subname: "순도 999.9% FINE GOLD",
@@ -735,7 +735,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 62,
-        category: "순금코인",
+        category: "goldcoin",
         subCategory: "순금코인",
         name: "갑진년 청룡코인",
         subname: "순도 999.9% FINE GOLD",
@@ -747,7 +747,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 63,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "선물용/소장용",
         name: "카네이션 상패",
         subname: " ",
@@ -759,7 +759,7 @@ export const ProductData = [
         weight: 1,
     }, {
         id: 64,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "선물용/소장용",
         name: "순금 카네이션 배지 하트 플라워 패키지",
         subname: "어버이날 선물 추천! FINE GOLD 1g",
@@ -772,7 +772,7 @@ export const ProductData = [
     },
     {
         id: 65,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "선물용/소장용",
         name: "순금 카네이션 배지 하트 플라워 패키지",
         subname: "어버이날 선물 추천! FINE GOLD 1.875g",
@@ -785,7 +785,7 @@ export const ProductData = [
     },
     {
         id: 66,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "선물용/소장용",
         name: "순금 카네이션 배지 하트 플라워 패키지",
         subname: "어버이날 선물 추천! FINE GOLD 3.75g",
@@ -797,7 +797,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 67,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "선물용/소장용",
         name: "순금 카네이션 배지",
         subname: "어버이날 선물 추천! FINE GOLD 1g",
@@ -809,7 +809,7 @@ export const ProductData = [
         weight: 1,
     }, {
         id: 68,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "선물용/소장용",
         name: "순금 카네이션 배지",
         subname: "어버이날 선물 추천! FINE GOLD 1.875g",
@@ -821,7 +821,7 @@ export const ProductData = [
         weight: 1.875,
     }, {
         id: 69,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "선물용/소장용",
         name: "순금 카네이션 배지",
         subname: "어버이날 선물 추천! FINE GOLD 3.75g",
@@ -833,7 +833,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 70,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "선물용/소장용",
         name: "순금 카네이션 상패 골드바",
         subname: "FINE GOLD 3.75g",
@@ -845,7 +845,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 71,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "선물용/소장용",
         name: "순금 1조 수표",
         subname: "선물 추천! 프리미엄 우드 케이스 포함",
@@ -857,7 +857,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 72,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "선물용/소장용",
         name: "순금 2달러 카드",
         subname: "선물 추천! 프리미엄 우드 케이스 포함",
@@ -869,7 +869,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 73,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "선물용/소장용",
         name: "순금 십이지신 골드바 세트 상패",
         subname: "선물추천! FINE GOLD 45g + 우드 케이스",
@@ -881,7 +881,7 @@ export const ProductData = [
         weight: 45,
     }, {
         id: 74,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "선물용/소장용",
         name: "순금 뱀 상패",
         subname: "선물 추천! 프리미엄 우드 케이스 포함",
@@ -893,7 +893,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 75,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "선물용/소장용",
         name: "순금 뱀 상패",
         subname: "선물 추천! 프리미엄 우드 케이스 포함",
@@ -905,7 +905,7 @@ export const ProductData = [
         weight: 11.25,
     }, {
         id: 76,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "선물용/소장용",
         name: "순금 뱀 상패",
         subname: "선물 추천! 프리미엄 우드 케이스 포함",
@@ -918,7 +918,7 @@ export const ProductData = [
     },
     {
         id: 77,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "돼지/토끼/입체",
         name: "십이지신 피규어",
         subname: "FINE GOLD 3.75g",
@@ -930,7 +930,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 78,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "돼지/토끼/입체",
         name: "순금 골프공",
         subname: "FINE GOLD 3.75g",
@@ -942,7 +942,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 79,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "돼지/토끼/입체",
         name: "순금 골프공",
         subname: "FINE GOLD 11.25g",
@@ -954,7 +954,7 @@ export const ProductData = [
         weight: 11.25,
     }, {
         id: 80,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "돼지/토끼/입체",
         name: "순금 골프공",
         subname: "FINE GOLD 37.5g",
@@ -967,7 +967,7 @@ export const ProductData = [
     },
     {
         id: 81,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "돼지/토끼/입체",
         name: "순금 황금돼지",
         subname: "FINE GOLD 3.75g",
@@ -979,7 +979,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 82,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "돼지/토끼/입체",
         name: "순금 황금돼지",
         subname: "FINE GOLD 11.25g",
@@ -991,7 +991,7 @@ export const ProductData = [
         weight: 11.25,
     }, {
         id: 83,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "돼지/토끼/입체",
         name: "순금 황금돼지",
         subname: "FINE GOLD 37.5g",
@@ -1003,7 +1003,7 @@ export const ProductData = [
         weight: 37.5,
     }, {
         id: 84,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "돼지/토끼/입체",
         name: "순금 토끼",
         subname: "FINE GOLD 3.75g",
@@ -1015,7 +1015,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 85,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "돼지/토끼/입체",
         name: "순금 토끼",
         subname: "FINE GOLD 11.25g",
@@ -1027,7 +1027,7 @@ export const ProductData = [
         weight: 11.25,
     }, {
         id: 86,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "돼지/토끼/입체",
         name: "순금 토끼",
         subname: "FINE GOLD 37.5g",
@@ -1039,7 +1039,7 @@ export const ProductData = [
         weight: 37.5,
     }, {
         id: 87,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "돼지/토끼/입체",
         name: "순금 거북이",
         subname: "FINE GOLD 3.75g",
@@ -1051,7 +1051,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 88,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "돼지/토끼/입체",
         name: "순금 거북이",
         subname: "FINE GOLD 11.25g",
@@ -1063,7 +1063,7 @@ export const ProductData = [
         weight: 11.25,
     }, {
         id: 89,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "돼지/토끼/입체",
         name: "순금 거북이",
         subname: "FINE GOLD 37.5g",
@@ -1075,7 +1075,7 @@ export const ProductData = [
         weight: 37.5,
     }, {
         id: 90,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "돼지/토끼/입체",
         name: "순금 두꺼비",
         subname: "FINE GOLD 18.75g",
@@ -1087,7 +1087,7 @@ export const ProductData = [
         weight: 18.75,
     }, {
         id: 91,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "돼지/토끼/입체",
         name: "순금 두꺼비",
         subname: "FINE GOLD 37.5g",
@@ -1098,7 +1098,7 @@ export const ProductData = [
         weight: 37.5,
     }, {
         id: 92,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "돼지/토끼/입체",
         name: "순금 소",
         subname: "FINE GOLD 37.5g",
@@ -1110,7 +1110,7 @@ export const ProductData = [
         weight: 37.5,
     }, {
         id: 93,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "돼지/토끼/입체",
         name: "순금 말",
         subname: "FINE GOLD 3.75g",
@@ -1123,7 +1123,7 @@ export const ProductData = [
     },
     {
         id: 94,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "순금 행운의 열쇠/열쇠상패",
         name: "순금 행운의 열쇠",
         subname: "FINE GOLD 3.75g",
@@ -1136,7 +1136,7 @@ export const ProductData = [
     },
     {
         id: 95,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "순금 행운의 열쇠/열쇠상패",
         name: "순금 행운의 열쇠",
         subname: "FINE GOLD 11.25g",
@@ -1149,7 +1149,7 @@ export const ProductData = [
     },
     {
         id: 96,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "순금 행운의 열쇠/열쇠상패",
         name: "순금 행운의 열쇠",
         subname: "FINE GOLD 37.5g",
@@ -1162,7 +1162,7 @@ export const ProductData = [
     },
     {
         id: 97,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "복 금수저/금수저상패",
         name: "순금 복 황금수저",
         subname: "선물추천! FINE GOLD 3.75g",
@@ -1174,7 +1174,7 @@ export const ProductData = [
         weight: 3.75,
     },{
         id: 98,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "복 금수저/금수저상패",
         name: "순금 복 평면 금 수저",
         subname: " ",
@@ -1187,7 +1187,7 @@ export const ProductData = [
     },
     {
         id: 99,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "순금 행운의 열쇠/열쇠상패",
         name: "순금 행운의 열쇠 상패 가로형",
         subname: "선물추천! 기본 우드케이스 포함",
@@ -1199,7 +1199,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 100,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "순금 행운의 열쇠/열쇠상패",
         name: "순금 행운의 열쇠 상패 가로형",
         subname: "선물추천! 기본 우드케이스 포함",
@@ -1211,7 +1211,7 @@ export const ProductData = [
         weight: 11.25,
     }, {
         id: 101,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "순금 행운의 열쇠/열쇠상패",
         name: "순금 행운의 열쇠 상패 가로형",
         subname: "선물추천! 기본 우드케이스 포함",
@@ -1223,7 +1223,7 @@ export const ProductData = [
         weight: 37.5,
     }, {
         id: 102,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "순금 행운의 열쇠/열쇠상패",
         name: "순금 행운의 열쇠 상패 세로형",
         subname: "선물추천! 기본 우드케이스 포함",
@@ -1235,7 +1235,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 103,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "복 금수저/금수저상패",
         name: "순금 수저 상패 목판 가로형",
         subname: "선물추천! 기본 우드케이스 포함",
@@ -1247,7 +1247,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 104,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "복 금수저/금수저상패",
         name: "순금 수저 상패 목판 가로형",
         subname: "선물추천! 기본 우드케이스 포함",
@@ -1259,7 +1259,7 @@ export const ProductData = [
         weight: 11.25,
     },{
         id: 105,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "복 금수저/금수저상패",
         name: "순금 수저 카드 아크릴 상패",
         subname: "선물추천! 기본 우드케이스 포함",
@@ -1271,7 +1271,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 106,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "복 금수저/금수저상패",
         name: "순금 수저 카드 아크릴 상패",
         subname: "선물추천! 기본 우드케이스 포함",
@@ -1283,7 +1283,7 @@ export const ProductData = [
         weight: 11.25,
     }, {
         id: 107,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "복 금수저/금수저상패",
         name: "순금 수저 카드 상패",
         subname: "선물추천! 기본 우드케이스 포함",
@@ -1295,7 +1295,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 108,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "복 금수저/금수저상패",
         name: "순금 수저 카드 상패",
         subname: "선물추천! 기본 우드케이스 포함",
@@ -1307,7 +1307,7 @@ export const ProductData = [
         weight: 11.25,
     }, {
         id: 109,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "순금 행운의 열쇠/열쇠상패",
         name: "순금 행운의 열쇠 상패 목판 가로형",
         subname: "선물추천! 기본 우드케이스 포함",
@@ -1320,7 +1320,7 @@ export const ProductData = [
     },
     {
         id: 110,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "상패류",
         name: "카네이션 상패",
         subname: " ",
@@ -1333,7 +1333,7 @@ export const ProductData = [
     },
     {
         id: 111,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "상패류",
         name: "순금 뱀 상패",
         subname: "선물 추천! 프리미엄 우드 케이스 포함",
@@ -1345,7 +1345,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 112,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "상패류",
         name: "순금 뱀 상패",
         subname: "선물 추천! 프리미엄 우드 케이스 포함",
@@ -1357,7 +1357,7 @@ export const ProductData = [
         weight: 11.25,
     }, {
         id: 113,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "상패류",
         name: "순금 뱀 상패",
         subname: "선물 추천! 프리미엄 우드 케이스 포함",
@@ -1369,7 +1369,7 @@ export const ProductData = [
         weight: 37.5,
     }, {
         id: 114,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "상패류",
         name: "순금 1조 수표",
         subname: "선물 추천! 프리미엄 우드 케이스 포함",
@@ -1381,7 +1381,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 115,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "상패류",
         name: "순금 2달러 카드",
         subname: "선물 추천! 프리미엄 우드 케이스 포함",
@@ -1394,7 +1394,7 @@ export const ProductData = [
     },
     {
         id: 117,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "상패류",
         name: "순금 십장생 골드 코인 상패",
         subname: "선물추천! FINE GOLD 11.25g + 우드케이스",
@@ -1406,7 +1406,7 @@ export const ProductData = [
         weight: 11.25,
     }, {
         id: 118,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "상패류",
         name: "순금 십장생 골드 코인 상패",
         subname: "선물추천! FINE GOLD 37.5g + 우드케이스",
@@ -1419,7 +1419,7 @@ export const ProductData = [
     },
     {
         id: 119,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "순금 행운의 열쇠/열쇠상패",
         name: "순금 행운의 열쇠 상패 목판 가로형",
         subname: "선물추천! 기본 우드케이스 포함",
@@ -1431,7 +1431,7 @@ export const ProductData = [
         weight: 11.25,
     }, {
         id: 120,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "순금 행운의 열쇠/열쇠상패",
         name: "순금 행운의 열쇠 상패 목판 가로형",
         subname: "선물추천! 기본 우드케이스 포함",
@@ -1443,7 +1443,7 @@ export const ProductData = [
         weight: 37.5,
     }, {
         id: 121,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "순금 행운의 열쇠/열쇠상패",
         name: "순금 행운의 열쇠 상패 목판 세로형",
         subname: "선물추천! 기본 우드케이스 포함",
@@ -1455,7 +1455,7 @@ export const ProductData = [
         weight: 11.25,
     }, {
         id: 122,
-        category: "순금기념품",
+        category: "goldgift",
         subCategory: "순금 행운의 열쇠/열쇠상패",
         name: "순금 행운의 열쇠 상패 목판 세로형",
         subname: "선물추천! 기본 우드케이스 포함",
@@ -1467,7 +1467,7 @@ export const ProductData = [
         weight: 18.75,
     },{
         id: 123,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "돌반지",
         name: "순금 왕관 용 돌반지",
         subname: "FINE GOLD 3.75g",
@@ -1479,7 +1479,7 @@ export const ProductData = [
         weight: 3.75,
     },{
         id: 124,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "돌반지",
         name: "순금 첫돌 용 돌반지",
         subname: "FINE GOLD 3.75g",
@@ -1491,7 +1491,7 @@ export const ProductData = [
         weight: 3.75,
     },{
         id: 125,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "돌반지",
         name: "순금 첫돌 까꿍 용 돌반지",
         subname: "FINE GOLD 3.75g",
@@ -1503,7 +1503,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 126,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "돌반지",
         name: "순금 2024 용 돌반지",
         subname: "FINE GOLD 3.75g",
@@ -1515,7 +1515,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 127,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "돌반지",
         name: "순금 왕관 용 꼬까신 돌반지",
         subname: "FINE GOLD 3.75g",
@@ -1527,7 +1527,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 128,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "돌반지",
         name: "순금 용 건물주 금수저 돌반지",
         subname: "FINE GOLD 1.875g",
@@ -1539,7 +1539,7 @@ export const ProductData = [
         weight: 1.875,
     }, {
         id: 129,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "돌반지",
         name: "순금 용 건물주 금수저 돌반지",
         subname: "FINE GOLD 3.75g",
@@ -1551,7 +1551,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 130,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "돌반지",
         name: "순금 왕관 용 금수저 돌반지",
         subname: "FINE GOLD 3.75g",
@@ -1563,7 +1563,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 1311,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "돌반지",
         name: "순금 힘찬용 돌반지",
         subname: "FINE GOLD 3.75g",
@@ -1575,7 +1575,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 131,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "돌반지",
         name: "순금 용용 돌반지",
         subname: "FINE GOLD 3.75g",
@@ -1587,7 +1587,7 @@ export const ProductData = [
         weight: 3.75,
     },{
         id: 132,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "돌반지",
         name: "순금 해피 토끼 돌반지",
         subname: "FINE GOLD 3.75g",
@@ -1599,7 +1599,7 @@ export const ProductData = [
         weight: 3.75,
     },{
         id: 133,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "돌반지",
         name: "순금 하트 토끼 돌반지",
         subname: "FINE GOLD 3.75g",
@@ -1611,7 +1611,7 @@ export const ProductData = [
         weight: 3.75,
     },{
         id: 134,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "돌반지",
         name: "순금 토끼 크라운 돌반지",
         subname: "FINE GOLD 3.75g",
@@ -1623,7 +1623,7 @@ export const ProductData = [
         weight: 3.75,
     },{
         id: 135,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "돌반지",
         name: "순금 리본 토끼 돌반지",
         subname: "FINE GOLD 3.75g",
@@ -1635,7 +1635,7 @@ export const ProductData = [
         weight: 3.75,
     },{
         id: 136,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "돌반지",
         name: "순금 하트 첫돌 돌반지",
         subname: "FINE GOLD 3.75g",
@@ -1647,7 +1647,7 @@ export const ProductData = [
         weight: 3.75,
     },{
         id: 137,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "돌반지",
         name: "순금 하트 백일 돌반지",
         subname: "FINE GOLD 3.75g",
@@ -1659,7 +1659,7 @@ export const ProductData = [
         weight: 3.75,
     },{
         id: 138,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "돌반지",
         name: "순금 하트 리본 돌반지",
         subname: "FINE GOLD 3.75g",
@@ -1671,7 +1671,7 @@ export const ProductData = [
         weight: 3.75,
     },{
         id: 139,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "돌반지",
         name: "순금 플라워 스마일 돌반지",
         subname: "FINE GOLD 3.75g",
@@ -1683,7 +1683,7 @@ export const ProductData = [
         weight: 3.75,
     },{
         id: 140,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "돌팔찌",
         name: "순금 왕관 용 돌팔찌",
         subname: "FINE GOLD 7.5g",
@@ -1695,7 +1695,7 @@ export const ProductData = [
         weight: 7.5,
     }, {
         id: 141,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "돌팔찌",
         name: "순금 하트용 돌팔찌",
         subname: "FINE GOLD 3.75g",
@@ -1707,7 +1707,7 @@ export const ProductData = [
         weight: 7.5,
     }, {
         id: 142,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "돌팔찌",
         name: "순금 첫돌 용 돌팔찌",
         subname: "FINE GOLD 7.5g",
@@ -1719,7 +1719,7 @@ export const ProductData = [
         weight: 7.5,
     }, {
         id: 143,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "돌팔찌",
         name: "순금 까꿍 용 돌팔찌",
         subname: "FINE GOLD 11.25g",
@@ -1731,7 +1731,7 @@ export const ProductData = [
         weight: 11.25,
     }, {
         id: 144,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "돌팔찌",
         name: "순금 마이엔젤 돌팔찌",
         subname: "FINE GOLD 3.75g",
@@ -1743,7 +1743,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 145,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "돌팔찌",
         name: "순금 마이프린세스 돌팔찌",
         subname: "FINE GOLD 3.75g",
@@ -1755,7 +1755,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 146,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "돌팔찌",
         name: "순금 하트 토끼 돌팔찌",
         subname: "FINE GOLD 18.75g",
@@ -1767,7 +1767,7 @@ export const ProductData = [
         weight: 18.75,
     }, {
         id: 147,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "돌팔찌",
         name: "순금 하트 호랑이 돌팔찌",
         subname: "FINE GOLD 3.75g",
@@ -1779,7 +1779,7 @@ export const ProductData = [
         weight: 18.75,
     },{
         id: 148,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "돌팔찌",
         name: "순금 깡총이 돌팔찌",
         subname: "FINE GOLD 7.5g",
@@ -1791,7 +1791,7 @@ export const ProductData = [
         weight: 7.5,
     },{
         id: 149,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "돌팔찌",
         name: "순금 하트 백일 돌팔찌",
         subname: "FINE GOLD 7.5g",
@@ -1803,7 +1803,7 @@ export const ProductData = [
         weight: 7.5,
     },{
         id: 150,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "돌팔찌",
         name: "순금 하트 첫돌 돌팔찌",
         subname: "FINE GOLD 7.5g",
@@ -1815,7 +1815,7 @@ export const ProductData = [
         weight: 7.5,
     },{
         id: 151,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "돌팔찌",
         name: "순금 왕관컷팅 돌팔찌",
         subname: "FINE GOLD 11.25g",
@@ -1827,7 +1827,7 @@ export const ProductData = [
         weight: 11.25,
     },{
         id: 152,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "돌팔찌",
         name: "순금 복 돌팔찌",
         subname: "FINE GOLD 18.75g",
@@ -1839,7 +1839,7 @@ export const ProductData = [
         weight: 18.75,
     },{
         id: 153,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "돌팔찌",
         name: "순금 천사날개 돌팔찌",
         subname: "FINE GOLD 11.25g",
@@ -1851,7 +1851,7 @@ export const ProductData = [
         weight: 11.25,
     },{
         id: 154,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "돌목걸이",
         name: "순금 왕관 용 돌목걸이",
         subname: "FINE GOLD 3.75g",
@@ -1863,7 +1863,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 155,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "돌목걸이",
         name: "순금 왕관 용 돌목걸이",
         subname: "FINE GOLD 1.875g",
@@ -1875,7 +1875,7 @@ export const ProductData = [
         weight: 1.875,
     }, {
         id: 156,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "순금카드",
         name: "첫 생일 순금 카드",
         subname: "FINE GOLD 3.75g",
@@ -1887,7 +1887,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 157,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "순금카드",
         name: "백일 순금 카드",
         subname: "FINE GOLD 3.75g",
@@ -1899,7 +1899,7 @@ export const ProductData = [
         weight: 3.75,
     }, {
         id: 158,
-        category: "순금베이비",
+        category: "goldbaby",
         subCategory: "순금카드",
         name: "첫돌 순금 카드",
         subname: "FINE GOLD 3.75g",
@@ -1910,4 +1910,4 @@ export const ProductData = [
         detailImag: "/images/detail/goldbaby/첫돌_순금카드_3.75g_detail.jpeg",
         weight: 3.75,
     },
-]
+] 

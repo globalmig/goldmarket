@@ -2,8 +2,19 @@
 import { ProductData } from "@/data/productData";
 import Image from "next/image";
 import { useParams, usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
 import TellButton from "./TellButton";
+import { displayPrice, getCalculatedPrice } from "@/util/calculatedPrice";
+import { useEffect, useState } from "react";
+import usePrice from "@/hook/usePrice";
+
+interface DetailPriceProps {
+  buy: number,
+  sell: number,
+  rate: number,
+  prevBuyPrice: number,
+  prevSellPrice: number,
+  date: string,
+}
 
 export default function DetailLayout() {
 
@@ -13,23 +24,14 @@ export default function DetailLayout() {
     const productId = Number(id);
     const product = ProductData.find(p => p.id === productId);
 
-    const [priceData, setPriceData] = useState<{ buy: number; rate: number } | null>(null);
+    const [goldPrice, setGoldPrice] = useState<DetailPriceProps | null>(null);
+    const detailPrice = usePrice();
 
-    useEffect(() => {
-        async function fetchPrice() {
-            try {
-                const res = await fetch("/api/price");
-                const result = await res.json();
-                const [latestPrice] = result.data;
-                setPriceData({ buy: latestPrice.buy, rate: latestPrice.rate });
-            } catch (err) {
-                console.error(err);
-            }
-        }
-        fetchPrice();
-    }, []);
+    useEffect(()=> {
+    if(detailPrice) setGoldPrice(detailPrice);
+  },[detailPrice]);
 
-    if (!product || !priceData) return (
+    if (!product || !goldPrice) return (
         <article className="detail">
             <div className="loading">
                 <p>상품정보를 불러오는 중입니다.</p>
@@ -37,43 +39,20 @@ export default function DetailLayout() {
         </article>
     )
 
-    const goldPrice = priceData.buy;
-    const rate = priceData.rate;
+    const gold = goldPrice?.buy ?? 0;
+    const rate = goldPrice?.rate ?? 1;
+    const price = getCalculatedPrice(gold, product.weight, rate);
+    const currentPrice = displayPrice(price, product.weight)?.toLocaleString();
 
-    const weightRateMap: Record<number, number> = {
-        0.2: 0.054, 0.3: 0.08, 0.5: 0.134, 1: 0.27, 1.875: 0.5, 3.75: 1,
-        5: 1.3, 7.5: 2, 10: 2.67, 11.25: 3, 18.75: 5, 37.5: 10,
-        45: 12, 50: 13.33, 75: 20, 100: 26.67, 112.5: 30, 187.5: 50, 375: 100, 500: 133.33, 1000: 266.67
-    }
-
-    const getCalculatedPrice = (weight: number)=>
-            Math.round((goldPrice * (weightRateMap[weight] ?? 1) * rate));
-
-    const price = getCalculatedPrice(product.weight);
-
-    const roundedPrice = price !== undefined
-        ? Math.ceil(price / 1000) * 1000
-        : undefined;
-
-    const weightPlusMap: Record<number, number> = {
-        0.2: 30000, 0.3: 30000, 0.5: 30000,
-        1: 40000, 1.875: 40000, 3.75: 40000,
-        5: 60000, 7.5: 60000, 10: 60000, 11.25: 60000,
-        18.75: 50000
-    }
-
-    const displayPrice = (weight: number) =>{
-         return roundedPrice && roundedPrice + (weightPlusMap[weight] ?? 0);
-        }
 
     const isPriceHidden = pathname.startsWith('/silverbar');
 
     // 순금베이비, 순금코인, 순금 기념품, 실버바
-    const detailImage = pathname.startsWith('/%EC%88%9C%EA%B8%88%EB%B2%A0%EC%9D%B4%EB%B9%84') ||
-        pathname.startsWith('/%EC%88%9C%EA%B8%88%EC%BD%94%EC%9D%B8/detail/53') ||
-        pathname.startsWith('/%EC%88%9C%EA%B8%88%EA%B8%B0%EB%85%90%ED%92%88')
+    const detailImage = pathname.startsWith('/goldbaby') ||
+        pathname.startsWith('/goldcoin') ||
+        pathname.startsWith('/goldgift')
         ? "/images/detail/detail_02_2.png"
-        : pathname.startsWith('/%EC%8B%A4%EB%B2%84%EB%B0%94')
+        : pathname.startsWith('/silverbar')
             ? null
             : "/images/detail/detail_02.jpg";
 
@@ -81,7 +60,7 @@ export default function DetailLayout() {
         <div>
             <div className="display-flex">
                 <div>
-                    <Image src={product.img} alt="상품이미지" width={550} height={550} />
+                    <Image src={product.img} alt={product.name} width={550} height={550} priority />
                 </div>
                 <div>
                     <h2>{product.name} {product.name === "골드바 수납함" ? "" : `${product.weight}g`}</h2>
@@ -94,7 +73,7 @@ export default function DetailLayout() {
                             ) : isPriceHidden || product.category === "실버바" ? (
                                 <span>시세 변동</span>
                             ) : (
-                                <span>{displayPrice(product.weight)?.toLocaleString()}원</span>
+                                <span>{currentPrice}원</span>
                             )}
                         </h3>
                         <ul>

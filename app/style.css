@@ -404,7 +404,7 @@ main>div>:last-child>img {
 .admin>div {
     width: 1460px;
     margin: 0 auto;
-    padding: 100px 0 150px;
+    padding: 200px 0 150px;
 }
 
 .admin>div>:first-child {
@@ -770,7 +770,7 @@ main>div>:last-child>img {
     .admin>div {
         width: 100%;
         margin: 0;
-        padding: 50px 5% 80px;
+        padding: 120px 5% 80px;
     }
 
     .admin>div>:first-child {
