@@ -17,7 +17,7 @@ interface ProductItemProps {
 export default function ProductItem({ id, category, name, subname, price, img, weight, priority = false }: ProductItemProps) {
 
     const pathname = usePathname();
-    const isPriceHidden = pathname.startsWith('/silverbar');
+    const isPriceHidden = pathname.startsWith('/silverbar') || name === "LS MnM 골드바";
 
     const roundedPrice = price !== undefined
         ? Math.ceil(price / 1000) * 1000

@@ -44,10 +44,8 @@ export default function DetailLayout() {
     const price = getCalculatedPrice(gold, product.weight, rate);
     const currentPrice = displayPrice(price, product.weight)?.toLocaleString();
 
+    const isPriceHidden = pathname.startsWith('/silverbar') || product.name === "LS MnM 골드바";
 
-    const isPriceHidden = pathname.startsWith('/silverbar');
-
-    // 순금베이비, 순금코인, 순금 기념품, 실버바
     const detailImage = pathname.startsWith('/goldbaby') ||
         pathname.startsWith('/goldcoin') ||
         pathname.startsWith('/goldgift')
