@@ -39,6 +39,20 @@ export default function Footer() {
                 wsa.inflow("www.goldmarket.co.kr");
                 wsa_do(wsa);
             `}} />
+            <Script
+                id="wcs-init"
+                strategy="afterInteractive"
+                dangerouslySetInnerHTML={{
+                    __html: `
+                if (!wcs_add) var wcs_add={};
+                wcs_add["wa"] = "s_2744ddc174ff";
+                if (!_nasa) var _nasa={};
+                if(window.wcs){
+                wcs.inflow();
+                wcs_do();
+                }
+            `}}
+            />
         </>
     )
 }
