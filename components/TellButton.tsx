@@ -1,5 +1,5 @@
 'use client'
-import { conversion } from "@/util/conversion";
+import { conversion, naverConversion } from "@/util/conversion";
 import Link from "next/link";
 import { CSSProperties, ReactNode } from "react";
 
@@ -12,7 +12,8 @@ interface TellButtonProps {
 export default function TellButton({ children, className, style }: TellButtonProps) {
 
     const onClickTelButton = () => {
-        conversion('4', 1, 'UAVHsFC')
+        conversion('4', 1, 'UAVHsFC');
+        naverConversion('lead', 's_2744ddc174ff')
     }
 
     return (

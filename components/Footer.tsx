@@ -61,18 +61,16 @@ export default function Footer() {
             var url = document.URL;
             var _conv = {};
 
-            if (url.indexOf("/product") >= 0) {
+            if (url.indexOf("/goldbar") >= 0) {
               _conv.type = "custom001";
-            } else if (url.indexOf("/goldbar") >= 0) {
+            } else if (url.indexOf("/goldbaby") >= 0) {
               _conv.type = "custom002";
-            } else if (url.indexOf("/silverbar") >= 0) {
+            } else if (url.indexOf("/goldgift") >= 0) {
               _conv.type = "custom003";
             } else if (url.indexOf("/goldcoin") >= 0) {
               _conv.type = "custom004";
-            } else if (url.indexOf("/goldbaby") >= 0) {
+            } else if (url.indexOf("/silverbar") >= 0) {
               _conv.type = "custom005";
-            } else if (url.indexOf("/goldgift") >= 0) {
-              _conv.type = "custom006";
             }
 
             if (_conv.type) {
