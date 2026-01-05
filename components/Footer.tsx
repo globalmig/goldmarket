@@ -39,19 +39,53 @@ export default function Footer() {
                 wsa.inflow("www.goldmarket.co.kr");
                 wsa_do(wsa);
             `}} />
+            <Script type="text/javascript" src="//wcs.naver.net/wcslog.js" strategy="beforeInteractive" />
             <Script
                 id="wcs-init"
                 strategy="afterInteractive"
                 dangerouslySetInnerHTML={{
                     __html: `
-                if (!wcs_add) var wcs_add={};
-                wcs_add["wa"] = "s_2744ddc174ff";
-                if (!_nasa) var _nasa={};
-                if(window.wcs){
-                wcs.inflow();
-                wcs_do();
-                }
-            `}}
+      (function initWCS() {
+        var _nasa = {};
+
+        if (!window.wcs_add) window.wcs_add = {};
+        window.wcs_add["wa"] = "s_2744ddc174ff";
+
+        var maxRetry = 20;
+        var interval = setInterval(function () {
+          if (window.wcs && window.wcs_do) {
+          
+            window.wcs.inflow("goldmarket.co.kr");
+            window.wcs_do(_nasa);
+
+            var url = document.URL;
+            var _conv = {};
+
+            if (url.indexOf("/product") >= 0) {
+              _conv.type = "custom001";
+            } else if (url.indexOf("/goldbar") >= 0) {
+              _conv.type = "custom002";
+            } else if (url.indexOf("/silverbar") >= 0) {
+              _conv.type = "custom003";
+            } else if (url.indexOf("/goldcoin") >= 0) {
+              _conv.type = "custom004";
+            } else if (url.indexOf("/goldbaby") >= 0) {
+              _conv.type = "custom005";
+            } else if (url.indexOf("/goldgift") >= 0) {
+              _conv.type = "custom006";
+            }
+
+            if (_conv.type) {
+              window.wcs.trans(_conv);
+            }
+
+            clearInterval(interval);
+          }
+          if (--maxRetry <= 0) clearInterval(interval);
+        }, 300);
+      })();
+    `
+                }}
             />
         </>
     )
